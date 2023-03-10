@@ -36,16 +36,6 @@
 		font-weight: 300;
 		font-size: 0.7em;
 	}
-	.button {
-  		background-color: #F5F5F5;
-  		color: #2F2C25;
-  		padding: 15px 32px;
-  		text-align: center;
-  		text-decoration: none;
-  		display: inline-block;
-  		font-size: 0.7em;
-		border: 1px solid #2F2C25;
-	}
 	a:hover {
 		color: aqua;
 	}
@@ -113,7 +103,7 @@
     transform: translate(0, 0);
   	}
   	100% {
-    transform: translate(-10%, 0);
+    transform: translate(-15%, 0);
   }
 }
 	.ribbon-text:hover {
@@ -194,6 +184,42 @@
 		border: 1px solid #2F2C25;
 		cursor: not-allowed;
 	}
+	img {
+		max-width: 450px;
+		height: auto;
+		margin: auto;
+  		display: block;
+		cursor: default;
+	}
+	.gallery {
+		display: inline-block;
+		margin-right: 65px;
+  		width: 300px;
+  		background-color: white;
+  		height: 580px;
+		border: 1px solid #2F2C25;
+		color: #2F2C25;
+		overflow: visible;
+		margin-bottom: 65px;
+		text-align: center;
+		vertical-align: top;
+		
+	}
+	.container {
+		padding: 0px 15px 0px 15px;
+		overflow: visible;
+	}
+	.button {
+		font-size: 0.7em;
+		color: #f5f5f5;
+		text-decoration: none;
+		background-color: #2F2C25;
+		padding: 10px;
+		margin: 10px 0px;
+	}
+	button:hover {
+		opacity: 0.5;
+	}
 </style>
 <!--END OF CSS CODES-->
 	
@@ -207,27 +233,64 @@
 	<br>
 	<ul>
 		<li style="float:left;margin-top:-15px;"><a href="index.html"><img src="ZARA HAPIZ logo.png" alt="ZH" style="width:90px;height:90px;margin-top:-10px;margin-bottom:-10px;"></a></li>
-  		<li><a href="store.html">store</a></li>
+  		<li><a class="active" href="store.html">store</a></li>
   		<li><a href="art gallery.html">art gallery</a></li>
-		<li><a class="active" href="index.html">home</a></li>
+		<li><a href="index.html">home</a></li>
 	</ul>
 	<div class="divider"></div>
 	<!--END OF HEADER STUFF-->
 	
 	
 	
-	<div class="green-bg" style="text-align:center;">
-		<h1>
-			<i>We’re sorry!</i></h1>
-			<br><h4>This page is under construction.</h4></div>
+	<div class="blue-bg" style="text-align:center;">
+		<h1>Store!</h1>
+		<br><h4>My digital creations available for free download!
+		<br><i style="opacity:0.7;font-size:0.8em">Everything provided here is meant for PERSONAL USE ONLY :&#41;</i></h4>
+	</div>
+	<div class="divider"></div>
+	<div class="pink-bg" style="text-align:center;">
+		<h2>Posters</h2>
+		<div class="gallery">
+		<img src="artwork/GHOST IN THE MACHINE.png" width="300px" alt="Ghost in the Machine poster">
+		<div class="container">Ghost in the Machine poster<br>
+		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/103zLfGLvLdlU6yTukoKOb28AELYxy8-M/view?usp=sharing">download PNG</a></div></div></div>
+		
+		<div class="gallery">
+		<img src="artwork/F2F.png" width="300px" alt="F2F - SZA">
+		<div class="container">F2F - SZA poster<br>
+		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1chUJauhGhReGna4KxQbZsKBFU38Jtc1Y/view?usp=sharing">download PNG</a></div></div></div>
+		
+		<div class="gallery">
+		<img src="artwork/garden (say it like dat).png" width="300px" alt="F2F - SZA">
+		<div class="container">Garden (Say It Like Dat) - SZA<br>
+		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1UGCigJldydBfBdMg38Iy846ICWtyU0fI/view?usp=sharing">download PNG</a></div></div></div>
+		</div>
+	<div class="divider"></div>
+	
+	
+	<div class="orange-bg" style="text-align:center;">
+		<h2>Python codes</h2>
+		<div class="gallery">
+		<img src="artwork/converter.png" width="300px" height="300px" alt="Number System Converter">
+		<div class="container">number system converter<br><h4>*this code is fully in Malay :)</h4>
+		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1FJ3pngXxi71Klq_xtU-MnXmbviWmoqBr/view?usp=sharing">download .py file</a></div></div></div>
+		<div class="gallery">
+		<img src="artwork/patterns.png" width="300px" height="300px" alt="Patterns and Sequences">
+		<div class="container">patterns and sequences<br><h4>*this code is fully in Malay :)</h4>
+		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1qae4Isz2EdwrSkr2pxKUDwD33BfLc8E2/view?usp=sharing">download .py file</a></div></div></div>
+		<div class="gallery">
+		<img src="artwork/compendium.png" width="300px" height="300px" alt="TLoZ:BotW Compendium">
+		<div class="container">TLoZ:BotW compendium<br>
+		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1orJHjPoCbh2-2vtkXd62ca2OrLiUxy9K/view?usp=sharing">download .py file</a></div></div></div>
+	</div>
 	<div class="divider"></div>
 	
 	
 	
 	<!--FOOTER STUFF-->
 	<footer>
-		<a href="https://www.instagram.com/zaramysh/"><img src="instagram.png" style="width:30px;opacity:0.8;" alt="Instagram"></a>
-		<a href="https://www.tiktok.com/@zaramysh"><img src="tik-tok.png" style="width:30px;opacity:0.8;" alt="TikTok"></a>
+		<a href="https://www.instagram.com/zaramysh/"><img src="instagram.png" style="width:30px;opacity:0.8;display:inline-block;"  alt="Instagram"></a>
+		<a href="https://www.tiktok.com/@zaramysh"><img src="tik-tok.png" style="width:30px;opacity:0.8;display:inline-block;"  alt="TikTok"></a>
 		<p style="color:#2F2C25;">© Zara Hapiz 2023</p>
 		<p style="font-size:0.7em;">Special thanks to Cikgu Hidayati and Cikgu Rosila, my Computer Science teachers, for helping this website come to life.</p>
 	</footer>
