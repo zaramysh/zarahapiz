@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <title>HOME - Zara Hapiz</title>
-<link rel="icon" type="image/x-icon" href="zara hapiz logo simple-1.png" alt="ZH">
+<link rel="icon" type="image/x-icon" href="ZARA HAPIZ logo.png">
 <link rel="stylesheet" href="https://use.typekit.net/oag6cqw.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
@@ -288,7 +288,7 @@
 	</div></div>
 	<br>
 	<ul>
-		<li style="float:left;margin-top:-15px;"><a href="index.html"><img src="ZARA HAPIZ logo.png" alt="ZH" style="width:90px;height:90px;margin-top:-10px;margin-bottom:-10px;"></a></li>
+		<li style="float:left;margin-top:-15px;"><a href="index.html"><img src="zara hapiz logo simple-1.png" alt="ZH" style="width:90px;height:90px;margin-top:-10px;margin-bottom:-10px;"></a></li>
   		<li><a href="store.html">store</a></li>
   		<li><a class="active" href="art gallery.html">art gallery</a></li>
 		<li><a href="index.html">home</a></li>
@@ -311,6 +311,12 @@
 	<!---2023--->
 	<div class="blue-bg">
 	<p>2023</p>
+	<div class="gallery">
+	<img id="img2023-8" src="artwork/beabadoobee-1.png" width="300px" height="300px" alt="beabadoobee">
+	<div class="container">beabadoobee<br><h4>12/4/23</h4></div></div>	
+	<div class="gallery">
+	<img id="img2023-7" src="artwork/sza-1.png" width="300px" height="300px" alt="SZA">
+	<div class="container">SZA<br><h4>16/2/23</h4></div></div>	
 	<div class="gallery">
 	<img id="img2023-6" src="artwork/xavier-1.png" width="300px" height="300px" alt="Xavier Thorpe from <i>Wednesday</i> during the Poe Cup">
 	<div class="container">xavier thorpe<br><h4>8/2/23</h4></div></div>
@@ -385,6 +391,23 @@
 var modal = document.getElementById('myModal');
 
 // IMAGE MODAL
+var img = document.getElementById('img2023-8');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}
+// IMAGE MODAL
+var img = document.getElementById('img2023-7');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}// IMAGE MODAL
 var img = document.getElementById('img2023-6');
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
