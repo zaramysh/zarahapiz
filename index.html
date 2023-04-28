@@ -12,30 +12,39 @@
 <style>
 	body {
 		font-family: 'neue-haas-grotesk-text', Arial, sans-serif;
-		font-size: 2em;
-		font-weight: 400;
+		font-size: 1.5em;
+		font-weight: 300;
 		color: #2F2C25;
 		margin: 35px;
 		background-color: #F5F5F5;
 		cursor: default;
 	}
 	h1 {
-		font-family: 'Apple Garamond', 'neue-haas-grotesk-text', Garamond, serif;
-		font-size: 3.5em;
+		font-family: 'roc-grotesk-condensed', Garamond, sans-serif;
+		font-size: 4em;
 		font-weight: 400;
-		margin: -10px 0 -10px;
+		font-style: normal;
+		margin: -10px 0 -30px;
 		line-height: 1;
 	}
 	h2 {
 		margin: 0;
+		margin-top: 20px;
+		font-weight: 300;
 	}
 	h3 {
 		margin: 10px 0 10px 0;
+		font-weight: 300;
 	}
 	h4 {
 		margin: 10px 0 10px 0;
 		font-weight: 300;
-		font-size: 0.7em;
+		font-size: 1em;
+	}
+	h5 {
+		font-weight: 300;
+		font-size: 0.5em;
+		opacity: 0.7;
 	}
 	::-webkit-scrollbar {
 		width: 10px;
@@ -56,7 +65,7 @@
 		margin: 0;
   		padding: 0;
 		float: right;
-		font-size: 25px;
+		font-size: 0.9em;
 	}
 	li {
 		float: left;
@@ -89,6 +98,7 @@
 		white-space: nowrap;
 	}
 	.ribbon-text {
+		font-size: 1.4em;
   		animation: bannermove 10s linear infinite;
  		animation-play-state: running;
  		-webkit-animation-play-state: running;
@@ -119,7 +129,7 @@
 	footer {
 		color: #8A8883;
 		text-align: center;
-		font-size: 0.6em;
+		font-size: 0.9em;
 	}
 	.pink-bg {
 		background-color: #EDC0BE;
@@ -204,6 +214,17 @@
 		width: 0px;
 		}
 	}
+	.column {
+		float: left;
+		width: 50%;
+	}
+
+	/* Clear floats after the columns */
+	.row:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
 </style>
 <!--END OF CSS CODES-->
 	
@@ -212,11 +233,11 @@
 <body>
 	<!--HEADER STUFF-->
 	<div class="ribbon"><div class="ribbon-text">
-	THANK YOU FOR VISITING ZARA'S NEW WEBSITE! THANK YOU FOR VISITING ZARA'S NEW WEBSITE!
+	THANK YOU FOR VISITING ZARA'S WEBSITE! THANK YOU FOR VISITING ZARA'S WEBSITE!
 	</div></div>
 	<br>
 	<ul style="float:left;">
-		<li style="float:left;margin-top:-20px;"><a href="index.html"><img src="ZARA HAPIZ LOGO V2.png" alt="ZH" style="width:90px;height:90px;"></a></li>
+		<li style="float:left;margin-top:-25px;"><a href="index.html"><img src="ZARA HAPIZ LOGO V2.png" alt="ZH" style="width:90px;height:90px;"></a></li>
 	</ul><ul style="float:right;margin-top:5px;">
 		<li><a class="active" href="index.html">home</a></li>
   		<li><a href="art gallery.html">art gallery</a></li>
@@ -235,9 +256,33 @@
 		</h1></div>
 	<div class="divider"></div>
 	<div class="blue-bg">
-		<h3 style="text-align:center;">
-			I’m <i>Zara Hapiz</i>, and this is my website, which serves as a vessel for me to <i>dump my artwork</i> and as a personal <i>portfolio</i>.</h3>
-			<h4 style="text-align:center;"> Besides the art gallery, this website itself is already a display of my talent (and hobby)! Yep, I programmed this website myself!</h4>
+		<div class="row">
+		<div class="column"><img src="artwork/pear-1.png" width="500px" alt="oh no picture gone :("></div>
+		<div class="column">
+			<h1 style="margin-left:50px;">
+			What’s up?
+			</h1><br>
+			<h4 style="text-align:justify;text-justify:inter-word;margin-left:50px;margin-right:50px;">
+			I’m <i>Zara Hapiz</i>, and this is my website, which serves as a vessel for me to <i>dump my artwork</i> and as a personal <i>portfolio</i>.
+			Besides the art gallery, this website itself is already a display of my talent (and hobby)! Yep, I programmed this website myself! Have fun browsing :)</h4>
+		</div></div>
+	</div>
+	<div class="divider"></div>
+	<div class="green-bg">
+		<div class="row">
+			<div class="column">
+				<h1>Latest Project!</h1>
+				<h4 style="margin-top:30px;">Imitation Apple iPhone 15 website
+				<br><a href="https://zaramysh.github.io/apple/" style="color:#2F2C25;">Click me to view!</a>
+				<br><br>
+				This is a faux Apple website I designed for a future iPhone 15 (which is very much not accurate). 
+				<h5>PHOTOS DO NOT BELONG TO ME!</h5>
+				</h4>
+			</div>
+			<div class="column">
+				<img src="artwork/iPhone 15 - 1.png" width="500" style="margin-left: 60px;" alt="oh no picture gone :(">
+			</div>
+		</div>
 	</div>
 	<div class="divider"></div>
 	
