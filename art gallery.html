@@ -3,8 +3,8 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>HOME - Zara Hapiz</title>
-<link rel="icon" type="image/x-icon" href="ZARA HAPIZ LOGO SIMPLE V2.png">
+<title>ART GALLERY - Zara Hapiz</title>
+<link rel="icon" type="image/x-icon" href="ZARA HAPIZ LOGO - SMALL.png">
 <link rel="stylesheet" href="https://use.typekit.net/oag6cqw.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,25 +12,35 @@
 <!--CSS CODES-->
 <style>
 	body {
-		font-family: 'neue-haas-grotesk-text', Arial, sans-serif;
+		font-family: "degular", sans-serif;
+		font-weight: 500;
+		font-style: normal;
 		font-size: 1.5em;
-		font-weight: 300;
-		color: #2F2C25;
+		color: #F3F3F3;
 		margin: 35px;
-		background-color: #F5F5F5;
+		background-color: #0A0A0A;
+		background-image: url("ZARA HAPIZ WEBSITE BG.png");
+		background-repeat: repeat-y;
+		background-position: left top;
+  		background-attachment: scroll;
+		background-size: cover;
 		cursor: default;
 	}
 	h1 {
-		font-family: 'roc-grotesk-condensed', Garamond, sans-serif;
-		font-size: 4em;
-		font-weight: 400;
+		font-family: "degular-display", sans-serif;
+		font-weight: 700;
 		font-style: normal;
-		margin: -10px 0 -30px;
-		line-height: 1;
+		font-size: 4em;
+		margin: 10px;
+		line-height: 0.8em;
+		animation-name: titleHover;
+		animation-duration: 3s;
+		animation-iteration-count: 1;
 	}
 	h2 {
 		margin: 0;
-		font-weight: 300;
+		margin-top: 20px;
+		font-weight: 600;
 	}
 	h3 {
 		margin: 10px 0 10px 0;
@@ -38,28 +48,26 @@
 	}
 	h4 {
 		margin: 10px 0 10px 0;
-		font-weight: 300;
+		font-weight: 500;
 		font-size: 1em;
 	}
-	img {
-		max-height: 450px;
-		margin: auto;
-  		display: block;
-		cursor: pointer;
+	h5 {
+		font-weight: 500;
+		font-size: 0.5em;
+		opacity: 0.7;
 	}
-	/* scrollbar stuff */
 	::-webkit-scrollbar {
 		width: 10px;
 	}
 	::-webkit-scrollbar-track {
-		background: #2F2C25;
+		background: #08131C;
 	}
 	::-webkit-scrollbar-thumb {
-		background: #9BC4D7;
-		border: 1px solid #2F2C25;
+		background: #F26697;
+		border: 1px solid #08131C;
 	}
 	::-webkit-scrollbar-thumb:hover {
-		background: #A5C497;
+		background: #2346F3;
 	}
 	ul {
 		height: 0px;
@@ -74,27 +82,38 @@
 		color: black;
 		margin: 15px 15px 15px 30px;
 		text-decoration: none;
-		color: #2F2C25;
+		color: #F3F3F3;
 		float: left;
+		transition: color 0.3s, transform 0.3s;
 	}
-	li a:hover {
-		color: #5B5648;
+	ul a:hover {
+		color: #F26697;
+		transform: rotate(10deg);
 	}
 	.active {
-		color: #9BC4D7;
+		color: #2346F3;
+	}
+	@keyframes titleHover {
+		from {opacity: 0;}
+		to {opacity: 1;}
+	}
+	embed {
+		cursor: default;
 	}
 	.ribbon {
 		margin: -35px;
-		font-size: 0.9em;
+		font-size: 0.8em;
 		text-align: center;
-		background-color: #EDC0BE;
-		border-bottom: 1px solid #2F2C25;
+		background-color: #F0B719;
+		border-bottom: 1px solid #08131C;
 		overflow-x: hidden;
+		overflow-y: hidden;
 		height: 38px;
 		font-style: italic;	
 		white-space: nowrap;
 	}
 	.ribbon-text {
+		color: #08131C;
 		font-size: 1.4em;
   		animation: bannermove 10s linear infinite;
  		animation-play-state: running;
@@ -108,152 +127,38 @@
   	}
   	100% {
     transform: translate(-10%, 0);
-  	}
-	}
-
+  }
+}
 	.ribbon-text:hover {
 		-webkit-animation-play-state:paused;
-  		-moz-animation-play-state:paused;
+		-moz-animation-play-state:paused;
 		-o-animation-play-state:paused;
 		animation-play-state:paused;
 	}
-	.divider {
-		border-bottom: 1px solid #2F2C25;
-		width: auto;
-		margin-left: -35px;
-		margin-right: -35px;
-		margin-bottom: 20px;
-	}
 	footer {
-		color: #8A8883;
+		color: #F3F3F3;
 		text-align: center;
 		font-size: 0.9em;
 	}
-	.pink-bg {
-		background-color: #EDC0BE;
-		margin-top: -20px;
-		width: auto;
-		margin-left: -35px;
-		margin-right: -35px;
-		padding: 40px 70px;
-	}
-	.orange-bg {
-		background-color: #E17A48;
-		margin-top: -20px;
-		width: auto;
-		margin-left: -35px;
-		margin-right: -35px;
-		padding: 40px 70px;
-		color: #F5F5F5;
-	}
-	.yellow-bg {
-		background-color: #E9CB58;
-		margin-top: -20px;
-		width: auto;
-		margin-left: -35px;
-		margin-right: -35px;
-		padding: 40px 70px;
-	}
-	.green-bg {
-		background-color: #A5C497;
-		margin-top: -20px;
-		width: auto;
-		margin-left: -35px;
-		margin-right: -35px;
-		padding: 40px 70px;
-	}
-	.blue-bg {
-		background-color: #9BC4D7;
-		margin-top: -20px;
-		width: auto;
-		margin-left: -35px;
-		margin-right: -35px;
-		padding: 40px 70px;
-	}
-	.black-bg {
-		background-color: #2F2C25;
-		margin-top: -20px;
-		width: auto;
-		margin-left: -35px;
-		margin-right: -35px;
-		padding: 40px 70px;
-		color: #F5F5F5;
-	}
-	.gallery {
-		display: inline-block;
-		margin-right: 65px;
-  		width: 300px;
-  		background-color: white;
-  		height: 440px;
-		border: 1px solid #2F2C25;
-		color: #2F2C25;
-		overflow: visible;
-		margin-bottom: 65px;
-		text-align: left;
-		vertical-align: top;
-	}
-	.container {
-		padding: 10px 15px 0px 15px;
-		overflow: visible;
-	}
-	/* The Modal (background) */
-	.modal {
-        display: none; /* hidden by default */
-        position: fixed; 
-        z-index: 1; /* sit on top */
-        padding-top: 100px; /* location of the box */
-        left: 0;
-        top: 0;
-        width: 100%; 
-        height: 100%; 
-        overflow: auto; 
-        background-color: rgb(0,0,0); /* fallback colour */
-        background-color: rgba(0,0,0,0.9); 
-        cursor: default;
-	}
-	/* modal caption */
-	#caption {
-	  	margin: auto;
-	  	display: block;
-	  	width: 80%;
-	  	max-width: 700px;
-	  	text-align: center;
-	  	color: #9BC4D7;
-	  	padding: 10px 0;
-	  	height: 150px;
-	  	font-size: 0.6em;
-	  	overflow: auto;
-	}
-	/* close button (x) */
-	.close {
-	  	position: absolute;
-	  	top: 15px;
-	  	right: 35px;
-	  	color: #f5f5f5;
-	  	font-size: 40px;
-	  	font-weight: bold;
-	  	transition: 0.3s;
-	}
-
-	.close:hover, .close:focus {
-	  	color: #EDC0BE;
-	  	text-decoration: none;
-	  	cursor: pointer;
-	}
 	.topnav .icon {
   		display: none;
+		color: #F3F3F3;
 	}
 	.column {
 		flex: 50%;
+		padding: 0 5px;
 	}
 	.row {
 		display: flex;
 	}
 		/* responsive stuff */
 	@media screen and (max-width: 600px) {
+		html {
+		}
 		body {
 			margin: 35px 10px;
 			overflow-x: hidden;
+			background-position: top center;
 		}
 		h1 {
 			font-size: 15vw;
@@ -288,7 +193,7 @@
 		width: 0px;
 		}
 		.topnav { 
-		background-color: #F5F5F5;
+		background-color: #F3F3F3;
 		}
 		.topnav a {display: none;}
   		.topnav a.icon {
@@ -310,6 +215,79 @@
 			width: "40vw";
 		}
 	}
+	/*ART GALLERY STYLES*/
+	img {
+		max-height: 450px;
+		margin: auto;
+  		display: block;
+		cursor: pointer;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+	}
+	.gallery {
+		display: inline-block;
+		margin-right: 65px;
+  		width: 300px;
+  		background-color: #F3F3F3;
+  		height: 440px;
+		border: 1px solid #08131C;
+		color: #2346F3;
+		overflow: visible;
+		margin-bottom: 65px;
+		text-align: left;
+		vertical-align: top;
+		border-radius: 5px;
+	}
+	.container {
+		padding: 10px 15px 0px 15px;
+		overflow: visible;
+		font-weight: 600;
+		line-height: 25px;
+	}
+	/* The Modal (background) */
+	.modal {
+        display: none; /* hidden by default */
+        position: fixed; 
+        z-index: 1; /* sit on top */
+        padding-top: 100px; /* location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+        background-color: rgb(0,0,0); /* fallback colour */
+        background-color: rgba(0,0,0,0.9); 
+        cursor: default;
+	}
+	/* modal caption */
+	#caption {
+	  	margin: auto;
+	  	display: block;
+	  	width: 80%;
+	  	max-width: 700px;
+	  	text-align: center;
+	  	color: #2346F3;
+	  	padding: 10px 0;
+	  	height: 150px;
+	  	font-size: 1em;
+	  	overflow: auto;
+	}
+	/* close button (x) */
+	.close {
+	  	position: absolute;
+	  	top: 15px;
+	  	right: 35px;
+	  	color: #F0B719;
+	  	font-size: 40px;
+	  	font-weight: bold;
+	  	transition: 0.3s;
+	}
+
+	.close:hover, .close:focus {
+	  	color: #F26697;
+	  	text-decoration: none;
+	  	cursor: pointer;
+	}
 </style>
 <!--END OF CSS CODES-->
 
@@ -319,12 +297,12 @@
 <body>
 	<!--HEADER STUFF-->
 	<div class="ribbon"><div class="ribbon-text">
-	THANK YOU FOR VISITING ZARA'S WEBSITE! THANK YOU FOR VISITING ZARA'S WEBSITE!
+	THANK YOU FOR VISITING ZARA'S WEBSITE! THANK YOU FOR VISITING ZARA'S WEBSITE! THANK YOU FOR VISITING ZARA'S WEBSITE
 	</div></div>
 	<br>
 	<ul style="float:left;">
-		<li style="float:left;margin-top:-25px;"><a href="index.html"><img src="ZARA HAPIZ LOGO V2.png" alt="ZH" style="width:90px;height:90px;"></a></li>
-	</ul><ul style="float:right;margin-top:5px;"><div class="topnav" id="myTopnav">
+		<li style="float:left;margin-top:-25px;"><a href="index.html"><img src="ZARA HAPIZ LOGO - LARGE BLACK.png" alt="ZH" style="width:90px;height:90px;"></a></li>
+	</ul><ul style="float:right;margin-top:5px;font-size:1.1em;"><div class="topnav" id="myTopnav">
 		<a href="index.html">home</a>
   		<a class="active" href="art gallery.html">art gallery</a>
 		<a href="store.html">store</a>
@@ -340,18 +318,19 @@
 	
 <!--MAIN!!!!-->	
 	<div class="green-bg">
-		<h1 style="text-align:center;">
-			Art Gallery
+		<h1>
+			Zara’s
+			<p style="color:#F21F1F;margin:0;"> art gallery<i>!</i></p>
 		</h1><br>
-		<h3 style="text-align:center;">
-			Showcasing my artwork! 
+		<h3>
+			Zara's graphite drawings. Check it out.
 		</h3>
 	</div>
-	<div class="divider"></div>
 	
 	<!---2023--->
-	<div class="blue-bg">
-	<p>2023</p>
+	<h2 style="color:#F0B719;"><p>2023</p></h2><div class="gallery">
+	<img id="img2023-9" src="artwork/prowler-42-1.png" width="300px" height="300px" alt="Miles Morales, the Prowler of Earth-42.">
+	<div class="container">earth-42’s prowler<br><h4>6/6/23</h4></div></div>	
 	<div class="gallery">
 	<img id="img2023-8" src="artwork/beabadoobee-1.png" width="300px" height="300px" alt="beabadoobee">
 	<div class="container">beabadoobee<br><h4>12/4/23</h4></div></div>	
@@ -376,25 +355,21 @@
 	<div class="gallery">
 	<img id="img2023-1" src="artwork/clairo-1.png" width="300px" height="300px" alt="Clairo">
 	<div class="container">clairo<br><h4>3/2/23</h4></div></div>
-	</div><div class="divider"></div>
 	
 	
 	
 	<!---2022--->
-	<div class="pink-bg">
-	<p>2022</p>
+	<h2 style="color:#F0B719;"><p>2022</p></h2>
 	<div class="gallery">
 	<img id="img2022-2" src="artwork/pear-1.png" width="300px" height="300px" alt="Pear; acrylic on paper">
 	<div class="container">pear<br><h4>27/6/22</h4></div></div>
 	<div class="gallery">
 	<img id="img2022-1" src="artwork/waktu senja-1.png" width="300px" height="300px" alt="Waktu Senja; acrylic on paper">
 	<div class="container">waktu senja<br><h4>31/3/22</h4></div></div>
-	</div><div class="divider"></div>
 	
 	
 	<!---2021--->
-	<div class="orange-bg">
-	<p>2021</p>
+	<h2 style="color:#F0B719;"><p>2021</p></h2>
 	<div class="gallery">
 	<img id="img2021-4" src="artwork/egg-1.png" width="300px" height="300px" alt="Fried Egg">
 	<div class="container">fried egg<br><h4>30/11/21</h4></div></div>
@@ -407,7 +382,6 @@
 	<div class="gallery">
 	<img id="img2021-1" src="artwork/manta ray-1.png" width="300px" height="300px" alt="Manta Ray (dedicated to Suraya)">
 	<div class="container">manta ray<br><h4>22/5/21</h4></div></div>
-	</div><div class="divider"></div>
 <!--END OF MAIN-->	
 	<!-- MODAL -->
 <div id="myModal" class="modal">
@@ -419,10 +393,10 @@
 	
 	
 	<!--FOOTER STUFF-->
-	<footer>
-		<a href="https://www.instagram.com/zaramysh/"><img src="instagram.png" style="width:30px;opacity:0.8;display:inline-block;" alt="Instagram"></a>
-		<a href="https://www.tiktok.com/@zaramysh"><img src="tik-tok.png" style="width:30px;opacity:0.8;display:inline-block;" alt="TikTok"></a>
-		<p style="color:#2F2C25;">© Zara Hapiz 2023</p>
+	<footer><br><br>
+		<a href="https://www.instagram.com/zaramysh/"><img src="instagram.png" style="width:30px;display:inline-block;" alt="Instagram"></a>
+		<a href="https://www.tiktok.com/@zaramysh"><img src="tik-tok.png" style="width:30px;display:inline-block;" alt="TikTok"></a>
+		<p>© Zara Hapiz 2023</p>
 		<p style="font-size:0.7em;">Special thanks to Cikgu Hidayati and Cikgu Rosila, my Computer Science teachers, for helping this website come to life.</p>
 		
 	</footer>
@@ -440,6 +414,15 @@
 // Get the modal
 var modal = document.getElementById('myModal');
 
+// IMAGE MODAL
+var img = document.getElementById('img2023-9');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}
 // IMAGE MODAL
 var img = document.getElementById('img2023-8');
 var modalImg = document.getElementById("img01");
