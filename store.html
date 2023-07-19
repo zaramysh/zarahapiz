@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <title>STORE - Zara Hapiz</title>
-<link rel="icon" type="image/x-icon" href="ZARA HAPIZ LOGO SIMPLE V2.png">
+<link rel="icon" type="image/x-icon" href="ZARA HAPIZ LOGO - SMALL.png">
 <link rel="stylesheet" href="https://use.typekit.net/oag6cqw.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,25 +12,35 @@
 <!--CSS CODES-->
 <style>
 	body {
-		font-family: 'neue-haas-grotesk-text', Arial, sans-serif;
+		font-family: "degular", sans-serif;
+		font-weight: 500;
+		font-style: normal;
 		font-size: 1.5em;
-		font-weight: 300;
-		color: #2F2C25;
+		color: #F3F3F3;
 		margin: 35px;
-		background-color: #F5F5F5;
+		background-color: #0A0A0A;
+		background-image: url("ZARA HAPIZ WEBSITE BG.png");
+		background-repeat: repeat-y;
+		background-position: left top;
+  		background-attachment: scroll;
+		background-size: cover;
 		cursor: default;
 	}
 	h1 {
-		font-family: 'roc-grotesk-condensed', Garamond, sans-serif;
-		font-size: 4em;
-		font-weight: 400;
+		font-family: "degular-display", sans-serif;
+		font-weight: 700;
 		font-style: normal;
-		margin: -10px 0 -30px;
-		line-height: 1;
+		font-size: 4em;
+		margin: 10px;
+		line-height: 0.8em;
+		animation-name: titleHover;
+		animation-duration: 3s;
+		animation-iteration-count: 1;
 	}
 	h2 {
 		margin: 0;
-		font-weight: 300;
+		margin-top: 20px;
+		font-weight: 600;
 	}
 	h3 {
 		margin: 10px 0 10px 0;
@@ -38,21 +48,26 @@
 	}
 	h4 {
 		margin: 10px 0 10px 0;
-		font-weight: 300;
+		font-weight: 500;
 		font-size: 1em;
+	}
+	h5 {
+		font-weight: 500;
+		font-size: 0.5em;
+		opacity: 0.7;
 	}
 	::-webkit-scrollbar {
 		width: 10px;
 	}
 	::-webkit-scrollbar-track {
-		background: #2F2C25;
+		background: #08131C;
 	}
 	::-webkit-scrollbar-thumb {
-		background: #9BC4D7;
-		border: 1px solid #2F2C25;
+		background: #F26697;
+		border: 1px solid #08131C;
 	}
 	::-webkit-scrollbar-thumb:hover {
-		background: #A5C497;
+		background: #2346F3;
 	}
 	ul {
 		height: 0px;
@@ -67,27 +82,38 @@
 		color: black;
 		margin: 15px 15px 15px 30px;
 		text-decoration: none;
-		color: #2F2C25;
+		color: #F3F3F3;
 		float: left;
+		transition: color 0.3s, transform 0.3s;
 	}
-	li a:hover {
-		color: #5B5648;
+	ul a:hover {
+		color: #F26697;
+		transform: rotate(10deg);
 	}
 	.active {
-		color: #9BC4D7;
+		color: #2346F3;
+	}
+	@keyframes titleHover {
+		from {opacity: 0;}
+		to {opacity: 1;}
+	}
+	embed {
+		cursor: default;
 	}
 	.ribbon {
 		margin: -35px;
-		font-size: 0.9em;
+		font-size: 0.8em;
 		text-align: center;
-		background-color: #EDC0BE;
-		border-bottom: 1px solid #2F2C25;
+		background-color: #F0B719;
+		border-bottom: 1px solid #08131C;
 		overflow-x: hidden;
+		overflow-y: hidden;
 		height: 38px;
 		font-style: italic;	
 		white-space: nowrap;
 	}
 	.ribbon-text {
+		color: #08131C;
 		font-size: 1.4em;
   		animation: bannermove 10s linear infinite;
  		animation-play-state: running;
@@ -100,7 +126,7 @@
     transform: translate(0, 0);
   	}
   	100% {
-    transform: translate(-15%, 0);
+    transform: translate(-10%, 0);
   }
 }
 	.ribbon-text:hover {
@@ -109,122 +135,30 @@
 		-o-animation-play-state:paused;
 		animation-play-state:paused;
 	}
-	.divider {
-		border-bottom: 1px solid #2F2C25;
-		width: auto;
-		margin-left: -35px;
-		margin-right: -35px;
-		margin-bottom: 20px;
-	}
 	footer {
-		color: #8A8883;
+		color: #F3F3F3;
 		text-align: center;
 		font-size: 0.9em;
 	}
-	.pink-bg {
-		background-color: #EDC0BE;
-		margin-top: -20px;
-		width: auto;
-		margin-left: -35px;
-		margin-right: -35px;
-		padding: 40px 70px;
-	}
-	.orange-bg {
-		background-color: #E17A48;
-		margin-top: -20px;
-		width: auto;
-		margin-left: -35px;
-		margin-right: -35px;
-		padding: 40px 70px;
-		color: #F5F5F5;
-	}
-	.yellow-bg {
-		background-color: #E9CB58;
-		margin-top: -20px;
-		width: auto;
-		margin-left: -35px;
-		margin-right: -35px;
-		padding: 40px 70px;
-	}
-	.green-bg {
-		background-color: #A5C497;
-		margin-top: -20px;
-		width: auto;
-		margin-left: -35px;
-		margin-right: -35px;
-		padding: 40px 70px;
-	}
-	.blue-bg {
-		background-color: #9BC4D7;
-		margin-top: -20px;
-		width: auto;
-		margin-left: -35px;
-		margin-right: -35px;
-		padding: 40px 70px;
-	}
-	.black-bg {
-		background-color: #2F2C25;
-		margin-top: -20px;
-		width: auto;
-		margin-left: -35px;
-		margin-right: -35px;
-		padding: 40px 70px;
-		color: #F5F5F5;
-	}
-	.hide {
-		display: none;
-		position: sticky;
-	}
-	img {
-		max-width: 450px;
-		height: auto;
-		margin: auto;
-  		display: block;
-		cursor: default;
-	}
-	.gallery {
-		display: inline-block;
-		margin-right: 65px;
-  		width: 300px;
-  		background-color: white;
-  		height: 580px;
-		border: 1px solid #2F2C25;
-		color: #2F2C25;
-		overflow: visible;
-		margin-bottom: 65px;
-		text-align: center;
-		vertical-align: top;
-		
-	}
-	.container {
-		padding: 10px 15px 0px 15px;
-		overflow: visible;
-	}
-	.button {
-		font-size: 0.7em;
-		color: #f5f5f5;
-		text-decoration: none;
-		background-color: #2F2C25;
-		padding: 10px;
-		margin: 10px 0px;
-	}
-	button:hover {
-		opacity: 0.5;
-	}
 	.topnav .icon {
   		display: none;
+		color: #F3F3F3;
 	}
 	.column {
 		flex: 50%;
+		padding: 0 5px;
 	}
 	.row {
 		display: flex;
 	}
 		/* responsive stuff */
 	@media screen and (max-width: 600px) {
+		html {
+		}
 		body {
 			margin: 35px 10px;
 			overflow-x: hidden;
+			background-position: top center;
 		}
 		h1 {
 			font-size: 15vw;
@@ -259,7 +193,7 @@
 		width: 0px;
 		}
 		.topnav { 
-		background-color: #F5F5F5;
+		background-color: #F3F3F3;
 		}
 		.topnav a {display: none;}
   		.topnav a.icon {
@@ -281,6 +215,47 @@
 			width: "40vw";
 		}
 	}
+	/*STORE STYLES*/
+	img {
+		max-width: 450px;
+		height: auto;
+		margin: auto;
+  		display: block;
+		cursor: default;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+	}
+	.gallery {
+		display: inline-block;
+		margin-right: 65px;
+  		width: 300px;
+  		background-color: #F3F3F3;
+  		height: 580px;
+		border: 1px solid #08131C;
+		color: #08131C;
+		overflow: visible;
+		margin-bottom: 65px;
+		text-align: center;
+		vertical-align: top;
+		border-radius: 5px;
+	}
+	.container {
+		padding: 10px 15px 0px 15px;
+		overflow: visible;
+		font-weight: 600;
+	}
+	.button {
+		font-size: 1em;
+		color: #F3F3F3;
+		text-decoration: none;
+		background-color: #2346F3;
+		padding: 10px;
+		margin: 10px 0px;
+		border-radius: 20px;
+	}
+	button:hover {
+		opacity: 0.5;
+	}
 </style>
 <!--END OF CSS CODES-->
 	
@@ -288,12 +263,12 @@
 <body>
 	<!--HEADER STUFF-->
 	<div class="ribbon"><div class="ribbon-text">
-	THANK YOU FOR VISITING ZARA'S WEBSITE! THANK YOU FOR VISITING ZARA'S WEBSITE!
+	THANK YOU FOR VISITING ZARA'S WEBSITE! THANK YOU FOR VISITING ZARA'S WEBSITE! THANK YOU FOR VISITING ZARA'S WEBSITE
 	</div></div>
 	<br>
 	<ul style="float:left;">
-		<li style="float:left;margin-top:-25px;"><a href="index.html"><img src="ZARA HAPIZ LOGO V2.png" alt="ZH" style="width:90px;height:90px;"></a></li>
-	</ul><ul style="float:right;margin-top:5px;"><div class="topnav" id="myTopnav">
+		<li style="float:left;margin-top:-25px;"><a href="index.html"><img src="ZARA HAPIZ LOGO - LARGE BLACK.png" alt="ZH" style="width:90px;height:90px;"></a></li>
+	</ul><ul style="float:right;margin-top:5px;font-size:1.1em;"><div class="topnav" id="myTopnav">
 		<a href="index.html">home</a>
   		<a href="art gallery.html">art gallery</a>
 		<a class="active" href="store.html">store</a>
@@ -308,43 +283,55 @@
 	
 	
 	
-	<div class="blue-bg" style="text-align:center;">
-		<h1>Freebies :)</h1>
+	<div class="blue-bg">
+		<h1>Freeeeebies!</h1>
 		<br><h4>My digital creations available for free download!
 		<br><i style="opacity:0.7;font-size:0.8em">Everything provided here is meant for PERSONAL USE ONLY :&#41;</i></h4>
 	</div>
-	<div class="divider"></div>
-	<div class="pink-bg" style="text-align:center;">
 		<h2>Posters</h2>
-		<div class="gallery">
-		<img src="artwork/GHOST IN THE MACHINE.png" width="300px" alt="Ghost in the Machine poster">
-		<div class="container">Ghost in the Machine poster<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/103zLfGLvLdlU6yTukoKOb28AELYxy8-M/view?usp=sharing" target="_blank">download PNG</a></div></div></div>
 		
+		
+		<div class="gallery">
+		<img src="artwork/Flashing Lights - Kanye West.png" width="300px" alt="Flashing Lights - Kanye West">
+		<div class="container">Flashing Lights - Kanye West<br>
+		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1whX2wjFpYFFb3NHzQjdwwx8z8_cwqdOC/view?usp=sharing" target="_blank">download PNG</a></div></div></div>	
+	
+		<div class="gallery">
+		<img src="artwork/Come Home The Kids Miss You - Jack Harlow.png" width="300px" alt="Come Home The Kids Miss You - Jack Harlow">
+		<div class="container">Come Home The Kids Miss You - Jack Harlow<br>
+		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1whX2wjFpYFFb3NHzQjdwwx8z8_cwqdOC/view?usp=sharing" target="_blank">download PNG</a></div></div></div>	
+	
+		<div class="gallery">
+		<img src="artwork/Tamale - Tyler, The Creator.png" width="300px" alt="Tamale - Tyler, The Creator">
+		<div class="container">Tamale - Tyler, The Creator<br>
+		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1whX2wjFpYFFb3NHzQjdwwx8z8_cwqdOC/view?usp=sharing" target="_blank">download PNG</a></div></div></div>	
+		
+		<div class="gallery">
+		<img src="artwork/JUGGERNAUT - Tyler, The Creator.png" width="300px" alt="JUGGERNAUT (feat. Lil Uzi Vert & Pharrell Williams)">
+		<div class="container">JUGGERNAUT - Tyler, The Creator<br>
+		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1HzqEMJHKosbOswL4A_Xi0TN31vs6SAGZ/view?usp=sharing" target="_blank">download PNG</a></div></div></div>	
+	
+		<div class="gallery">
+		<img src="artwork/I Ain't Got Time! - Tyler.png" width="300px" alt="I Ain't Got Time! - Tyler, The Creator">
+		<div class="container">I Ain't Got Time! - Tyler, The Creator<br>
+		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1RLbmrsHETk0TOOVxCZIdJetdKyRyCiql/view?usp=sharing" target="_blank">download PNG</a></div></div></div>
+	
 		<div class="gallery">
 		<img src="artwork/F2F.png" width="300px" alt="F2F - SZA">
-		<div class="container">F2F - SZA poster<br>
+		<div class="container">F2F - SZA<br>
 		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1chUJauhGhReGna4KxQbZsKBFU38Jtc1Y/view?usp=sharing" target="_blank">download PNG</a></div></div></div>
-		
+	
 		<div class="gallery">
 		<img src="artwork/garden (say it like dat).png" width="300px" alt="F2F - SZA">
 		<div class="container">Garden (Say It Like Dat) - SZA<br>
 		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1UGCigJldydBfBdMg38Iy846ICWtyU0fI/view?usp=sharing" target="_blank">download PNG</a></div></div></div>
 	
 		<div class="gallery">
-		<img src="artwork/I Ain't Got Time! - Tyler.png" width="300px" alt="I Ain't Got Time! - Tyler, The Creator">
-		<div class="container">I Ain't Got Time! - Tyler, The Creator<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1RLbmrsHETk0TOOVxCZIdJetdKyRyCiql/view?usp=sharing" target="_blank">download PNG</a></div></div></div>
-		
-		<div class="gallery">
-		<img src="artwork/JUGGERNAUT - Tyler, The Creator.png" width="300px" alt="JUGGERNAUT (feat. Lil Uzi Vert & Pharrell Williams)">
-		<div class="container">JUGGERNAUT - Tyler, The Creator<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1HzqEMJHKosbOswL4A_Xi0TN31vs6SAGZ/view?usp=sharing" target="_blank">download PNG</a></div></div></div>
-		</div>
-	<div class="divider"></div>
+		<img src="artwork/GHOST IN THE MACHINE.png" width="300px" alt="Ghost in the Machine poster">
+		<div class="container">Ghost in the Machine<br>
+		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/103zLfGLvLdlU6yTukoKOb28AELYxy8-M/view?usp=sharing" target="_blank">download PNG</a></div></div></div>
 	
 	
-	<div class="orange-bg" style="text-align:center;">
 		<h2>Python codes</h2>
 		<div class="gallery">
 		<img src="artwork/converter.png" width="300px" height="300px" alt="Number System Converter">
@@ -358,16 +345,14 @@
 		<img src="artwork/compendium.png" width="300px" height="300px" alt="TLoZ:BotW Compendium">
 		<div class="container">TLoZ:BotW compendium<br>
 		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1orJHjPoCbh2-2vtkXd62ca2OrLiUxy9K/view?usp=sharing" target="_blank">download .py file</a></div></div></div>
-	</div>
-	<div class="divider"></div>
 	
 	
 	
 	<!--FOOTER STUFF-->
 	<footer>
-		<a href="https://www.instagram.com/zaramysh/"><img src="instagram.png" style="width:30px;opacity:0.8;display:inline-block;"  alt="Instagram"></a>
-		<a href="https://www.tiktok.com/@zaramysh"><img src="tik-tok.png" style="width:30px;opacity:0.8;display:inline-block;"  alt="TikTok"></a>
-		<p style="color:#2F2C25;">© Zara Hapiz 2023</p>
+		<a href="https://www.instagram.com/zaramysh/"><img src="instagram.png" style="width:30px;display:inline-block;" alt="Instagram"></a>
+		<a href="https://www.tiktok.com/@zaramysh"><img src="tik-tok.png" style="width:30px;display:inline-block;" alt="TikTok"></a>
+		<p>© Zara Hapiz 2023</p>
 		<p style="font-size:0.7em;">Special thanks to Cikgu Hidayati and Cikgu Rosila, my Computer Science teachers, for helping this website come to life.</p>
 	</footer>
 	<!--END OF FOOTER STUFF-->
