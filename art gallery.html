@@ -329,7 +329,11 @@
 	</div>
 	
 	<!---2023--->
-	<h2 style="color:#F0B719;"><p>2023</p></h2><div class="gallery">
+	<h2 style="color:#F0B719;"><p>2023</p></h2>
+	<div class="gallery">
+	<img id="img2023-10" src="artwork/jack harlow.png" width="300px" height="300px" alt="Jack Harlow">
+	<div class="container">jack harlow<br><h4>8/8/23</h4></div></div>	
+	<div class="gallery">
 	<img id="img2023-9" src="artwork/prowler-42-1.png" width="300px" height="300px" alt="Miles Morales, the Prowler of Earth-42.">
 	<div class="container">earth-42’s prowler<br><h4>6/6/23</h4></div></div>	
 	<div class="gallery">
@@ -415,6 +419,15 @@
 // Get the modal
 var modal = document.getElementById('myModal');
 
+// IMAGE MODAL
+var img = document.getElementById('img2023-10');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}
 // IMAGE MODAL
 var img = document.getElementById('img2023-9');
 var modalImg = document.getElementById("img01");
