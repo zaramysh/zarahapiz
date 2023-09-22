@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>STORE - Zara Hapiz</title>
+<title>ART GALLERY - Zara Hapiz</title>
 <link rel="icon" type="image/x-icon" href="ZARA HAPIZ LOGO - SMALL.png">
 <link rel="stylesheet" href="https://use.typekit.net/oag6cqw.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -216,13 +216,12 @@
 			width: "40vw";
 		}
 	}
-	/*STORE STYLES*/
+	/*ART GALLERY STYLES*/
 	img {
-		max-width: 450px;
-		height: auto;
+		max-height: 450px;
 		margin: auto;
   		display: block;
-		cursor: default;
+		cursor: pointer;
 		border-top-left-radius: 5px;
 		border-top-right-radius: 5px;
 	}
@@ -231,12 +230,12 @@
 		margin-right: 65px;
   		width: 300px;
   		background-color: #F3F3F3;
-  		height: 580px;
+  		height: 440px;
 		border: 1px solid #08131C;
-		color: #08131C;
+		color: #2346F3;
 		overflow: visible;
 		margin-bottom: 65px;
-		text-align: center;
+		text-align: left;
 		vertical-align: top;
 		border-radius: 5px;
 	}
@@ -244,21 +243,56 @@
 		padding: 10px 15px 0px 15px;
 		overflow: visible;
 		font-weight: 600;
+		line-height: 25px;
 	}
-	.button {
-		font-size: 1em;
-		color: #F3F3F3;
-		text-decoration: none;
-		background-color: #2346F3;
-		padding: 10px;
-		margin: 10px 0px;
-		border-radius: 20px;
+	/* The Modal (background) */
+	.modal {
+        display: none; /* hidden by default */
+        position: fixed; 
+        z-index: 1; /* sit on top */
+        padding-top: 100px; /* location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+        background-color: rgb(0,0,0); /* fallback colour */
+        background-color: rgba(0,0,0,0.9); 
+        cursor: default;
 	}
-	button:hover {
-		opacity: 0.5;
+	/* modal caption */
+	#caption {
+	  	margin: auto;
+	  	display: block;
+	  	width: 80%;
+	  	max-width: 700px;
+	  	text-align: center;
+	  	color: #2346F3;
+	  	padding: 10px 0;
+	  	height: 150px;
+	  	font-size: 1em;
+	  	overflow: auto;
+	}
+	/* close button (x) */
+	.close {
+	  	position: absolute;
+	  	top: 15px;
+	  	right: 35px;
+	  	color: #F0B719;
+	  	font-size: 40px;
+	  	font-weight: bold;
+	  	transition: 0.3s;
+	}
+
+	.close:hover, .close:focus {
+	  	color: #F26697;
+	  	text-decoration: none;
+	  	cursor: pointer;
 	}
 </style>
 <!--END OF CSS CODES-->
+
+	
 	
 </head>
 <body>
@@ -271,8 +305,8 @@
 		<li style="float:left;margin-top:-25px;"><a href="index.html"><img src="ZARA HAPIZ LOGO - LARGE BLACK.png" alt="ZH" style="width:90px;height:90px;"></a></li>
 	</ul><ul style="float:right;margin-top:5px;font-size:1.1em;"><div class="topnav" id="myTopnav">
 		<a href="index.html">home</a>
-  		<a href="art gallery.html">art gallery</a>
-		<a class="active" href="store.html">store</a>
+  		<a class="active" href="art gallery.html">art gallery</a>
+		<a href="store.html">store</a>
 		<a href="contact.html">contact</a>
 		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
     	<i class="fa fa-bars" style="font-size:7.5vw;"></i>
@@ -283,99 +317,96 @@
 	<!--END OF HEADER STUFF-->
 	
 	
+<!--MAIN!!!!-->	
+	<div class="green-bg">
+		<h1>
+			Zara’s
+			<p style="color:#F21F1F;margin:0;"> art gallery<i>!</i></p>
+		</h1><br>
+		<h3>
+			My drawings and stuff. Check it out.
+		</h3>
+	</div>
 	
-		<h1>Freeeeebies!</h1>
-		<br><h4>My digital creations available for free download!
-		<br><i style="opacity:0.7;font-size:0.8em">Everything provided here is meant for PERSONAL USE ONLY :&#41;</i></h4>
-
-		<h2>Posters</h2>
-	
-		<div class="gallery">
-		<img src="artwork/Bound 2 - Kanye West.png" width="300px" alt="Bound 2 - Kanye West">
-		<div class="container">Bound 2 - Kanye West<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1Ts5Iwqw2tZeaygdNhZvTI6QrUHaV66qm/view?usp=sharing" target="_blank">download PNG</a></div></div></div>	
-	
-		<div class="gallery">
-		<img src="artwork/Thats What They All Say - Jack Harlow.png" width="300px" alt="Thats What They All Say - Jack Harlow">
-		<div class="container">Thats What They All Say - Jack Harlow<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1qkMSQQqd12kk83oO2sefbLw-CN1a-t_j/view?usp=sharing" target="_blank">download PNG</a></div></div></div>	
-		
-		<div class="gallery">
-		<img src="artwork/Jackman. - Jack Harlow.png" width="300px" alt="Jackman. - Jack Harlow">
-		<div class="container">Jackman. - Jack Harlow<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1Km-xrH5UKkgZJS4Tnik5t94n5yYHHb41/view?usp=sharing" target="_blank">download PNG</a></div></div></div>	<div class="gallery">
-	
-		<img src="artwork/UTOPIA - Travis Scott.png" width="300px" alt="UTOPIA - Travis Scott">
-		<div class="container">UTOPIA - Travis Scott<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1GBeJ-XlNzZszKWfbTWScVMkeprvPQzY-/view?usp=sharing" target="_blank">download PNG</a></div></div></div>	<div class="gallery">
-	
-		<img src="artwork/BARBIE 2023.png" width="300px" alt="Barbie (2023)">
-		<div class="container">Barbie (2023)<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1vJ2bQ9a_vkyjCqvmT0rXGywp24T1do3_/view?usp=sharing" target="_blank">download PNG</a></div></div></div>	
-	
-		<div class="gallery">
-		<img src="artwork/Flashing Lights - Kanye West.png" width="300px" alt="Flashing Lights - Kanye West">
-		<div class="container">Flashing Lights - Kanye West<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1cX3TVXmjZL2mFCleOUxCAYjyLoQsgZmg/view?usp=sharing" target="_blank">download PNG</a></div></div></div>	
-	
-		<div class="gallery">
-		<img src="artwork/Come Home The Kids Miss You - Jack Harlow.png" width="300px" alt="Come Home The Kids Miss You - Jack Harlow">
-		<div class="container">Come Home The Kids Miss You - Jack Harlow<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1o0hVPjJTDq_hOI0MTV6Q3y5KpE1WJmNr/view?usp=sharing" target="_blank">download PNG</a></div></div></div>	
-	
-		<div class="gallery">
-		<img src="artwork/Tamale - Tyler, The Creator.png" width="300px" alt="Tamale - Tyler, The Creator">
-		<div class="container">Tamale - Tyler, The Creator<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1whX2wjFpYFFb3NHzQjdwwx8z8_cwqdOC/view?usp=sharing" target="_blank">download PNG</a></div></div></div>	
-		
-		<div class="gallery">
-		<img src="artwork/JUGGERNAUT - Tyler, The Creator.png" width="300px" alt="JUGGERNAUT (feat. Lil Uzi Vert & Pharrell Williams)">
-		<div class="container">JUGGERNAUT - Tyler, The Creator<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1HzqEMJHKosbOswL4A_Xi0TN31vs6SAGZ/view?usp=sharing" target="_blank">download PNG</a></div></div></div>	
-	
-		<div class="gallery">
-		<img src="artwork/I Ain't Got Time! - Tyler.png" width="300px" alt="I Ain't Got Time! - Tyler, The Creator">
-		<div class="container">I Ain't Got Time! - Tyler, The Creator<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1RLbmrsHETk0TOOVxCZIdJetdKyRyCiql/view?usp=sharing" target="_blank">download PNG</a></div></div></div>
-	
-		<div class="gallery">
-		<img src="artwork/F2F.png" width="300px" alt="F2F - SZA">
-		<div class="container">F2F - SZA<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1chUJauhGhReGna4KxQbZsKBFU38Jtc1Y/view?usp=sharing" target="_blank">download PNG</a></div></div></div>
-	
-		<div class="gallery">
-		<img src="artwork/garden (say it like dat).png" width="300px" alt="F2F - SZA">
-		<div class="container">Garden (Say It Like Dat) - SZA<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1UGCigJldydBfBdMg38Iy846ICWtyU0fI/view?usp=sharing" target="_blank">download PNG</a></div></div></div>
-	
-		<div class="gallery">
-		<img src="artwork/GHOST IN THE MACHINE.png" width="300px" alt="Ghost in the Machine poster">
-		<div class="container">Ghost in the Machine<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/103zLfGLvLdlU6yTukoKOb28AELYxy8-M/view?usp=sharing" target="_blank">download PNG</a></div></div></div>
+	<!---2023--->
+	<h2 style="color:#F0B719;"><p>2023</p></h2>
+	<div class="gallery">
+	<img id="img2023-10" src="artwork/jack harlow.png" width="300px" height="300px" alt="Jack Harlow">
+	<div class="container">jack harlow<br><h4>8/8/23</h4></div></div>	
+	<div class="gallery">
+	<img id="img2023-9" src="artwork/prowler-42-1.png" width="300px" height="300px" alt="Miles Morales, the Prowler of Earth-42.">
+	<div class="container">earth-42’s prowler<br><h4>6/6/23</h4></div></div>	
+	<div class="gallery">
+	<img id="img2023-8" src="artwork/beabadoobee-1.png" width="300px" height="300px" alt="beabadoobee">
+	<div class="container">beabadoobee<br><h4>12/4/23</h4></div></div>	
+	<div class="gallery">
+	<img id="img2023-7" src="artwork/sza-1.png" width="300px" height="300px" alt="SZA">
+	<div class="container">SZA<br><h4>16/2/23</h4></div></div>	
+	<div class="gallery">
+	<img id="img2023-6" src="artwork/xavier-1.png" width="300px" height="300px" alt="Xavier Thorpe from <i>Wednesday</i> during the Poe Cup">
+	<div class="container">xavier thorpe<br><h4>8/2/23</h4></div></div>
+	<div class="gallery">
+	<img id="img2023-5" src="artwork/wednesday-1.png" width="300px" height="300px" alt="Wednesday Addams from <i>Wednesday</i> during the Poe Cup">
+	<div class="container">wednesday addams<br><h4>8/2/23</h4></div></div>
+	<div class="gallery">
+	<img id="img2023-4" src="artwork/enid-1.png" width="300px" height="300px" alt="Enid Sinclair from <i>Wednesday</i> during the Poe Cup">
+	<div class="container">enid sinclair<br><h4>8/2/23</h4></div></div>
+	<div class="gallery">
+	<img id="img2023-3" src="artwork/madeline-1.png" width="300px" height="300px" alt="Madeline Argy">
+	<div class="container">madeline argy<br><h4>6/2/23</h4></div></div>
+	<div class="gallery">
+	<img id="img2023-2" src="artwork/central cee-1.png" width="300px" height="300px" alt="Central Cee">
+	<div class="container">central cee<br><h4>5/2/23</h4></div></div>
+	<div class="gallery">
+	<img id="img2023-1" src="artwork/clairo-1.png" width="300px" height="300px" alt="Clairo">
+	<div class="container">clairo<br><h4>3/2/23</h4></div></div>
 	
 	
-		<h2>Python codes</h2>
-		<div class="gallery">
-		<img src="artwork/converter.png" width="300px" height="300px" alt="Number System Converter">
-		<div class="container">number system converter<br><h4>*this code is fully in Malay :)</h4>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1FJ3pngXxi71Klq_xtU-MnXmbviWmoqBr/view?usp=sharing" target="_blank">download .py file</a></div></div></div>
-		<div class="gallery">
-		<img src="artwork/patterns.png" width="300px" height="300px" alt="Patterns and Sequences">
-		<div class="container">patterns and sequences<br><h4>*this code is fully in Malay :)</h4>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1qae4Isz2EdwrSkr2pxKUDwD33BfLc8E2/view?usp=sharing" target="_blank">download .py file</a></div></div></div>
-		<div class="gallery">
-		<img src="artwork/compendium.png" width="300px" height="300px" alt="TLoZ:BotW Compendium">
-		<div class="container">TLoZ:BotW compendium<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1orJHjPoCbh2-2vtkXd62ca2OrLiUxy9K/view?usp=sharing" target="_blank">download .py file</a></div></div></div>
+	
+	<!---2022--->
+	<h2 style="color:#F0B719;"><p>2022</p></h2>
+	<div class="gallery">
+	<img id="img2022-2" src="artwork/pear-1.png" width="300px" height="300px" alt="Pear; acrylic on paper">
+	<div class="container">pear<br><h4>27/6/22</h4></div></div>
+	<div class="gallery">
+	<img id="img2022-3" src="artwork/save the animals.png" width="300px" height="300px" alt="Save The Animals">
+	<div class="container">save the animals<br><h4>9/5/22</h4></div></div>
+	<div class="gallery">
+	<img id="img2022-1" src="artwork/waktu senja-1.png" width="300px" height="300px" alt="Waktu Senja; acrylic on paper">
+	<div class="container">waktu senja<br><h4>31/3/22</h4></div></div>
+	
+	
+	<!---2021--->
+	<h2 style="color:#F0B719;"><p>2021</p></h2>
+	<div class="gallery">
+	<img id="img2021-4" src="artwork/egg-1.png" width="300px" height="300px" alt="Fried Egg">
+	<div class="container">fried egg<br><h4>30/11/21</h4></div></div>
+	<div class="gallery">
+	<img id="img2021-3" src="artwork/promises-1.png" width="300px" height="300px" alt="Promises">
+	<div class="container">promises<br><h4>7/10/21</h4></div></div>
+	<div class="gallery">
+	<img id="img2021-2" src="artwork/willow-1.png" width="300px" height="300px" alt="WILLOW">
+	<div class="container">willow<br><h4>11/6/21</h4></div></div>
+	<div class="gallery">
+	<img id="img2021-1" src="artwork/manta ray-1.png" width="300px" height="300px" alt="Manta Ray (dedicated to Suraya)">
+	<div class="container">manta ray<br><h4>22/5/21</h4></div></div>
+<!--END OF MAIN-->	
+	<!-- MODAL -->
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="img01" alt="Sorry, image failed to load!">
+	<div id="caption"></div>
+</div>
 	
 	
 	
 	<!--FOOTER STUFF-->
-	<footer>
+	<footer><br><br>
 		<a href="https://www.instagram.com/zaramysh/"><img src="instagram.png" style="width:30px;display:inline-block;" alt="Instagram"></a>
 		<a href="https://www.tiktok.com/@zaramysh"><img src="tik-tok.png" style="width:30px;display:inline-block;" alt="TikTok"></a>
 		<p>© Zara Hapiz 2023</p>
 		<p style="font-size:0.7em;">Special thanks to Cikgu Hidayati and Cikgu Rosila, my Computer Science teachers, for helping this website come to life.</p>
+		
 	</footer>
 	<!--END OF FOOTER STUFF-->
 	<!--JAVASCRIPT SCRIPTS-->
@@ -388,6 +419,161 @@
 			x.className = "topnav";
 	  	}
 	}
-	</script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// IMAGE MODAL
+var img = document.getElementById('img2023-10');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}
+// IMAGE MODAL
+var img = document.getElementById('img2023-9');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}
+// IMAGE MODAL
+var img = document.getElementById('img2023-8');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}
+// IMAGE MODAL
+var img = document.getElementById('img2023-7');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}// IMAGE MODAL
+var img = document.getElementById('img2023-6');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}
+// IMAGE MODAL
+var img = document.getElementById('img2023-5');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}
+// IMAGE MODAL
+var img = document.getElementById('img2023-4');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}
+// IMAGE MODAL
+var img = document.getElementById('img2023-3');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}
+// IMAGE MODAL
+var img = document.getElementById('img2023-2');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}
+// IMAGE MODAL
+var img = document.getElementById('img2023-1');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}
+// IMAGE MODAL
+var img = document.getElementById('img2022-2');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}
+// IMAGE MODAL
+var img = document.getElementById('img2022-1');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}
+// IMAGE MODAL
+var img = document.getElementById('img2021-4');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}
+// IMAGE MODAL
+var img = document.getElementById('img2021-3');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}
+// IMAGE MODAL
+var img = document.getElementById('img2021-2');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+	  modal.style.display = "block";
+	  modalImg.src = this.src;
+	  captionText.innerHTML = this.alt;
+}
+// IMAGE MODAL
+var img = document.getElementById('img2021-1');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+ 	modal.style.display = "block";
+  	modalImg.src = this.src;
+  	captionText.innerHTML = this.alt;
+}
+
+
+// get the x
+var span = document.getElementsByClassName("close")[0];
+
+// close the model when clicking x
+span.onclick = function() { 
+	modal.style.display = "none";
+}
+</script>
 </body>
 </html>
