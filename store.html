@@ -19,12 +19,12 @@
 		color: #F3F3F3;
 		margin: 35px;
 		background-color: #0A0A0A;
-		background-image: url("ZARA HAPIZ WEBSITE BG.png");
 		background-repeat: repeat-y;
 		background-position: left top;
   		background-attachment: scroll;
 		background-size: cover;
 		cursor: default;
+		overflow-x: hidden;
 	}
 	h1 {
 		font-family: "degular-display", sans-serif;
@@ -47,6 +47,7 @@
 		font-weight: 300;
 	}
 	h4 {
+		font-family: "neue-haas-grotesk-text",sans-serif;
 		margin: 10px 0 10px 0;
 		font-weight: 500;
 		font-size: 1em;
@@ -60,11 +61,11 @@
 		width: 10px;
 	}
 	::-webkit-scrollbar-track {
-		background: #08131C;
+		background: #0A0A0A;
 	}
 	::-webkit-scrollbar-thumb {
 		background: #F26697;
-		border: 1px solid #08131C;
+		border: 1px solid #0A0A0A;
 	}
 	::-webkit-scrollbar-thumb:hover {
 		background: #2346F3;
@@ -151,6 +152,21 @@
 	.row {
 		display: flex;
 	}
+	table {
+		border: 1px solid #F3F3F3;
+		width: 105%;
+		overflow: visible;
+		margin-left: -35px;
+		padding: 0;
+		border-collapse: collapse;
+	}
+	tr {
+		border: 1px solid #F3F3F3;
+	}
+	td {
+		border: 1px solid #F3F3F3;
+		padding: 0 20px;
+	}
 		/* responsive stuff */
 	@media screen and (max-width: 650px) {
 		html {
@@ -170,7 +186,7 @@
 			font-size: 6vw;
 		}
 		h4, h5 {
-			font-size: 5vw;
+			font-size: 4vw;
 		}
 		ul {
 			width: 50%;
@@ -194,7 +210,9 @@
 		width: 0px;
 		}
 		.topnav { 
-		background-color: #F3F3F3;
+			background-color: #F0B719;
+			border-radius: 5px;
+			z-index: 5;
 		}
 		.topnav a {display: none;}
   		.topnav a.icon {
@@ -223,22 +241,19 @@
 		margin: auto;
   		display: block;
 		cursor: default;
-		border-top-left-radius: 5px;
-		border-top-right-radius: 5px;
 	}
 	.gallery {
 		display: inline-block;
 		margin-right: 65px;
   		width: 300px;
-  		background-color: #F3F3F3;
+  		background-color: #0a0a0a;
   		height: 580px;
-		border: 1px solid #08131C;
-		color: #08131C;
+		border: 1px solid #F3F3F3;
+		color: #F3F3F3;
 		overflow: visible;
 		margin-bottom: 65px;
 		text-align: center;
 		vertical-align: top;
-		border-radius: 5px;
 	}
 	.container {
 		padding: 10px 15px 0px 15px;
@@ -247,15 +262,14 @@
 	}
 	.button {
 		font-size: 1em;
-		color: #F3F3F3;
+		color: #0A0A0A!important;
 		text-decoration: none;
-		background-color: #2346F3;
-		padding: 10px;
+		background-color: #F3F3F3;
+		padding: 7px 10px 10px;
 		margin: 10px 0px;
-		border-radius: 20px;
 	}
-	button:hover {
-		opacity: 0.5;
+	.button:hover {
+		background-color: #F0B719;
 	}
 </style>
 <!--END OF CSS CODES-->
@@ -282,106 +296,121 @@
 	<div class="divider"></div>
 	<!--END OF HEADER STUFF-->
 	
-	
-	
-		<h1>Freeeeebies!</h1>
-		<br><h4>My digital creations available for free download!
-		<br><i style="opacity:0.7;font-size:0.8em">Everything provided here is meant for PERSONAL USE ONLY :&#41;</i></h4>
+		
+		
+		<br>
+		<table>
+		<tr>
+			<td><h1 style="font-family:'owners-narrow',sans-serif;font-weight:700;font-style:normal;font-size:15vw;margin-top:20px;">STORE</h1></td>
+			<td style="background-color:#F3F3F3;"><h1 style="color:#0A0A0A;vertical-align:top;text-align:justify;text-justify:inter-word;margin-left:-3px;">FREEBIES<i>!</i></h1>
+			<h4 style="color:#0A0A0A;vertical-align:top;text-align:justify;text-justify:inter-word;">
+				Download my posters designed with
+				<br>love. No charge. Satisfaction guaranteed.
+			</h4>
+			</td>
+		</tr>
+		</table>
+		
 
 		<h2>Posters</h2>
 	
 		<div class="gallery">
+		<img src="artwork/Violent Crimes - Kanye West.png" width="300px" alt="Violent Crimes - Kanye West">
+		<div class="container">Violent Crimes - Kanye West<br>
+		<a style="text-decoration:none;color:#0A0A0A;" href="https://drive.google.com/file/d/1g1qEit_2v22CgNu_HlX1yL_6rdyvEb8n/view?usp=sharing" target="_blank"><div class="button">download PNG</div></a></div></div>	
+	
+		<div class="gallery">
 		<img src="artwork/3D (feat. Jack Harlow) - Jung Kook.png" width="300px" alt="3D (feat. Jack Harlow) - Jung Kook">
 		<div class="container">3D (feat. Jack Harlow) - Jung Kook<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1eFiyGiiLphiNmNTIAh1jWte7Irlan-c8/view?usp=sharing" target="_blank">download PNG</a></div></div></div>	
+		<a style="text-decoration:none;color:#0A0A0A;" href="https://drive.google.com/file/d/1eFiyGiiLphiNmNTIAh1jWte7Irlan-c8/view?usp=sharing" target="_blank"><div class="button">download PNG</div></a></div></div>	
 	
 		<div class="gallery">
 		<img src="artwork/Runaway - Kanye West.png" width="300px" alt="Runaway (feat. Pusha T) - Kanye West">
 		<div class="container">Runaway (feat. Pusha T) - Kanye West, Pusha T<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/123thcxwGDj1g7lAyKRNgycfNo4MY7r4i/view?usp=sharing" target="_blank">download PNG</a></div></div></div>	
+		<a style="text-decoration:none;color:#0A0A0A;" href="https://drive.google.com/file/d/123thcxwGDj1g7lAyKRNgycfNo4MY7r4i/view?usp=sharing" target="_blank"><div class="button">download PNG</div></a></div></div>	
 	
 		<div class="gallery">
 		<img src="artwork/A BOY IS A GUN - Tyler, The Creator.png" width="300px" alt="A BOY IS A GUN* - Tyler, The Creator">
 		<div class="container">A BOY IS A GUN* - Tyler, The Creator<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1axy8Xy7kT_FazMpwSvHt2uDLAXGrQnUF/view?usp=sharing" target="_blank">download PNG</a></div></div></div>	
+		<a style="text-decoration:none;color:#0A0A0A;" href="https://drive.google.com/file/d/1axy8Xy7kT_FazMpwSvHt2uDLAXGrQnUF/view?usp=sharing" target="_blank"><div class="button">download PNG</div></a></div></div>	
 	
 		<div class="gallery">
 		<img src="artwork/Bound 2 - Kanye West.png" width="300px" alt="Bound 2 - Kanye West">
 		<div class="container">Bound 2 - Kanye West<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1Ts5Iwqw2tZeaygdNhZvTI6QrUHaV66qm/view?usp=sharing" target="_blank">download PNG</a></div></div></div>	
+		<a style="text-decoration:none;color:#0A0A0A;" href="https://drive.google.com/file/d/1Ts5Iwqw2tZeaygdNhZvTI6QrUHaV66qm/view?usp=sharing" target="_blank"><div class="button">download PNG</div></a></div></div>	
 	
 		<div class="gallery">
 		<img src="artwork/Thats What They All Say - Jack Harlow.png" width="300px" alt="Thats What They All Say - Jack Harlow">
 		<div class="container">Thats What They All Say - Jack Harlow<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1qkMSQQqd12kk83oO2sefbLw-CN1a-t_j/view?usp=sharing" target="_blank">download PNG</a></div></div></div>	
+		<a style="text-decoration:none;color:#0A0A0A;" href="https://drive.google.com/file/d/1qkMSQQqd12kk83oO2sefbLw-CN1a-t_j/view?usp=sharing" target="_blank"><div class="button">download PNG</div></a></div></div>	
 		
 		<div class="gallery">
 		<img src="artwork/Jackman. - Jack Harlow.png" width="300px" alt="Jackman. - Jack Harlow">
 		<div class="container">Jackman. - Jack Harlow<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1Km-xrH5UKkgZJS4Tnik5t94n5yYHHb41/view?usp=sharing" target="_blank">download PNG</a></div></div></div>	<div class="gallery">
+		<a style="text-decoration:none;color:#0A0A0A;" href="https://drive.google.com/file/d/1Km-xrH5UKkgZJS4Tnik5t94n5yYHHb41/view?usp=sharing" target="_blank"><div class="button">download PNG</div></a></div></div>	<div class="gallery">
 	
 		<img src="artwork/UTOPIA - Travis Scott.png" width="300px" alt="UTOPIA - Travis Scott">
 		<div class="container">UTOPIA - Travis Scott<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1GBeJ-XlNzZszKWfbTWScVMkeprvPQzY-/view?usp=sharing" target="_blank">download PNG</a></div></div></div>	<div class="gallery">
+		<a style="text-decoration:none;color:#0A0A0A;" href="https://drive.google.com/file/d/1GBeJ-XlNzZszKWfbTWScVMkeprvPQzY-/view?usp=sharing" target="_blank"><div class="button">download PNG</div></a></div></div>	<div class="gallery">
 	
 		<img src="artwork/BARBIE 2023.png" width="300px" alt="Barbie (2023)">
 		<div class="container">Barbie (2023)<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1vJ2bQ9a_vkyjCqvmT0rXGywp24T1do3_/view?usp=sharing" target="_blank">download PNG</a></div></div></div>	
+		<a style="text-decoration:none;color:#0A0A0A;" href="https://drive.google.com/file/d/1vJ2bQ9a_vkyjCqvmT0rXGywp24T1do3_/view?usp=sharing" target="_blank"><div class="button">download PNG</div></a></div></div>	
 	
 		<div class="gallery">
 		<img src="artwork/Flashing Lights - Kanye West.png" width="300px" alt="Flashing Lights - Kanye West">
 		<div class="container">Flashing Lights - Kanye West<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1cX3TVXmjZL2mFCleOUxCAYjyLoQsgZmg/view?usp=sharing" target="_blank">download PNG</a></div></div></div>	
+		<a style="text-decoration:none;color:#0A0A0A;" href="https://drive.google.com/file/d/1cX3TVXmjZL2mFCleOUxCAYjyLoQsgZmg/view?usp=sharing" target="_blank"><div class="button">download PNG</div></a></div></div>	
 	
 		<div class="gallery">
 		<img src="artwork/Come Home The Kids Miss You - Jack Harlow.png" width="300px" alt="Come Home The Kids Miss You - Jack Harlow">
 		<div class="container">Come Home The Kids Miss You - Jack Harlow<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1o0hVPjJTDq_hOI0MTV6Q3y5KpE1WJmNr/view?usp=sharing" target="_blank">download PNG</a></div></div></div>	
+		<a style="text-decoration:none;color:#0A0A0A;" href="https://drive.google.com/file/d/1o0hVPjJTDq_hOI0MTV6Q3y5KpE1WJmNr/view?usp=sharing" target="_blank"><div class="button">download PNG</div></a></div></div>	
 	
 		<div class="gallery">
 		<img src="artwork/Tamale - Tyler, The Creator.png" width="300px" alt="Tamale - Tyler, The Creator">
 		<div class="container">Tamale - Tyler, The Creator<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1whX2wjFpYFFb3NHzQjdwwx8z8_cwqdOC/view?usp=sharing" target="_blank">download PNG</a></div></div></div>	
+		<a style="text-decoration:none;color:#0A0A0A;" href="https://drive.google.com/file/d/1whX2wjFpYFFb3NHzQjdwwx8z8_cwqdOC/view?usp=sharing" target="_blank"><div class="button">download PNG</div></a></div></div>	
 		
 		<div class="gallery">
 		<img src="artwork/JUGGERNAUT - Tyler, The Creator.png" width="300px" alt="JUGGERNAUT (feat. Lil Uzi Vert & Pharrell Williams)">
 		<div class="container">JUGGERNAUT - Tyler, The Creator<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1HzqEMJHKosbOswL4A_Xi0TN31vs6SAGZ/view?usp=sharing" target="_blank">download PNG</a></div></div></div>	
+		<a style="text-decoration:none;color:#0A0A0A;" href="https://drive.google.com/file/d/1HzqEMJHKosbOswL4A_Xi0TN31vs6SAGZ/view?usp=sharing" target="_blank"><div class="button">download PNG</div></a></div></div>	
 	
 		<div class="gallery">
 		<img src="artwork/I Ain't Got Time! - Tyler.png" width="300px" alt="I Ain't Got Time! - Tyler, The Creator">
 		<div class="container">I Ain't Got Time! - Tyler, The Creator<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1RLbmrsHETk0TOOVxCZIdJetdKyRyCiql/view?usp=sharing" target="_blank">download PNG</a></div></div></div>
+		<a style="text-decoration:none;color:#0A0A0A;" href="https://drive.google.com/file/d/1RLbmrsHETk0TOOVxCZIdJetdKyRyCiql/view?usp=sharing" target="_blank"><div class="button">download PNG</div></a></div></div>
 	
 		<div class="gallery">
 		<img src="artwork/F2F.png" width="300px" alt="F2F - SZA">
 		<div class="container">F2F - SZA<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1chUJauhGhReGna4KxQbZsKBFU38Jtc1Y/view?usp=sharing" target="_blank">download PNG</a></div></div></div>
+		<a style="text-decoration:none;color:#0A0A0A;" href="https://drive.google.com/file/d/1chUJauhGhReGna4KxQbZsKBFU38Jtc1Y/view?usp=sharing" target="_blank"><div class="button">download PNG</div></a></div></div>
 	
 		<div class="gallery">
 		<img src="artwork/garden (say it like dat).png" width="300px" alt="F2F - SZA">
 		<div class="container">Garden (Say It Like Dat) - SZA<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1UGCigJldydBfBdMg38Iy846ICWtyU0fI/view?usp=sharing" target="_blank">download PNG</a></div></div></div>
+		<a style="text-decoration:none;color:#0A0A0A;" href="https://drive.google.com/file/d/1UGCigJldydBfBdMg38Iy846ICWtyU0fI/view?usp=sharing" target="_blank"><div class="button">download PNG</div></a></div></div>
 	
 		<div class="gallery">
 		<img src="artwork/GHOST IN THE MACHINE.png" width="300px" alt="Ghost in the Machine poster">
 		<div class="container">Ghost in the Machine<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/103zLfGLvLdlU6yTukoKOb28AELYxy8-M/view?usp=sharing" target="_blank">download PNG</a></div></div></div>
+		<a style="text-decoration:none;color:#0A0A0A;" href="https://drive.google.com/file/d/103zLfGLvLdlU6yTukoKOb28AELYxy8-M/view?usp=sharing" target="_blank"><div class="button">download PNG</div></a></div></div>
 	
-	
+	<!--
 		<h2>Python codes</h2>
 		<div class="gallery">
 		<img src="artwork/converter.png" width="300px" height="300px" alt="Number System Converter">
 		<div class="container">number system converter<br><h4>*this code is fully in Malay :)</h4>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1FJ3pngXxi71Klq_xtU-MnXmbviWmoqBr/view?usp=sharing" target="_blank">download .py file</a></div></div></div>
+		<a style="text-decoration:none;color:#0A0A0A;" href="https://drive.google.com/file/d/1FJ3pngXxi71Klq_xtU-MnXmbviWmoqBr/view?usp=sharing" target="_blank"><div class="button">download .py file</div></a></div></div>
 		<div class="gallery">
 		<img src="artwork/patterns.png" width="300px" height="300px" alt="Patterns and Sequences">
 		<div class="container">patterns and sequences<br><h4>*this code is fully in Malay :)</h4>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1qae4Isz2EdwrSkr2pxKUDwD33BfLc8E2/view?usp=sharing" target="_blank">download .py file</a></div></div></div>
+		<a style="text-decoration:none;color:#0A0A0A;" href="https://drive.google.com/file/d/1qae4Isz2EdwrSkr2pxKUDwD33BfLc8E2/view?usp=sharing" target="_blank"><div class="button">download .py file</div></a></div></div>
 		<div class="gallery">
 		<img src="artwork/compendium.png" width="300px" height="300px" alt="TLoZ:BotW Compendium">
 		<div class="container">TLoZ:BotW compendium<br>
-		<div class="button"><a style="text-decoration:none;color:#f5f5f5;" href="https://drive.google.com/file/d/1orJHjPoCbh2-2vtkXd62ca2OrLiUxy9K/view?usp=sharing" target="_blank">download .py file</a></div></div></div>
+		<a style="text-decoration:none;color:#0A0A0A;" href="https://drive.google.com/file/d/1orJHjPoCbh2-2vtkXd62ca2OrLiUxy9K/view?usp=sharing" target="_blank"><div class="button">download .py file</div></a></div></div> -->
 	
 	
 	
@@ -390,7 +419,6 @@
 		<a href="https://www.instagram.com/zaramysh/"><img src="instagram.png" style="width:30px;display:inline-block;" alt="Instagram"></a>
 		<a href="https://www.tiktok.com/@zaramysh"><img src="tik-tok.png" style="width:30px;display:inline-block;" alt="TikTok"></a>
 		<p>© Zara Hapiz 2023</p>
-		<p style="font-size:0.7em;">Special thanks to Cikgu Hidayati and Cikgu Rosila, my Computer Science teachers, for helping this website come to life.</p>
 	</footer>
 	<!--END OF FOOTER STUFF-->
 	<!--JAVASCRIPT SCRIPTS-->
