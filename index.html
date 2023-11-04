@@ -26,6 +26,9 @@
 		cursor: default;
 		overflow-x: hidden;
 	}
+	#everything {
+		  
+	}
 	h1 {
 		font-family: "degular-display", sans-serif;
 		font-weight: 700;
@@ -70,6 +73,21 @@
 	::-webkit-scrollbar-thumb:hover {
 		background: #2346F3;
 	}
+	/* loader stuff */
+	#loader {
+		  border: 10px solid #F26697; /* Light grey */
+		  border-top: 10px solid #2346F3; /* Blue */
+		  border-radius: 50%;
+		  width: 120px;
+		  height: 120px;
+		  animation: spin 2s linear infinite;
+	}
+
+	@keyframes spin {
+		  0% { transform: rotate(0deg); }
+		  100% { transform: rotate(360deg); }
+	}
+
 	ul {
 		height: 0px;
 		list-style-type: none;
@@ -180,13 +198,11 @@
 		display: flex;
 	}
 	.stickers {
-		animation-name: titleHover;
-		animation-duration: 3s;
-		animation-iteration-count: 1;
+		transition: transform 0.3s;
 	}
-	/*.stickers img:hover {
+	.stickers img:hover {
 		transform: rotate(-3deg);
-	}*/
+	}
 	
 	
 		/* responsive stuff */
@@ -265,6 +281,10 @@
 	
 </head>
 <body>
+<!--<body onload="load()">
+	<div id="loader"></div>
+<div id="everything">-->
+	
 	<!--HEADER STUFF-->
 	<div class="ribbon"><div class="ribbon-text">
 	THANK YOU FOR VISITING ZARA'S WEBSITE! THANK YOU FOR VISITING ZARA'S WEBSITE! THANK YOU FOR VISITING ZARA'S WEBSITE
@@ -319,11 +339,11 @@
 			JUGGERNAUT (feat. Lil Uzi Vert &amp; Pharrell Williams) - Tyler, The Creator [POSTER]
 		</div>
 		<div class="column">
-			<h4 style="text-align:justify;text-justify:inter-word;padding:30px;">
+			<h4 style="text-align:justify;text-justify:inter-word;padding:10px;">
 				<i style="color:#F26697">WHAT’S UP?</i> My name’s Zara Hapiz. I’m a graphic designer, software engineer, and much more. You could possibly call me a jack of all trades. I’m really into hip hop, rap, and R&amp;B music, Nintendo video games, and sneakers.
 				<br><br>
 				I currently study pure Sciences and Computer Science at a secondary level. This website may be a display of my skill, considering I programmed and designed it myself. Nevertheless, I hope you enjoy browsing. <i style="color:#F26697">THANK YOU! :p</i>
-				<br><br><iframe style="border-radius:12px;margin-top:0;" src="https://open.spotify.com/embed/track/0PyJRNmJvJJ5OmffwQf5we?utm_source=generator" width="90%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></h4>
+				<br><br><iframe style="border-radius:12px;margin-top:0;" src="https://open.spotify.com/embed/track/0PyJRNmJvJJ5OmffwQf5we?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></h4>
 			<!--
 			0PyJRNmJvJJ5OmffwQf5we - State Fair
 			54FJWt8YIA1IHjmUxuDxwi - Praise God
@@ -331,56 +351,85 @@
 			3DK6m7It6Pw857FcQftMds - Runaway
 			-->
 		</div></div><br><br><br>
-		<h1 style="font-family:'owners-narrow',sans-serif;font-weight:700;font-style:normal;font-size:15vw!important;text-align:center;color:#F0B719;">PROLOGUE!</h1>
-		<h4 style="text-align:justify;text-justify:inter-word;padding:30px;">
-			Alright, first and foremost, I’d like to thank my parents. My mum and dad. Without them, I wouldn’t be here, both figuratively and literally. My mum is awesome. She inspires me to achieve greater heights and has been nurturing and guiding me since birth. She inspired me to display my talents here. She’s like a real life Barbie. My dad, on the other hand, is the coolest person on earth. He pays for my design softwares, haha, but he also does other amazing things. I get my music taste from him. He inspired me to take my passion for computer science further, and now that’s my ambition. I’d also like to give an honourable mention to my younger siblings, Azeem and Mysha, who give me constant unconditional support.
-			<br><br>
-			I’d also like to thank Cikgu Rosila and Cikgu Hidayati. They’d been my Computer Science teachers throughout 2020-2022 and without them, this website wouldn’t exist, no joke. I wouldn’t know how to code at all without them. The idea of coding my own website wouldn’t even cross my mind without them. 
-			<br><br>
-			Last, but definitely not least, I’d like to express my appreciation towards my amazing friends. Adam, Afina, Airel, Airin, Aishah, Aleesya, Alisha, Aliya, Alyssa, Azeem, Cassandra, Hamzah, Lakhiesa, Lara, Ranjit, Syarafina, Uwais, just to name a few. You guys motivate me to embrace my talents and skills, and I truly wouldn’t be me without all of you.
-		</h4><br><br><br>
 		<div class="row">
 			<div class="column">
 				<h1>Latest Projects!</h1>
-				<h4 style="margin-top:30px;text-align:justify;text-justify:inter-word;padding:30px;"><a href="https://zaramysh.github.io/apple/" style="color:#2346F3;" target="_blank"><b>Click me to visit Zara’s Apple website!</b></a>
+				<h4 style="margin-top:30px;text-align:justify;text-justify:inter-word;padding:10px;"><a href="https://zaramysh.github.io/apple/" style="color:#2346F3;" target="_blank"><b>Click me to visit Zara’s Apple website!</b></a>
 				<br><br>
 				I was tasked with a school project to design a future smartphone device. This is a faux Apple website I programmed for the then-upcoming iPhone 15 before its release. 
 				<br><br>The <i>real</i> iPhone 15 was just released and not many of my predictions were accurate.
 				<br><br><i>PHOTOS DO NOT BELONG TO ME!</i>
-				<br><br><iframe style="border-radius:12px;margin-top:0;" src="https://open.spotify.com/embed/track/3DK6m7It6Pw857FcQftMds?utm_source=generator" width="90%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></h4>
+				<br><br><iframe style="border-radius:12px;margin-top:0;" src="https://open.spotify.com/embed/track/3DK6m7It6Pw857FcQftMds?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></h4>
 			<!--
-			0PyJRNmJvJJ5OmffwQf5we - State Fair
-			54FJWt8YIA1IHjmUxuDxwi - Praise God
-			6SdQfCiVae1EXK1pQ6b92o - Rendezvous
-			3DK6m7It6Pw857FcQftMds - Runaway
+			1ofhfV90EnYhEr7Un2fWiv - Changes - 2Pac
+			0PyJRNmJvJJ5OmffwQf5we - State Fair - Jack Harlow
+			54FJWt8YIA1IHjmUxuDxwi - Praise God - Ye
+			6SdQfCiVae1EXK1pQ6b92o - Rendezvous - Jack Harlow
+			3DK6m7It6Pw857FcQftMds - Runaway - Ye
+			2YSzYUF3jWqb9YP9VXmpjE - IDGAF - Drake
 			-->
 			</div>
 			<div class="column">
 				<img src="artwork/SMARTPHONE POSTER square!.png" width="100%" alt="oh no picture gone :(">
 				“Future” iPhone 15 by Zara [POSTER] (Not affiliated with Apple)
 			</div>
-		</div>
+		</div><br><br><br>
+	
 		<div class="row">
 			<div class="column">
 				<img src="artwork/ENGLISH 1.png" width="100%" alt="oh no picture gone :(">
 				<i>Montigo</i> Ace Bottle [POSTER] (Not affiliated with Montigo)
 			</div>
 			<div class="column">
-				<h4 style="margin-top:30px;text-align:justify;text-justify:inter-word;padding:30px;">
+				<h4 style="margin-top:30px;text-align:justify;text-justify:inter-word;padding:10px;">
 					I received this Montigo Ace Bottle in Sunset Coral as a gift for my birthday this year and it’s such a game-changer, man..
 					<br><br> It keeps my water cool all day. I know this sounds like an advertisement, but I promise Montigo doesn’t even know I exist. I just really like their products.
-				<br><br><iframe style="border-radius:12px;margin-top:0;" src="https://open.spotify.com/embed/track/1ofhfV90EnYhEr7Un2fWiv?utm_source=generator" width="90%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+				<br><br><iframe style="border-radius:12px;margin-top:0;" src="https://open.spotify.com/embed/track/1ofhfV90EnYhEr7Un2fWiv?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 				<br><br> P.S. All my posters are geared towards the future. I have no idea why. Apparently I’m a psychic.
 				</h4>
 			<!--
-			1ofhfV90EnYhEr7Un2fWiv - Changes
-			0PyJRNmJvJJ5OmffwQf5we - State Fair
-			54FJWt8YIA1IHjmUxuDxwi - Praise God
-			6SdQfCiVae1EXK1pQ6b92o - Rendezvous
-			3DK6m7It6Pw857FcQftMds - Runaway
+			1ofhfV90EnYhEr7Un2fWiv - Changes - 2Pac
+			0PyJRNmJvJJ5OmffwQf5we - State Fair - Jack Harlow
+			54FJWt8YIA1IHjmUxuDxwi - Praise God - Ye
+			6SdQfCiVae1EXK1pQ6b92o - Rendezvous - Jack Harlow
+			3DK6m7It6Pw857FcQftMds - Runaway - Ye
+			2YSzYUF3jWqb9YP9VXmpjE - IDGAF - Drake
 			-->
 			</div>
+		</div><br><br><br>
+	
+		<div class="row">
+			<div class="column">
+				<h1>PERSADA <i>MWT</i></h1>
+				<h4 style="margin-top:30px;text-align:justify;text-justify:inter-word;padding:10px;">
+				PERSADA is my school, SMK Taman Melawati’s, official magazine. It has been published annually for almost 28 years as of 2023. I’m proud to say that I’m a part of its Editorial Board, specifically the Graphic Design department. It’s been a blast working with our head editors: Wan, Zahra, Azeem, Dayana, as well as everyone else in this family.
+				<br><br> Look out for this year’s issue (28th Edition)!
+				<br><br><a href="https://quarterlypersada.wixsite.com/e-pinnaclesofficials" style="color:#2346F3;" target="_blank"><b>Click me to visit PERSADA’s quarterly magazine site!</b></a>
+				<br><br><iframe style="border-radius:12px;margin-top:0;" src="https://open.spotify.com/embed/track/2YSzYUF3jWqb9YP9VXmpjE?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></h4>
+			<!--
+			1ofhfV90EnYhEr7Un2fWiv - Changes - 2Pac
+			0PyJRNmJvJJ5OmffwQf5we - State Fair - Jack Harlow
+			54FJWt8YIA1IHjmUxuDxwi - Praise God - Ye
+			6SdQfCiVae1EXK1pQ6b92o - Rendezvous - Jack Harlow
+			3DK6m7It6Pw857FcQftMds - Runaway - Ye
+			2YSzYUF3jWqb9YP9VXmpjE - IDGAF - Drake
+			-->
+			</div>
+				<div class="column">
+				<img src="artwork/JENTERA PENGGERAK COVER '23.jpg" width="100%" alt="oh no picture gone :(">
+				<i>Jentera Penggerak</i> page for 2023’s upcoming issue
+			</div>
 		</div>
+	
+	
+	<br><br><br><h1 style="font-family:'owners-narrow',sans-serif;font-weight:700;font-style:normal;font-size:15vw!important;text-align:center;color:#F0B719;">PROLOGUE!</h1>
+		<h4 style="text-align:justify;text-justify:inter-word;padding:30px;">
+			Alright, first and foremost, I’d like to thank my parents. My mum and dad. Without them, I wouldn’t be here, both figuratively and literally. My mum is awesome. She inspires me to achieve greater heights and has been nurturing and guiding me since birth. She inspired me to display my talents here. She’s like a real life Barbie. My dad, on the other hand, is the coolest person on earth. He pays for my design softwares, haha, but he also does other amazing things. I get my music taste from him. He inspired me to take my passion for computer science further, and now that’s my ambition. I’d also like to give an honourable mention to my younger siblings, Azeem and Mysha, who give me constant unconditional support.
+			<br><br>
+			I’d also like to thank Cikgu Rosila and Cikgu Hidayati. They’d been my Computer Science teachers throughout 2020-2022 and without them, this website wouldn’t exist, no joke. I wouldn’t know how to code at all without them. The idea of coding my own website wouldn’t even cross my mind without them. 
+			<br><br>
+			Last, but definitely not least, I’d like to express my appreciation towards my amazing friends. Adam, Afina, Airel, Airin, Aishah, Aleesya, Alisha, Aliya, Alyssa, Azeem, Cassandra, Hamzah, Lakhiesa, Lara, Ranjit, Syarafina, Uwais, just to name a few. You guys motivate me to embrace my talents and skills, and I truly wouldn’t be me without all of you.
+		</h4>
 	
 	
 	
@@ -391,8 +440,9 @@
 		<p>© Zara Hapiz 2023</p>
 		<p style="font-size:0.7em;">Special thanks to Cikgu Hidayati and Cikgu Rosila, my Computer Science teachers, for helping this website come to life.</p>
 		<embed><a href="https://acadooghostwriter.com/" style="opacity: 0; cursor:default;">https://acadooghostwriter.com</a> <script type="text/javascript" src="https://www.freevisitorcounters.com/auth.php?id=1d304043b64be22a3a5ba7a5a465aa9a5c4460cf"></script>
-<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1019120/t/5"></script>
+<!--<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1019120/t/5"></script>-->
 	</footer>
+<!--</div>-->
 	<!--END OF FOOTER STUFF-->
 	<!--JAVASCRIPT SCRIPTS-->
 	<script>
@@ -404,6 +454,31 @@
 			x.className = "topnav";
 	  	}
 	}
+		
+	const loading;
+	
+	document.onreadystatechange = function () {
+		const state = document.readyState
+		if (state == 'interactive') {
+        document.getElementById('everything').style.visibility="hidden";
+  		} else if (state == 'complete') {
+      		setTimeout(function(){
+				document.getElementById('interactive');
+				document.getElementById('loader').style.visibility="hidden";
+				document.getElementById('everything').style.visibility="visible";
+      		},1000);
+  		}
+	}
+
+	//function load() {
+	//  loading = setTimeout(showPage, 3000);
+	//}
+
+	//function showPage() {
+	//  document.getElementById("loader").style.display="none";
+	//  document.getElementById("everything").style.display="block";
+	//}
+		
 		//const observer = new IntersectionObserver(entries => {
 	  	// Loop over the entries
 	  	//entries.forEach(entry => {
