@@ -7,12 +7,15 @@
 <link rel="icon" type="image/x-icon" href="ZARA HAPIZ LOGO SMALL.png">
 <link rel="stylesheet" href="https://use.typekit.net/oag6cqw.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 <!--CSS CODES-->
 <style>
 	body {
-		font-family: "degular", sans-serif;
+		font-family: 'Fragment Mono', monospace;
 		font-weight: 500;
 		font-style: normal;
 		font-size: 1.5em;
@@ -26,9 +29,6 @@
 		cursor: default;
 		overflow-x: hidden;
 	}
-	#everything {
-		  
-	}
 	h1 {
 		font-family: "degular-display", sans-serif;
 		font-weight: 700;
@@ -36,11 +36,9 @@
 		font-size: 4em;
 		margin: 10px;
 		line-height: 0.8em;
-		animation-name: titleHover;
-		animation-duration: 3s;
-		animation-iteration-count: 1;
 	}
 	h2 {
+		font-family: "neue-haas-grotesk-text", sans-serif;
 		margin: 0;
 		margin-top: 20px;
 		font-weight: 600;
@@ -50,7 +48,6 @@
 		font-weight: 300;
 	}
 	h4 {
-		font-family: "neue-haas-grotesk-text",sans-serif;
 		margin: 10px 0 10px 0;
 		font-weight: 500;
 		font-size: 1em;
@@ -73,21 +70,6 @@
 	::-webkit-scrollbar-thumb:hover {
 		background: #2346F3;
 	}
-	/* loader stuff */
-	#loader {
-		  border: 10px solid #F26697; /* Light grey */
-		  border-top: 10px solid #2346F3; /* Blue */
-		  border-radius: 50%;
-		  width: 120px;
-		  height: 120px;
-		  animation: spin 2s linear infinite;
-	}
-
-	@keyframes spin {
-		  0% { transform: rotate(0deg); }
-		  100% { transform: rotate(360deg); }
-	}
-
 	ul {
 		height: 0px;
 		list-style-type: none;
@@ -98,7 +80,6 @@
 	}
 	ul a {
 		display: block;
-		color: black;
 		margin: 15px 15px 15px 30px;
 		text-decoration: none;
 		color: #F3F3F3;
@@ -112,19 +93,12 @@
 	.active {
 		color: #2346F3;
 	}
-	@keyframes titleHover {
-		from {opacity: 0;}
-		to {opacity: 1;}
-	}
-	embed {
-		cursor: default;
-	}
 	.ribbon {
 		margin: -35px;
 		font-size: 0.8em;
 		text-align: center;
 		background-color: #F0B719;
-		border-bottom: 1px solid #0A0A0A;
+		border-bottom: 1px solid #08131C;
 		overflow-x: hidden;
 		overflow-y: hidden;
 		height: 38px;
@@ -132,7 +106,7 @@
 		white-space: nowrap;
 	}
 	.ribbon-text {
-		color: #0A0A0A;
+		color: #08131C;
 		font-size: 1.4em;
   		animation: bannermove 10s linear infinite;
  		animation-play-state: running;
@@ -140,46 +114,19 @@
  		animation-direction: alternate-reverse;
 	}
 	@keyframes bannermove {
-		0% {
-		transform: translate(0, 0);
-		}
-		100% {
-		transform: translate(-10%, 0);
-		}
-	}
+  		0% 
+	{
+    transform: translate(0, 0);
+  	}
+  	100% {
+    transform: translate(-10%, 0);
+  }
+}
 	.ribbon-text:hover {
 		-webkit-animation-play-state:paused;
 		-moz-animation-play-state:paused;
 		-o-animation-play-state:paused;
 		animation-play-state:paused;
-	}
-	.carouselbg {
-		background-color: #2346F3;
-		margin: 0 -50px;
-		padding: -20px 0;
-	}
-	.carousel {
-		overflow: visible;
-		white-space: nowrap;
-		margin: 0;
-		font-family: "owners-narrow", sans-serif;
-		font-weight: 700;
-		font-style: normal;
-		font-size: 10em !important;
-		color: #0a0a0a;
-		font-size: 1.4em;
-  		animation: carouselmove 50s linear infinite;
- 		animation-play-state: running;
- 		-webkit-animation-play-state: running;
- 		animation-direction: alternate;
-	}
-	@keyframes carouselmove {
-		0% {
-		transform: translate(0, 0);
-		}
-		100% {
-		transform: translate(-1030%, 0);
-		}
 	}
 	footer {
 		color: #F3F3F3;
@@ -197,11 +144,11 @@
 	.row {
 		display: flex;
 	}
-	.stickers {
-		transition: transform 0.3s;
-	}
-	.stickers img:hover {
-		transform: rotate(-3deg);
+	@keyframes colourchange {
+  		50% {
+			-webkit-filter: hue-rotate(360deg); 
+			filter: hue-rotate(360deg);
+  		}
 	}
 	
 	
@@ -224,7 +171,7 @@
 			font-size: 6vw;
 		}
 		h4, h5 {
-			font-size: 4vw;
+			font-size: 3vw;
 		}
 		ul {
 			width: 50%;
@@ -233,9 +180,12 @@
 		ul a {
 			margin-top: 3.5vw;
 			font-size: 7vw;
-			line-height: 8vw;
+			line-height: 4vw;
 			overflow: visible;
 			color: #08131C;
+		}
+		ul a:hover {
+			transform: rotate(5deg);
 		}
 		.row {
 			display: block;
@@ -267,13 +217,65 @@
 			float: none;
 			display: block;
 			text-align: left;
+			font-size: 4.5vw;
 		}
 		i {
 			width: "40vw";
 		}
-			.stickers {
-				z-index: 0;
-			}
+	}
+	/*INDEX STUFF*/
+	
+	embed {
+		cursor: default;
+	}
+	.carouselbg {
+		background-color: #2346F3;
+		margin: 0 -50px;
+		padding: -20px 0;
+	}
+	.carousel {
+		overflow: visible;
+		white-space: nowrap;
+		margin: 0;
+		font-family: "owners-narrow", sans-serif;
+		font-weight: 700;
+		font-style: normal;
+		font-size: 10em !important;
+		color: #0a0a0a;
+		font-size: 1.4em;
+  		animation: carouselmove 50s linear infinite;
+ 		animation-play-state: running;
+ 		-webkit-animation-play-state: running;
+ 		animation-direction: alternate;
+	}
+	@keyframes carouselmove {
+		0% {
+		transform: translate(0, 0);
+		}
+		100% {
+		transform: translate(-1030%, 0);
+		}
+	}
+	
+	.stickers {
+		transition: transform 0.3s;
+	}
+	.spinny {
+		animation: spinny 50s linear infinite;
+ 		animation-play-state: running;
+ 		-webkit-animation-play-state: running;
+ 		animation-direction: alternate;
+	}
+	@keyframes spinny {
+		0% {
+		transform: rotate(0);
+		}
+		100% {
+		transform: rotate(360deg);
+		}
+	}
+	.stickers img:hover {
+		transform: rotate(-3deg);
 	}
 </style>
 <!--END OF CSS CODES-->
@@ -281,9 +283,6 @@
 	
 </head>
 <body>
-<!--<body onload="load()">
-	<div id="loader"></div>
-<div id="everything">-->
 	
 	<!--HEADER STUFF-->
 	<div class="ribbon"><div class="ribbon-text">
@@ -298,10 +297,11 @@
 		<a href="store.html">store</a>
 		<a href="contact.html">contact</a>
 		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    	<i class="fa fa-bars"></i>
+    	<i class="fa fa-bars" style="font-size:7.5vw;"></i>
   </a></div>
 	</ul>
 	<br><br>
+	<div class="divider"></div>
 	<!--END OF HEADER STUFF-->
 	
 	
@@ -323,7 +323,7 @@
 		<h1 style="margin-top:-30vw;">
 			<i>Hi.</i><br>
 			</h1><h1 style="color:#F26697;"> I’m Zara Hapiz,</h1>
-			<h1>a graphic designer + software engineer.
+			<h1>a graphic designer + web designer.
 		</h1><br><br>
 	
 		<div class="carouselbg">
@@ -340,21 +340,25 @@
 		</div>
 		<div class="column">
 			<h4 style="text-align:justify;text-justify:inter-word;padding:10px;">
-				<i style="color:#F26697">WHAT’S UP?</i> My name’s Zara Hapiz. I’m a graphic designer, software engineer, and much more. You could possibly call me a jack of all trades. I’m really into hip hop, rap, and R&amp;B music, Nintendo video games, and sneakers.
+				<i style="color:#F26697">WHAT’S UP?</i> My name’s Zara Hapiz. I’m a graphic designer, aspiring software engineer, and much more. You could possibly call me a jack of <i>some</i> trades. I’m really into hip hop, rap, and R&amp;B music, Nintendo video games, and sneakers.
 				<br><br>
-				I currently study pure Sciences and Computer Science at a secondary level. This website may be a display of my skill, considering I programmed and designed it myself. Nevertheless, I hope you enjoy browsing. <i style="color:#F26697">THANK YOU! :p</i>
-				<br><br><iframe style="border-radius:12px;margin-top:0;" src="https://open.spotify.com/embed/track/0PyJRNmJvJJ5OmffwQf5we?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></h4>
+				I currently study pure Science at a secondary level, graduating this year. This website may be a display of my skill in computer science, considering I programmed and designed it myself. For students, press <i>Ctrl+U</i> to view my code. Nevertheless, I hope you enjoy browsing. <i style="color:#F26697">THANK YOU! :p</i>
+				<br><br><iframe style="border-radius:12px;margin-top:0;" src="https://open.spotify.com/embed/track/4tqcoej1zPvwePZCzuAjJd?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></h4>
 			<!--
-			0PyJRNmJvJJ5OmffwQf5we - State Fair
-			54FJWt8YIA1IHjmUxuDxwi - Praise God
-			6SdQfCiVae1EXK1pQ6b92o - Rendezvous
-			3DK6m7It6Pw857FcQftMds - Runaway
-			2YSzYUF3jWqb9YP9VXmpjE - IDGAF
-			0O3TAouZE4vL9dM5SyxgvH - Fashion Killa
-			6n3HGiq4v35D6eFOSwqYuo - Teenage Fever
-			51EC3I1nQXpec4gDk0mQyP - 90210 (feat. Kacy Hill)
-			4mmkhcEm1Ljy1U9nwtsxUo - Through The Wire
+			0PyJRNmJvJJ5OmffwQf5we - State Fair - Jack Harlow
+			54FJWt8YIA1IHjmUxuDxwi - Praise God - Kanye West
+			6SdQfCiVae1EXK1pQ6b92o - Rendezvous - Jack Harlow
+			3DK6m7It6Pw857FcQftMds - Runaway - Kanye West
+			2YSzYUF3jWqb9YP9VXmpjE - IDGAF - Drake, Yeat
+			0O3TAouZE4vL9dM5SyxgvH - Fashion Killa - A$AP Rocky
+			6n3HGiq4v35D6eFOSwqYuo - Teenage Fever - Drake
+			51EC3I1nQXpec4gDk0mQyP - 90210 (feat. Kacy Hill) - Travis Scott
+			4mmkhcEm1Ljy1U9nwtsxUo - Through The Wire - Kanye West
 			1ofhfV90EnYhEr7Un2fWiv - Changes - 2Pac
+			4tqcoej1zPvwePZCzuAjJd - Wet Dreamz - J. Cole
+			3eekarcy7kvN4yt5ZFzltW - Highest In The Room - Travis Scott
+			0AluA5RNsa4Cx6XRhf2hWZ - 10 Freaky Girls - Metro Boomin, 21 Savage
+			4kjI1gwQZRKNDkw1nI475M - MY EYES - Travis Scott
 			-->
 		</div></div><br><br><br>
 		<div class="row">
@@ -365,18 +369,22 @@
 				I was tasked with a school project to design a future smartphone device. This is a faux Apple website I programmed for the then-upcoming iPhone 15 before its release. 
 				<br><br>The <i>real</i> iPhone 15 was just released and not many of my predictions were accurate.
 				<br><br><i>PHOTOS DO NOT BELONG TO ME!</i>
-				<br><br><iframe style="border-radius:12px;margin-top:0;" src="https://open.spotify.com/embed/track/0O3TAouZE4vL9dM5SyxgvH?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></h4>
+				<br><br><iframe style="border-radius:12px;margin-top:0;" src="https://open.spotify.com/embed/track/0O3TAouZE4vL9dM5SyxgvH?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></h4>
 			<!--
-			0PyJRNmJvJJ5OmffwQf5we - State Fair
-			54FJWt8YIA1IHjmUxuDxwi - Praise God
-			6SdQfCiVae1EXK1pQ6b92o - Rendezvous
-			3DK6m7It6Pw857FcQftMds - Runaway
-			2YSzYUF3jWqb9YP9VXmpjE - IDGAF
-			0O3TAouZE4vL9dM5SyxgvH - Fashion Killa
-			6n3HGiq4v35D6eFOSwqYuo - Teenage Fever
-			51EC3I1nQXpec4gDk0mQyP - 90210 (feat. Kacy Hill)
-			4mmkhcEm1Ljy1U9nwtsxUo - Through The Wire
+			0PyJRNmJvJJ5OmffwQf5we - State Fair - Jack Harlow
+			54FJWt8YIA1IHjmUxuDxwi - Praise God - Kanye West
+			6SdQfCiVae1EXK1pQ6b92o - Rendezvous - Jack Harlow
+			3DK6m7It6Pw857FcQftMds - Runaway - Kanye West
+			2YSzYUF3jWqb9YP9VXmpjE - IDGAF - Drake, Yeat
+			0O3TAouZE4vL9dM5SyxgvH - Fashion Killa - A$AP Rocky
+			6n3HGiq4v35D6eFOSwqYuo - Teenage Fever - Drake
+			51EC3I1nQXpec4gDk0mQyP - 90210 (feat. Kacy Hill) - Travis Scott
+			4mmkhcEm1Ljy1U9nwtsxUo - Through The Wire - Kanye West
 			1ofhfV90EnYhEr7Un2fWiv - Changes - 2Pac
+			4tqcoej1zPvwePZCzuAjJd - Wet Dreamz - J. Cole
+			3eekarcy7kvN4yt5ZFzltW - Highest In The Room - Travis Scott
+			0AluA5RNsa4Cx6XRhf2hWZ - 10 Freaky Girls - Metro Boomin, 21 Savage
+			4kjI1gwQZRKNDkw1nI475M - MY EYES - Travis Scott
 			-->
 			</div>
 			<div class="column">
@@ -391,22 +399,27 @@
 				<i>Montigo</i> Ace Bottle [POSTER] (Not affiliated with Montigo)
 			</div>
 			<div class="column">
-				<h4 style="margin-top:30px;text-align:justify;text-justify:inter-word;padding:10px;">
-					I received this Montigo Ace Bottle in Sunset Coral as a gift for my birthday this year and it’s such a game-changer, man..
+				<h4 style="text-align:justify;text-justify:inter-word;padding:10px;">
+					I received this Montigo Ace Bottle in Sunset Coral as a gift for my birthday last year and it’s such a game-changer, man..
 					<br><br> It keeps my water cool all day. I know this sounds like an advertisement, but I promise Montigo doesn’t even know I exist. I just really like their products.
-				<br><br><iframe style="border-radius:12px;margin-top:0;" src="https://open.spotify.com/embed/track/51EC3I1nQXpec4gDk0mQyP?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+					<br><br><b><a href="https://shopmontigo.com/" style="color:#2346F3;" target="_blank">Get your own Montigo!</a></b>
+				<br><br><iframe style="border-radius:12px;margin-top:0;" src="https://open.spotify.com/embed/track/4kjI1gwQZRKNDkw1nI475M?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 				</h4>
 			<!--
-			0PyJRNmJvJJ5OmffwQf5we - State Fair
-			54FJWt8YIA1IHjmUxuDxwi - Praise God
-			6SdQfCiVae1EXK1pQ6b92o - Rendezvous
-			3DK6m7It6Pw857FcQftMds - Runaway
-			2YSzYUF3jWqb9YP9VXmpjE - IDGAF
-			0O3TAouZE4vL9dM5SyxgvH - Fashion Killa
-			6n3HGiq4v35D6eFOSwqYuo - Teenage Fever
-			51EC3I1nQXpec4gDk0mQyP - 90210 (feat. Kacy Hill)
-			4mmkhcEm1Ljy1U9nwtsxUo - Through The Wire
+			0PyJRNmJvJJ5OmffwQf5we - State Fair - Jack Harlow
+			54FJWt8YIA1IHjmUxuDxwi - Praise God - Kanye West
+			6SdQfCiVae1EXK1pQ6b92o - Rendezvous - Jack Harlow
+			3DK6m7It6Pw857FcQftMds - Runaway - Kanye West
+			2YSzYUF3jWqb9YP9VXmpjE - IDGAF - Drake, Yeat
+			0O3TAouZE4vL9dM5SyxgvH - Fashion Killa - A$AP Rocky
+			6n3HGiq4v35D6eFOSwqYuo - Teenage Fever - Drake
+			51EC3I1nQXpec4gDk0mQyP - 90210 (feat. Kacy Hill) - Travis Scott
+			4mmkhcEm1Ljy1U9nwtsxUo - Through The Wire - Kanye West
 			1ofhfV90EnYhEr7Un2fWiv - Changes - 2Pac
+			4tqcoej1zPvwePZCzuAjJd - Wet Dreamz - J. Cole
+			3eekarcy7kvN4yt5ZFzltW - Highest In The Room - Travis Scott
+			0AluA5RNsa4Cx6XRhf2hWZ - 10 Freaky Girls - Metro Boomin, 21 Savage
+			4kjI1gwQZRKNDkw1nI475M - MY EYES - Travis Scott
 			-->
 			</div>
 		</div><br><br><br>
@@ -416,20 +429,24 @@
 				<h1>PERSADA <i>MWT</i></h1>
 				<h4 style="margin-top:30px;text-align:justify;text-justify:inter-word;padding:10px;">
 				PERSADA is my school, SMK Taman Melawati’s, official magazine. It has been published annually for almost 28 years as of 2023. I’m proud to say that I’m a part of its Editorial Board, specifically the Graphic Design department. It’s been a blast working with our head editors: Wan, Zahra, Azeem, Dayana, as well as everyone else in this family.
-				<br><br> Look out for this year’s issue (28th Edition)!
+				<br><br> Look out for 2023’s issue (28th Edition)!
 				<br><br><a href="https://quarterlypersada.wixsite.com/e-pinnaclesofficials" style="color:#2346F3;" target="_blank"><b>Click me to visit PERSADA’s quarterly magazine site!</b></a>
-				<br><br><iframe style="border-radius:12px;margin-top:0;" src="https://open.spotify.com/embed/track/4mmkhcEm1Ljy1U9nwtsxUo?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></h4>
+				<br><br><iframe style="border-radius:12px;margin-top:0;" src="https://open.spotify.com/embed/track/0AluA5RNsa4Cx6XRhf2hWZ?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></h4>
 			<!--
-			0PyJRNmJvJJ5OmffwQf5we - State Fair
-			54FJWt8YIA1IHjmUxuDxwi - Praise God
-			6SdQfCiVae1EXK1pQ6b92o - Rendezvous
-			3DK6m7It6Pw857FcQftMds - Runaway
-			2YSzYUF3jWqb9YP9VXmpjE - IDGAF
-			0O3TAouZE4vL9dM5SyxgvH - Fashion Killa
-			6n3HGiq4v35D6eFOSwqYuo - Teenage Fever
-			51EC3I1nQXpec4gDk0mQyP - 90210 (feat. Kacy Hill)
-			4mmkhcEm1Ljy1U9nwtsxUo - Through The Wire
+			0PyJRNmJvJJ5OmffwQf5we - State Fair - Jack Harlow
+			54FJWt8YIA1IHjmUxuDxwi - Praise God - Kanye West
+			6SdQfCiVae1EXK1pQ6b92o - Rendezvous - Jack Harlow
+			3DK6m7It6Pw857FcQftMds - Runaway - Kanye West
+			2YSzYUF3jWqb9YP9VXmpjE - IDGAF - Drake, Yeat
+			0O3TAouZE4vL9dM5SyxgvH - Fashion Killa - A$AP Rocky
+			6n3HGiq4v35D6eFOSwqYuo - Teenage Fever - Drake
+			51EC3I1nQXpec4gDk0mQyP - 90210 (feat. Kacy Hill) - Travis Scott
+			4mmkhcEm1Ljy1U9nwtsxUo - Through The Wire - Kanye West
 			1ofhfV90EnYhEr7Un2fWiv - Changes - 2Pac
+			4tqcoej1zPvwePZCzuAjJd - Wet Dreamz - J. Cole
+			3eekarcy7kvN4yt5ZFzltW - Highest In The Room - Travis Scott
+			0AluA5RNsa4Cx6XRhf2hWZ - 10 Freaky Girls - Metro Boomin, 21 Savage
+			4kjI1gwQZRKNDkw1nI475M - MY EYES - Travis Scott
 			-->
 			</div>
 				<div class="column">
@@ -440,7 +457,7 @@
 	
 	
 	<br><br><br><h1 style="font-family:'owners-narrow',sans-serif;font-weight:700;font-style:normal;font-size:15vw!important;text-align:center;color:#F0B719;">PROLOGUE!</h1>
-		<h4 style="text-align:justify;text-justify:inter-word;padding:30px;">
+		<h4 style="text-align:justify;text-justify:inter-word;padding:30px;font-size:0.8em;">
 			Alright, first and foremost, I’d like to thank my <i style="color:#F26697;">parents</i>. My mom and dad. Without them, I wouldn’t be here, both figuratively and literally. My mom inspires me to achieve greater heights and has been nurturing and guiding me since birth. She inspired me to display my talents here. My dad, on the other hand, is the coolest person on earth. He inspired me to take my passion for computer science further, and now that’s my ambition. I’d also like to give an honourable mention to my <i style="color:#F26697;">younger siblings</i>, Azeem and Mysha, who give me constant unconditional support.
 			<br><br>
 			I’d also like to thank <i style="color:#F26697;">Cikgu Rosila</i> and <i style="color:#F26697;">Cikgu Hidayati</i>. They’d been my Computer Science teachers throughout 2020-2022 and without them, this website wouldn’t exist, no joke. I wouldn’t know how to code at all without them. The idea of coding my own website wouldn’t even cross my mind without them.
@@ -452,13 +469,12 @@
 	
 	<!--FOOTER STUFF-->
 	<footer><br><br>
-		<a href="https://www.instagram.com/zaramysh/"><img src="instagram.png" style="width:30px;" alt="Instagram"></a>
-		<a href="https://www.tiktok.com/@zaramysh"><img src="tik-tok.png" style="width:30px;" alt="TikTok"></a>
+		<a href="https://www.instagram.com/zaramysh/" target="_blank"><img src="instagram.png" style="width:30px;" alt="Instagram"></a>
+		<a href="https://www.tiktok.com/@zaramysh" target="_blank"><img src="tik-tok.png" style="width:30px;" alt="TikTok"></a>
 		<p>© Zara Hapiz 2024</p>
 		<embed><a href="https://acadooghostwriter.com/" style="opacity: 0; cursor:default;">https://acadooghostwriter.com</a> <script type="text/javascript" src="https://www.freevisitorcounters.com/auth.php?id=1d304043b64be22a3a5ba7a5a465aa9a5c4460cf"></script>
-<!--<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1019120/t/5"></script>-->
+		<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1019120/t/5"></script>
 	</footer>
-<!--</div>-->
 	<!--END OF FOOTER STUFF-->
 	<!--JAVASCRIPT SCRIPTS-->
 	<script>
@@ -470,51 +486,6 @@
 			x.className = "topnav";
 	  	}
 	}
-		
-	const loading;
-	
-	document.onreadystatechange = function () {
-		const state = document.readyState
-		if (state == 'interactive') {
-        document.getElementById('everything').style.visibility="hidden";
-  		} else if (state == 'complete') {
-      		setTimeout(function(){
-				document.getElementById('interactive');
-				document.getElementById('loader').style.visibility="hidden";
-				document.getElementById('everything').style.visibility="visible";
-      		},1000);
-  		}
-	}
-
-	//function load() {
-	//  loading = setTimeout(showPage, 3000);
-	//}
-
-	//function showPage() {
-	//  document.getElementById("loader").style.display="none";
-	//  document.getElementById("everything").style.display="block";
-	//}
-		
-		//const observer = new IntersectionObserver(entries => {
-	  	// Loop over the entries
-	  	//entries.forEach(entry => {
-		// If the element is visible
-		//if (entry.isIntersecting) {
-		  // Add the animation class
-		//  entry.target.classList.add("titleHover");
-		//}
-		//});
-		//});
-
-		//observer.observe(document.querySelector(".h1"));
-		
-		//const funFacts = [
-		//	"FACT #1: AUSTRALIA IS WIDER THAN THE MOON."
-		//	"FACT #2: SUDAN HAS MORE PYRAMIDS THAN ANY COUNTRY IN THE WORLD."
-		//	"FACT #3: THE WORLD’S OLDEST WOODEN WHEEL HAS BEEN AROUND FOR MORE THAN 5000 YEARS."
-		//	"FACT #4:"
-		//	"FACT #5:"
-		//]
 	</script>
 </body>
 </html>
