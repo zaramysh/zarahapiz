@@ -7,12 +7,15 @@
 <link rel="icon" type="image/x-icon" href="ZARA HAPIZ LOGO SMALL.png">
 <link rel="stylesheet" href="https://use.typekit.net/oag6cqw.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 <!--CSS CODES-->
 <style>
 	body {
-		font-family: "degular", sans-serif;
+		font-family: 'Fragment Mono', monospace;
 		font-weight: 500;
 		font-style: normal;
 		font-size: 1.5em;
@@ -33,11 +36,9 @@
 		font-size: 4em;
 		margin: 10px;
 		line-height: 0.8em;
-		animation-name: titleHover;
-		animation-duration: 3s;
-		animation-iteration-count: 1;
 	}
 	h2 {
+		font-family: "neue-haas-grotesk-text", sans-serif;
 		margin: 0;
 		margin-top: 20px;
 		font-weight: 600;
@@ -47,7 +48,6 @@
 		font-weight: 300;
 	}
 	h4 {
-		font-family: "neue-haas-grotesk-text",sans-serif;
 		margin: 10px 0 10px 0;
 		font-weight: 500;
 		font-size: 1em;
@@ -80,7 +80,6 @@
 	}
 	ul a {
 		display: block;
-		color: black;
 		margin: 15px 15px 15px 30px;
 		text-decoration: none;
 		color: #F3F3F3;
@@ -93,13 +92,6 @@
 	}
 	.active {
 		color: #2346F3;
-	}
-	@keyframes titleHover {
-		from {opacity: 0;}
-		to {opacity: 1;}
-	}
-	embed {
-		cursor: default;
 	}
 	.ribbon {
 		margin: -35px;
@@ -152,8 +144,16 @@
 	.row {
 		display: flex;
 	}
+	@keyframes colourchange {
+  		50% {
+			-webkit-filter: hue-rotate(360deg); 
+			filter: hue-rotate(360deg);
+  		}
+	}
+	
+	
 		/* responsive stuff */
-	@media screen and (max-width: 650px) {
+		@media screen and (max-width: 650px) {
 		html {
 		}
 		body {
@@ -168,10 +168,10 @@
 			font-size: 6vw;
 		}
 		h3 {
-			font-size: 6vw;
+			font-size: 5vw;
 		}
 		h4, h5 {
-			font-size: 4vw;
+			font-size: 3vw;
 		}
 		ul {
 			width: 50%;
@@ -180,9 +180,12 @@
 		ul a {
 			margin-top: 3.5vw;
 			font-size: 7vw;
-			line-height: 8vw;
+			line-height: 4vw;
 			overflow: visible;
 			color: #08131C;
+		}
+		ul a:hover {
+			transform: rotate(5deg);
 		}
 		.row {
 			display: block;
@@ -214,10 +217,14 @@
 			float: none;
 			display: block;
 			text-align: left;
+			font-size: 4.5vw;
 		}
 		i {
 			width: "40vw";
 		}
+		h4 img {
+			width: 100% !important;
+			}
 	}
 	@keyframes imgHover {
 		from {transform: scale(100%);}
@@ -253,17 +260,18 @@
 	
 	
 	
-		<br><h1 style="text-align:center;color:#F26697">
-			Let me design for you<i>!</i> </h1>
+		<br><h1 style="text-align:center;color:#F26697;animation: colourchange 7s infinite;">
+			LET ME DESIGN FOR YOU<i>!</i> </h1>
 			<h3 style="text-align:center;">
 			Hit me up for business purposes, questions, or a conversation.
 		</h3>
-			<h4 style="text-align:center;"> 
+			<h4 style="text-align:center;font-family: 'Fragment Mono', monospace;"> 
 				e-mail me at <i style="color:#F0B719;">zara.hapiz@gmail.com,</i>
 				<br>or message me on Instagram <i style="color:#F0B719;">@zaramysh</i>
-				<br><br> check out my portfolio on
-				<br>Behance: <a href="https://www.behance.net/zarahapiz" style="color:#F3F3F3;"><i style="color:#F0B719;">Zara Hapiz</i></a>
-				<br><a href="https://www.behance.net/gallery/169375621/Graphic-Design-Portfolio-2023"><div class="portfolio"><img src="artwork/ZARA'S PORTFOLIO 2023!-2.png" style="width:600px;margin-top:20px;" alt="image failed to load?!"></div></a>
+				<br><img src="BUSINESS CARD COVER.png" style="width:600px;margin-top:20px;" alt="image failed to load?!">
+				<br><br> check out my 2023 Portfolio on
+				<br>Behance: <a href="https://www.behance.net/zarahapiz" target="_blank" style="color:#F3F3F3;"><i style="color:#F0B719;">Zara Hapiz</i></a>
+				<br><a href="https://www.behance.net/gallery/169375621/Graphic-Design-Portfolio-2023" target="_blank"><div class="portfolio"><img src="artwork/ZARA'S PORTFOLIO 2023!-2.png" style="width:600px;margin-top:20px;" alt="image failed to load?!"></div></a>
 				<br><br>
 				<!--<i>some of my previous works:</i>
 				<br>
@@ -278,8 +286,8 @@
 	
 	<!--FOOTER STUFF-->
 	<footer>
-		<a href="https://www.instagram.com/zaramysh/"><img src="instagram.png" style="width:30px;display:inline-block;" alt="Instagram"></a>
-		<a href="https://www.tiktok.com/@zaramysh"><img src="tik-tok.png" style="width:30px;display:inline-block;" alt="TikTok"></a>
+		<a href="https://www.instagram.com/zaramysh/" target="_blank"><img src="instagram.png" style="width:30px;display:inline-block;" alt="Instagram"></a>
+		<a href="https://www.tiktok.com/@zaramysh" target="_blank"><img src="tik-tok.png" style="width:30px;display:inline-block;" alt="TikTok"></a>
 		<p>© Zara Hapiz 2024</p>
 	</footer>
 	<!--END OF FOOTER STUFF-->
