@@ -7,18 +7,21 @@
 <link rel="icon" type="image/x-icon" href="ZARA HAPIZ LOGO SMALL.png">
 <link rel="stylesheet" href="https://use.typekit.net/oag6cqw.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 <!--CSS CODES-->
 <style>
 	body {
-		font-family: "degular", sans-serif;
+		font-family: 'Fragment Mono', monospace;
 		font-weight: 500;
 		font-style: normal;
 		font-size: 1.5em;
-		color: #F3F3F3;
+		color: #0A0A0A;
 		margin: 35px;
-		background-color: #0A0A0A;
+		background-color: #F3F3F3;
 		background-repeat: repeat-y;
 		background-position: left top;
   		background-attachment: scroll;
@@ -38,6 +41,7 @@
 		animation-iteration-count: 1;
 	}
 	h2 {
+		font-family: "neue-haas-grotesk-text",sans-serif;
 		margin: 0;
 		margin-top: 20px;
 		font-weight: 600;
@@ -70,6 +74,12 @@
 	::-webkit-scrollbar-thumb:hover {
 		background: #2346F3;
 	}
+	@keyframes colourchange {
+  		50% {
+			-webkit-filter: hue-rotate(360deg); 
+			filter: hue-rotate(360deg);
+  		}
+	}
 	ul {
 		height: 0px;
 		list-style-type: none;
@@ -83,7 +93,7 @@
 		color: black;
 		margin: 15px 15px 15px 30px;
 		text-decoration: none;
-		color: #F3F3F3;
+		color: #0A0A0A;
 		float: left;
 		transition: color 0.3s, transform 0.3s;
 	}
@@ -137,7 +147,7 @@
 		animation-play-state:paused;
 	}
 	footer {
-		color: #F3F3F3;
+		color: #0A0A0A;
 		text-align: center;
 		font-size: 0.9em;
 	}
@@ -151,21 +161,6 @@
 	}
 	.row {
 		display: flex;
-	}
-	table {
-		border: 1px solid #F3F3F3;
-		width: 105%;
-		overflow: visible;
-		margin-left: -35px;
-		padding: 0;
-		border-collapse: collapse;
-	}
-	tr {
-		border: 1px solid #F3F3F3;
-	}
-	td {
-		border: 1px solid #F3F3F3;
-		padding: 0 20px;
 	}
 		/* responsive stuff */
 	@media screen and (max-width: 650px) {
@@ -181,6 +176,7 @@
 		}
 		h2 {
 			font-size: 6vw;
+			margin-left: 5vw;
 		}
 		h3 {
 			font-size: 6vw;
@@ -195,9 +191,12 @@
 		ul a {
 			margin-top: 3.5vw;
 			font-size: 7vw;
-			line-height: 8vw;
+			line-height: 4vw;
 			overflow: visible;
 			color: #08131C;
+		}
+		ul a:hover {
+			transform: rotate(5deg);
 		}
 		.row {
 			display: block;
@@ -218,6 +217,7 @@
   		.topnav a.icon {
 			float: right;
 			display: block;
+			filter: invert(90%);
  		}
 		.topnav.responsive {position: relative;}
 		.topnav.responsive a.icon {
@@ -229,9 +229,16 @@
 			float: none;
 			display: block;
 			text-align: left;
+			font-size: 4.5vw;
 		}
 		i {
 			width: "40vw";
+		}
+		.stickers {
+			display: none;
+		}
+		.gallery {
+			margin-left: 5vw;
 		}
 	}
 	/*ART GALLERY STYLES*/
@@ -242,23 +249,30 @@
 		cursor: pointer;
 	}
 	.gallery {
+		position: relative;
 		display: inline-block;
 		margin-right: 65px;
   		width: 300px;
-  		background-color: #0a0a0a;
-  		height: 440px;
-		border: 1px solid #F3F3F3;
-		color: #F3F3F3;
+  		background-color: #F3F3F3;
+  		height: 410px;
+		border-left: 5px solid #F0B719;
+		color: #0A0A0A;
 		overflow: visible;
 		margin-bottom: 65px;
 		text-align: left;
 		vertical-align: top;
 	}
+	.title {
+		background-color: #2346F3;
+		color: #F3F3F3;
+		padding: 5px 7px;
+		font-size: 0.8em;
+	}
 	.container {
 		padding: 10px 15px 0px 15px;
 		overflow: visible;
-		font-weight: 600;
 		line-height: 25px;
+		font-size: 0.7em;
 	}
 	/* The Modal (background) */
 	.modal {
@@ -334,81 +348,119 @@
 	
 <!--MAIN!!!!-->	
 	<br>
-		<table>
+		<!--<table>
 		<tr>
 			<td><h1 style="font-family:'owners-narrow',sans-serif;font-weight:700;font-style:normal;font-size:15vw;margin-top:20px;">ART GALLERY</h1></td>
 			<td style="background-color:#F3F3F3;"><!--<h1 style="color:#0A0A0A;vertical-align:top;text-align:justify;text-justify:inter-word;margin-left:-3px;">ARTWORK<i>!</i></h1>-->
-			<h4 style="color:#0A0A0A;vertical-align:top;text-align:justify;text-justify:inter-word;">
+			<!--<h4 style="color:#0A0A0A;vertical-align:top;text-align:justify;text-justify:inter-word;">
 				Artwork by me. 
 				<br>Mostly graphite.
 				<br>Enjoy!
 			</h4>
 			</td>
 		</tr>
-		</table>
+		</table>-->
+	
+	<h1 style="font-family: 'neue-haas-grotesk-text', sans-serif;color:#F3F3F3;background-color:#2346F3;padding:50px;">ART GALLERY<i>!!!</i>
+	<div class="stickers"><img src="STICKER-05.png" style="float:right;width:230px;position:relative;bottom:6vw;right:2vw;transform:rotate(6deg);z-index:2;cursor:default;" alt="oh no :(">
+	<img src="STICKER-02.png" style="float:right;width:150px;position:relative;bottom:10vw;left:20vw;transform:rotate(10deg);z-index:1;cursor:default;" alt="oh no :(">
+	<img src="ZARA HAPIZ LOGO SMALL.png" style="float:right;width:200px;position:relative;bottom:12vw;left:20vw;transform:rotate(-10deg);z-index:1;cursor:default;" alt="oh no :("></div></h1><br><br>
+	
 	
 	<!---2023--->
-	<h2 style="color:#F0B719;"><p>2023</p></h2>
+	<h2 style="color:#F26697;"><p>2023</p></h2>
 	<div class="gallery">
+		<div class="title">Jack Harlow</div>
 	<img id="img2023-10" src="artwork/jack harlow.png" width="300px" height="300px" alt="Jack Harlow">
-	<div class="container">jack harlow<br><h4>8/8/23</h4></div></div>	
+	<div class="container">8/8/23<i><br>Graphite</i></div></div>
+	
 	<div class="gallery">
+		<div class="title">Earth-42's Prowler</div>
 	<img id="img2023-9" src="artwork/prowler-42-1.png" width="300px" height="300px" alt="Miles Morales, the Prowler of Earth-42.">
-	<div class="container">earth-42’s prowler<br><h4>6/6/23</h4></div></div>	
+	<div class="container">6/6/23<br><i>Graphite</i></div></div>	
+	
 	<div class="gallery">
+		<div class="title">beabadoobee</div>
 	<img id="img2023-8" src="artwork/beabadoobee-1.png" width="300px" height="300px" alt="beabadoobee">
-	<div class="container">beabadoobee<br><h4>12/4/23</h4></div></div>	
+	<div class="container">12/4/23<br><i>Graphite</i></div></div>	
+	
 	<div class="gallery">
+		<div class="title">SZA</div>
 	<img id="img2023-7" src="artwork/sza-1.png" width="300px" height="300px" alt="SZA">
-	<div class="container">SZA<br><h4>16/2/23</h4></div></div>	
+	<div class="container">16/2/23<br><i>Graphite</i></div></div>	
+	
 	<div class="gallery">
+		<div class="title">Xavier Thorpe</div>
 	<img id="img2023-6" src="artwork/xavier-1.png" width="300px" height="300px" alt="Xavier Thorpe from <i>Wednesday</i> during the Poe Cup">
-	<div class="container">xavier thorpe<br><h4>8/2/23</h4></div></div>
+	<div class="container">8/2/23<br><i>Graphite</i></div></div>
+	
 	<div class="gallery">
+		<div class="title">Wednesday Addams</div>
 	<img id="img2023-5" src="artwork/wednesday-1.png" width="300px" height="300px" alt="Wednesday Addams from <i>Wednesday</i> during the Poe Cup">
-	<div class="container">wednesday addams<br><h4>8/2/23</h4></div></div>
+	<div class="container">8/2/23<br><i>Graphite</i></div></div>
+	
 	<div class="gallery">
+		<div class="title">Enid Sinclair</div>
 	<img id="img2023-4" src="artwork/enid-1.png" width="300px" height="300px" alt="Enid Sinclair from <i>Wednesday</i> during the Poe Cup">
-	<div class="container">enid sinclair<br><h4>8/2/23</h4></div></div>
+	<div class="container">8/2/23<br><i>Graphite</i></div></div>
+	
 	<div class="gallery">
+		<div class="title">Madeline Argy</div>
 	<img id="img2023-3" src="artwork/madeline-1.png" width="300px" height="300px" alt="Madeline Argy">
-	<div class="container">madeline argy<br><h4>6/2/23</h4></div></div>
+	<div class="container">6/2/23<br><i>Graphite</i></div></div>
+	
 	<div class="gallery">
+		<div class="title">Central Cee</div>
 	<img id="img2023-2" src="artwork/central cee-1.png" width="300px" height="300px" alt="Central Cee">
-	<div class="container">central cee<br><h4>5/2/23</h4></div></div>
+	<div class="container">5/2/23<br><i>Graphite</i></div></div>
+	
 	<div class="gallery">
+		<div class="title">Clairo</div>
 	<img id="img2023-1" src="artwork/clairo-1.png" width="300px" height="300px" alt="Clairo">
-	<div class="container">clairo<br><h4>3/2/23</h4></div></div>
+	<div class="container">3/2/23<br><i>Graphite</i></div></div>
 	
 	
 	
 	<!---2022--->
-	<h2 style="color:#F0B719;"><p>2022</p></h2>
+	<h2 style="color:#F26697;"><p>2022</p></h2>
 	<div class="gallery">
-	<img id="img2022-2" src="artwork/pear-1.png" width="300px" height="300px" alt="Pear; acrylic on paper">
-	<div class="container">pear<br><h4>27/6/22</h4></div></div>
+		<div class="title">Pear</div>
+	<img id="img2022-3" src="artwork/pear-1.png" width="300px" height="300px" alt="Pear; acrylic on paper">
+	<div class="container">27/6/22<br><i>Acrylic</i></div></div>
+	
 	<div class="gallery">
-	<img id="img2022-3" src="artwork/save the animals.png" width="300px" height="300px" alt="Save The Animals">
-	<div class="container">save the animals<br><h4>9/5/22</h4></div></div>
+		<div class="title">Save the Animals<i>!</i></div>
+	<img id="img2022-2" src="artwork/save the animals.png" width="300px" height="300px" alt="Save The Animals">
+	<div class="container">9/5/22<br><i>Graphite</i></div></div>
+	
 	<div class="gallery">
+		<div class="title">Waktu Senja</div>
 	<img id="img2022-1" src="artwork/waktu senja-1.png" width="300px" height="300px" alt="Waktu Senja; acrylic on paper">
-	<div class="container">waktu senja<br><h4>31/3/22</h4></div></div>
+	<div class="container">31/3/22<br><i>Acrylic</i></div></div>
 	
 	
 	<!---2021--->
-	<h2 style="color:#F0B719;"><p>2021</p></h2>
+	<h2 style="color:#F26697;"><p>2021</p></h2>
 	<div class="gallery">
+		<div class="title">Fried Egg</div>
 	<img id="img2021-4" src="artwork/egg-1.png" width="300px" height="300px" alt="Fried Egg">
-	<div class="container">fried egg<br><h4>30/11/21</h4></div></div>
+	<div class="container">30/11/21<br><i>Digital</i></div></div>
+	
 	<div class="gallery">
+		<div class="title">Promises</div>
 	<img id="img2021-3" src="artwork/promises-1.png" width="300px" height="300px" alt="Promises">
-	<div class="container">promises<br><h4>7/10/21</h4></div></div>
+	<div class="container">7/10/21<br><i>Digital</i></div></div>
+	
 	<div class="gallery">
+		<div class="title">Willow</div>
 	<img id="img2021-2" src="artwork/willow-1.png" width="300px" height="300px" alt="WILLOW">
-	<div class="container">willow<br><h4>11/6/21</h4></div></div>
+	<div class="container">11/6/21<br><i>Acrylic</i></div></div>
+	
 	<div class="gallery">
-	<img id="img2021-1" src="artwork/manta ray-1.png" width="300px" height="300px" alt="Manta Ray (dedicated to Suraya)">
-	<div class="container">manta ray<br><h4>22/5/21</h4></div></div>
+		<div class="title">Manta Ray</div>
+	<img id="img2021-1" src="artwork/manta ray-1.png" width="300px" height="300px" alt="Manta Ray (for Suraya)">
+	<div class="container">22/5/21<br><i>Digital</i></div></div>
+	
 <!--END OF MAIN-->	
 	<!-- MODAL -->
 <div id="myModal" class="modal">
@@ -421,8 +473,8 @@
 	
 	<!--FOOTER STUFF-->
 	<footer><br><br>
-		<a href="https://www.instagram.com/zaramysh/"><img src="instagram.png" style="width:30px;display:inline-block;" alt="Instagram"></a>
-		<a href="https://www.tiktok.com/@zaramysh"><img src="tik-tok.png" style="width:30px;display:inline-block;" alt="TikTok"></a>
+		<a href="https://www.instagram.com/zaramysh/" target="_blank"><img src="instagram.png" style="width:30px;display:inline-block;filter:invert(90%);" alt="Instagram"></a>
+		<a href="https://www.tiktok.com/@zaramysh" target="_blank"><img src="tik-tok.png" style="width:30px;display:inline-block;filter:invert(90%);" alt="TikTok"></a>
 		<p>© Zara Hapiz 2024</p>
 		
 	</footer>
@@ -521,7 +573,7 @@ img.onclick = function(){
 	  captionText.innerHTML = this.alt;
 }
 // IMAGE MODAL
-var img = document.getElementById('img2023-1');
+var img = document.getElementById('img2023-3');
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
 img.onclick = function(){
