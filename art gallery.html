@@ -104,10 +104,6 @@
 	.active {
 		color: #2346F3;
 	}
-	@keyframes titleHover {
-		from {opacity: 0;}
-		to {opacity: 1;}
-	}
 	embed {
 		cursor: default;
 	}
@@ -162,11 +158,20 @@
 	.row {
 		display: flex;
 	}
+	@keyframes spinny {
+		0% {
+		transform: rotate(0);
+		}
+		100% {
+		transform: rotate(360deg);
+		}
+	}
 		/* responsive stuff */
-	@media screen and (max-width: 650px) {
+	@media screen and (max-width: 830px) {
 		html {
 		}
 		body {
+			font-size: 4vw;
 			margin: 35px 10px;
 			overflow-x: hidden;
 			background-position: top center;
@@ -174,15 +179,8 @@
 		h1 {
 			font-size: 15vw;
 		}
-		h2 {
-			font-size: 6vw;
-			margin-left: 5vw;
-		}
-		h3 {
-			font-size: 6vw;
-		}
 		h4, h5 {
-			font-size: 4vw;
+			font-size: 3.5vw;
 		}
 		ul {
 			width: 50%;
@@ -331,7 +329,7 @@
 	</div></div>
 	<br>
 	<ul style="float:left;">
-		<li style="float:left;margin-top:-25px;"><a href="index.html"><img src="ZARA HAPIZ LOGO BLACK.png" alt="ZH" style="width:90px;height:90px;"></a></li>
+		<li style="float:left;margin-top:-25px;"><a href="index.html"><img src="ZARA HAPIZ LOGO BLACK.png" alt="ZH" style="width:120px;"></a></li>
 	</ul><ul style="float:right;margin-top:5px;font-size:1.1em;"><div class="topnav" id="myTopnav">
 		<a href="index.html">home</a>
   		<a class="active" href="art gallery.html">art gallery</a>
@@ -363,7 +361,7 @@
 	
 	<h1 style="font-family: 'neue-haas-grotesk-text', sans-serif;color:#F3F3F3;background-color:#2346F3;padding:50px;">ART GALLERY<i>!!!</i>
 	<div class="stickers"><img src="STICKER-05.png" style="float:right;width:230px;position:relative;bottom:6vw;right:2vw;transform:rotate(6deg);z-index:2;cursor:default;" alt="oh no :(">
-	<img src="STICKER-02.png" style="float:right;width:150px;position:relative;bottom:10vw;left:20vw;transform:rotate(10deg);z-index:1;cursor:default;" alt="oh no :(">
+	<img src="STICKER-02.png" style="float:right;width:150px;position:relative;bottom:10vw;left:20vw;transform:rotate(10deg);z-index:1;cursor:default;animation:spinny 10s linear infinite;animation-play-state:running;-webkit-animation-play-state:running;animation-direction:normal;" alt="oh no :(">
 	<img src="ZARA HAPIZ LOGO SMALL.png" style="float:right;width:200px;position:relative;bottom:12vw;left:20vw;transform:rotate(-10deg);z-index:1;cursor:default;" alt="oh no :("></div></h1><br><br>
 	
 	
