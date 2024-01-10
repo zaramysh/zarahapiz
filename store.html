@@ -150,11 +150,20 @@
 			filter: hue-rotate(360deg);
   		}
 	}
+	@keyframes spinny {
+		0% {
+		transform: rotate(0);
+		}
+		100% {
+		transform: rotate(360deg);
+		}
+	}
 		/* responsive stuff */
-	@media screen and (max-width: 650px) {
+	@media screen and (max-width: 830px) {
 		html {
 		}
 		body {
+			font-size: 4vw;
 			margin: 35px 10px;
 			overflow-x: hidden;
 			background-position: top center;
@@ -162,15 +171,8 @@
 		h1 {
 			font-size: 15vw;
 		}
-		h2 {
-			margin-left: 5vw;
-			font-size: 6vw;
-		}
-		h3 {
-			font-size: 6vw;
-		}
 		h4, h5 {
-			font-size: 4vw;
+			font-size: 3.5vw;
 		}
 		ul {
 			width: 50%;
@@ -230,7 +232,7 @@
 		}
 		.price {
 			position: relative;
-			left: 20vw !important;
+			display: none;
 		}
 	}
 	/*STORE STYLES*/
@@ -296,7 +298,7 @@
 	</div></div>
 	<br>
 	<ul style="float:left;">
-		<li style="float:left;margin-top:-25px;"><a href="index.html"><img src="ZARA HAPIZ LOGO BLACK.png" alt="ZH" style="width:90px;height:90px;"></a></li>
+		<li style="float:left;margin-top:-25px;"><a href="index.html"><img src="ZARA HAPIZ LOGO BLACK.png" alt="ZH" style="width:120px;"></a></li>
 	</ul><ul style="float:right;margin-top:5px;font-size:1.1em;"><div class="topnav" id="myTopnav">
 		<a href="index.html">home</a>
   		<a href="art gallery.html">art gallery</a>
@@ -324,7 +326,7 @@
 			</td>
 		</tr>
 		</table>-->
-	<h1 style="font-family: 'neue-haas-grotesk-text', sans-serif;color:#F3F3F3;background-color:#2346F3;padding:50px;">STORE<i>!!!</i><div class="stickers"><img src="STICKER-03.png" style="float:right;width:200px;position:relative;bottom:9vw;transform:rotate(10deg);z-index:1;" alt="oh no :(">
+	<h1 style="font-family: 'neue-haas-grotesk-text', sans-serif;color:#F3F3F3;background-color:#2346F3;padding:50px;">STORE<i>!!!</i><div class="stickers"><img src="STICKER-03.png" style="float:right;width:200px;position:relative;bottom:9vw;transform:rotate(10deg);z-index:1;animation:colourchange 10s infinite;" alt="oh no :(">
 	<img src="ZARA HAPIZ LOGO SMALL.png" style="float:right;width:200px;position:relative;bottom:13vw;left:3vw;transform:rotate(-10deg);z-index:2;" alt="oh no :("></div></h1><br><br>
 		
 
