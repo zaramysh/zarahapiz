@@ -10,18 +10,27 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Space+Grotesk:wght@300..700&family=VT323&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 <!--CSS CODES-->
 <style>
+	:root {
+  		--black: #0C0A13;
+  		--white: #F0F5E4;
+		--pink: #F17F96;
+		--blue: #3D84E1;
+		--orange: #E65E15;
+	}
 	body {
-		font-family: 'Fragment Mono', monospace;
-		font-weight: 500;
+  		font-family: "Space Grotesk", sans-serif;
+		font-optical-sizing: auto;
+		font-weight: 400;
 		font-style: normal;
-		font-size: 1.5em;
-		color: #F3F3F3;
+		font-size: 1.1em;
+		color: #0C0A13;
 		margin: 35px;
-		background-color: #0A0A0A;
+		background-color: #F0F5E4;
 		background-repeat: repeat-y;
 		background-position: left top;
   		background-attachment: scroll;
@@ -30,22 +39,21 @@
 		overflow-x: hidden;
 	}
 	h1 {
-		font-family: "degular-display", sans-serif;
-		font-weight: 700;
+		
+		font-weight: 900;
 		font-style: normal;
-		font-size: 4em;
+		font-size: 7em;
 		margin: 10px;
 		line-height: 0.8em;
 	}
 	h2 {
-		font-family: "neue-haas-grotesk-text", sans-serif;
 		margin: 0;
 		margin-top: 20px;
 		font-weight: 600;
 	}
 	h3 {
 		margin: 10px 0 10px 0;
-		font-weight: 300;
+		font-weight: 400;
 	}
 	h4 {
 		margin: 10px 0 10px 0;
@@ -61,14 +69,15 @@
 		width: 10px;
 	}
 	::-webkit-scrollbar-track {
-		background: #0A0A0A;
+		background: #F0F5E4;
+		border-left: 1px solid #0C0A13;
 	}
 	::-webkit-scrollbar-thumb {
-		background: #F26697;
-		border: 1px solid #0A0A0A;
+		background: #0C0A13;
+		border: 1px solid #0C0A13;
 	}
 	::-webkit-scrollbar-thumb:hover {
-		background: #2346F3;
+		background: #E65E15;
 	}
 	ul {
 		height: 0px;
@@ -80,25 +89,25 @@
 	}
 	ul a {
 		display: block;
-		margin: 15px 15px 15px 30px;
+		margin: 30px 15px 15px 30px;
 		text-decoration: none;
-		color: #F3F3F3;
+		color: #0C0A13;
 		float: left;
 		transition: color 0.3s, transform 0.3s;
 	}
 	ul a:hover {
-		color: #F26697;
+		color: #E65E15;
 		transform: rotate(10deg);
 	}
 	.active {
-		color: #2346F3;
+		color: #F17F96;
 	}
 	.ribbon {
 		margin: -35px;
-		font-size: 0.8em;
+		font-size: 1em;
+		font-weight: 400;
 		text-align: center;
-		background-color: #F0B719;
-		border-bottom: 1px solid #08131C;
+		background-color: #0C0A13;
 		overflow-x: hidden;
 		overflow-y: hidden;
 		height: 33px;
@@ -106,7 +115,7 @@
 		white-space: nowrap;
 	}
 	.ribbon-text {
-		color: #08131C;
+		color: #F0F5E4;
 		font-size: 1.4em;
   		animation: bannermove 10s linear infinite;
  		animation-play-state: running;
@@ -129,13 +138,16 @@
 		animation-play-state:paused;
 	}
 	footer {
-		color: #F3F3F3;
+		color: var(--white);
 		text-align: center;
 		font-size: 0.9em;
+		background-color: var(--black);
+		margin: -35px;
+		padding: 20px;
 	}
 	.topnav .icon {
   		display: none;
-		color: #F3F3F3;
+		color: #F0F5E4;
 	}
 	.column {
 		flex: 50%;
@@ -144,20 +156,25 @@
 	.row {
 		display: flex;
 	}
-	@keyframes colourchange {
-  		50% {
-			-webkit-filter: hue-rotate(360deg); 
-			filter: hue-rotate(360deg);
-  		}
+	.spin {
+		animation: spin 1s linear infinite;
+  		animation-play-state: paused;
+  		animation-delay: calc(var(--scroll) * -1s);
 	}
+	@keyframes spin 
+	{
+		to { 
+			transform: rotate(360deg);
+		}
+	}	
 	
 	
-		/* responsive stuff */
+		/* RESPONSIVE */
 		@media screen and (max-width: 830px) {
 		html {
 		}
 		body {
-			font-size: 4vw;
+			font-size: 2.5vw;
 			margin: 35px 10px;
 			overflow-x: hidden;
 			background-position: top center;
@@ -166,22 +183,23 @@
 			font-size: 15vw;
 		}
 		h4, h5 {
-			font-size: 3.5vw;
+			font-size: 3vw;
 		}
 		ul {
-			width: 50%;
+			width: 40%;
 			text-align: right;
 		}
 		ul a {
 			margin-top: 3.5vw;
-			font-size: 7vw;
-			line-height: 4vw;
+			font-size: 5vw;
+			line-height: 3vw;
 			overflow: visible;
-			color: #08131C;
+			color: var(--black);
 		}
 		ul a:hover {
 			transform: rotate(5deg);
 		}
+		
 		.row {
 			display: block;
 		}
@@ -193,14 +211,14 @@
 		width: 0px;
 		}
 		.topnav { 
-			background-color: #F0B719;
-			border-radius: 5px;
-			z-index: 5;
+			background-color: var(--pink);
+			border-radius: 20px;
 		}
 		.topnav a {display: none;}
   		.topnav a.icon {
 			float: right;
 			display: block;
+			color: var(--black);
  		}
 		.topnav.responsive {position: relative;}
 		.topnav.responsive a.icon {
@@ -212,7 +230,6 @@
 			float: none;
 			display: block;
 			text-align: left;
-			font-size: 4.5vw;
 		}
 		i {
 			width: "40vw";
@@ -220,9 +237,6 @@
 		.ribbon {
 			height: 5vw;
 		}
-			.stickers {
-				margin-left: -9vw;
-			}
 	}
 	/*INDEX STUFF*/
 	
@@ -238,46 +252,59 @@
 		overflow: visible;
 		white-space: nowrap;
 		margin: 0;
-		font-family: "owners-narrow", sans-serif;
-		font-weight: 700;
-		font-style: normal;
-		font-size: 10em !important;
-		color: #0a0a0a;
-		font-size: 1.4em;
-  		animation: carouselmove 50s linear infinite;
+  		animation: carouselmove 10s linear infinite;
  		animation-play-state: running;
  		-webkit-animation-play-state: running;
  		animation-direction: alternate;
 	}
+	.carousel img {
+		margin-right: 30px;
+		height:200px !important;
+	}
+	/**.carousel:hover {
+		-webkit-animation-play-state:paused;
+		-moz-animation-play-state:paused;
+		-o-animation-play-state:paused;
+		animation-play-state:paused;
+	}**/
 	@keyframes carouselmove {
 		0% {
 		transform: translate(0, 0);
 		}
 		100% {
-		transform: translate(-1030%, 0);
+		transform: translate(-170%, 0);
 		}
 	}
 	
-	.stickers {
-		transition: transform 0.3s;
+	.zaraslide {
+		animation: slide 0.05s linear infinite;
+		animation-iteration-count: 1;
+  		animation-play-state: paused;
+  		animation-delay: calc(var(--scroll) * -1s);
 	}
-	.spinny {
-		animation: spinny 50s linear infinite;
- 		animation-play-state: running;
- 		-webkit-animation-play-state: running;
- 		animation-direction: normal;
-	}
-	@keyframes spinny {
-		0% {
-		transform: rotate(0);
+	@keyframes slide 
+	{
+		from { 
+			transform: translateX(-450px);
 		}
-		100% {
-		transform: rotate(360deg);
+		to { 
+			transform: translateX(0);
 		}
+	}	
+	.titleslide {
+		animation: swoosh 0.9s linear infinite;
+  		animation-play-state: paused;
+  		animation-delay: calc(var(--scroll) * -1s);
 	}
-	.stickers img:hover {
-		transform: rotate(-3deg);
-	}
+	@keyframes swoosh 
+	{
+		from { 
+			transform: translateX(700px);
+		}
+		to { 
+			transform: translateX(0);
+		}
+	}	
 </style>
 <!--END OF CSS CODES-->
 	
@@ -287,202 +314,84 @@
 	
 	<!--HEADER STUFF-->
 	<div class="ribbon"><div class="ribbon-text">
-	THANK YOU FOR VISITING ZARA'S WEBSITE! THANK YOU FOR VISITING ZARA'S WEBSITE! THANK YOU FOR VISITING ZARA'S WEBSITE
+	WELCOME TO MY (NEW &amp; IMPROVED) WEBSITE. &#10240; ENJOY YOUR TIME HERE! &#10240; THANKS FOR THE SUPPORT &lt;3
 	</div></div>
 	<br>
 	<ul style="float:left;">
-		<li style="float:left;margin-top:-25px;"><a href="index.html"><img src="ZARA HAPIZ LOGO BLACK.png" alt="ZH" style="width:100px;"></a></li>
+		<li style="float:left;margin-top:-25px;"><a href="index.html"><img src="ZARA HAPIZ LOGO.png" alt="ZH" style="width:150px;"></a></li>
 	</ul><ul style="float:right;margin-top:5px;font-size:1.1em;"><div class="topnav" id="myTopnav">
 		<a class="active" href="index.html">home</a>
-  		<a href="art gallery.html">art gallery</a>
+  		<a href="gallery.html">gallery</a>
 		<a href="store.html">store</a>
-		<a href="contact.html">contact</a>
 		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
     	<i class="fa fa-bars" style="font-size:7.5vw;"></i>
   </a></div>
 	</ul>
-	<br><br>
-	<div class="divider"></div>
-	<!--END OF HEADER STUFF-->
-	
-	
-		<div class="stickers">
-			<img src="STICKER-01.png" alt="" style="width:30%;display:block;margin-left:auto;margin-right:auto;margin-top: 50px;transform:rotate(-7deg);">
-			<img src="STICKER-02.png" alt="" style="width:15%;z-index:1;position:relative;left:57vw;bottom:15vw;transform:rotate(9deg);overflow:visible;animation:spinny 50s linear infinite;animation-play-state:running;-webkit-animation-play-state:running;animation-direction:reverse;">
-			<img src="STICKER-03.png" alt="" style="width:17%;z-index:1;position:relative;left:5vw;bottom:25vw;transform:rotate(4deg);overflow:visible;">
-			<img src="STICKER-04.png" alt="" style="width:17%;z-index:2;position:relative;left:-20vw;bottom:16vw;transform:rotate(-16deg);overflow:visible;">
-			<img src="STICKER-05.png" alt="" style="width:17%;z-index:2;position:relative;left:15vw;bottom:22vw;transform:rotate(7deg);overflow:visible;">
-			<img src="STICKER-06.png" alt="" style="width:17%;z-index:3;position:relative;left:5vw;bottom:14vw;transform:rotate(-3deg);overflow:visible;">
-			<img src="STICKER-07.png" alt="" style="width:17%;z-index:1;position:relative;left:75vw;bottom:45vw;transform:rotate(-2deg);overflow:visible;">
-			<img src="STICKER-08.png" alt="" style="width:17%;z-index:2;position:relative;left:-13vw;bottom:42vw;transform:rotate(-8deg);overflow:visible;">
-			<img src="STICKER-09.png" alt="" style="width:10%;z-index:4;position:relative;left:34vw;bottom:50vw;transform:rotate(-3deg);overflow:visible;">
-			<img src="STICKER-09.png" alt="" style="width:10%;z-index:4;position:relative;left:-16vw;bottom:34vw;transform:rotate(11deg);overflow:visible;">
-			<img src="STICKER-10.png" alt="" style="width:10%;z-index:4;position:relative;left:-50vw;bottom:33vw;transform:rotate(26deg);overflow:visible;animation:spinny 10s linear infinite;animation-play-state:running;-webkit-animation-play-state:running;animation-direction:normal;">
-			<img src="STICKER-10.png" alt="" style="width:10%;z-index:4;position:relative;left:17vw;bottom:40vw;transform:rotate(11deg);overflow:visible;animation:spinny 10s linear infinite;animation-play-state:running;-webkit-animation-play-state:running;animation-direction:normal;">
-		</div>
-	
-		<h1 style="margin-top:-30vw;">
-			<i>Hi.</i><br>
-			</h1><h1 style="color:#F26697;"> I’m Zara Hapiz,</h1>
-			<h1>a graphic designer + web designer.
-		</h1><br><br>
-	
-		<div class="carouselbg">
-		<div class="carousel">
-		APA KHABAR? ! مرحبًا 你好! HALLO! привет! WHAT'S UP? SALUT! Γειά σου! ALOHA! こんにちは! HALLÅ! 안녕하세요! XIN CHÀO! HEY! ¡HOLA! வணக்கம்! สวัสดี! HALÓ!
-		</div>
-		</div>
-	
-		<br><br>
-		<div class="row">
-		<div class="column">
-			<img src="artwork/JUGGERNAUT square.png" width="100%" alt="oh no picture gone :(">
-			JUGGERNAUT (feat. Lil Uzi Vert &amp; Pharrell Williams) - Tyler, The Creator [POSTER]
+	<div class="row" style="margin-top: 150px;">
+		<div class="column" style="flex:30%;">
+			<div class="zaraslide"><img src="zaraaaa.png" alt=""></div>
 		</div>
 		<div class="column">
-			<h4 style="text-align:justify;text-justify:inter-word;padding:10px;">
-				<i style="color:#F26697">WHAT’S UP?</i> My name’s Zara Hapiz. I’m a graphic designer, aspiring software engineer, and much more. You could possibly call me a jack of <i>some</i> trades. I’m really into hip hop, rap, and R&amp;B music, Nintendo video games, and sneakers.
-				<br><br>
-				I currently study pure Science at a secondary level, graduating this year. This website may be a display of my skill in computer science, considering I programmed and designed it myself. For students, press <i>Ctrl+U</i> to view my code. Nevertheless, I hope you enjoy browsing. <i style="color:#F26697">THANK YOU! :p</i>
-				<br><br><iframe style="border-radius:12px;margin-top:0;" src="https://open.spotify.com/embed/track/4tqcoej1zPvwePZCzuAjJd?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></h4>
-			<!--
-			0PyJRNmJvJJ5OmffwQf5we - State Fair - Jack Harlow
-			54FJWt8YIA1IHjmUxuDxwi - Praise God - Kanye West
-			6SdQfCiVae1EXK1pQ6b92o - Rendezvous - Jack Harlow
-			3DK6m7It6Pw857FcQftMds - Runaway - Kanye West
-			2YSzYUF3jWqb9YP9VXmpjE - IDGAF - Drake, Yeat
-			0O3TAouZE4vL9dM5SyxgvH - Fashion Killa - A$AP Rocky
-			6n3HGiq4v35D6eFOSwqYuo - Teenage Fever - Drake
-			51EC3I1nQXpec4gDk0mQyP - 90210 (feat. Kacy Hill) - Travis Scott
-			4mmkhcEm1Ljy1U9nwtsxUo - Through The Wire - Kanye West
-			1ofhfV90EnYhEr7Un2fWiv - Changes - 2Pac
-			4tqcoej1zPvwePZCzuAjJd - Wet Dreamz - J. Cole
-			3eekarcy7kvN4yt5ZFzltW - Highest In The Room - Travis Scott
-			0AluA5RNsa4Cx6XRhf2hWZ - 10 Freaky Girls - Metro Boomin, 21 Savage
-			4kjI1gwQZRKNDkw1nI475M - MY EYES - Travis Scott
-			-->
-		</div></div><br><br><br>
-		<div class="row">
-			<div class="column">
-				<h1>Latest Projects!</h1>
-				<h4 style="margin-top:30px;text-align:justify;text-justify:inter-word;padding:10px;"><a href="https://zaramysh.github.io/apple/" style="color:#2346F3;" target="_blank"><b>Click me to visit Zara’s Apple website!</b></a>
-				<br><br>
-				I was tasked with a school project to design a future smartphone device. This is a faux Apple website I programmed for the then-upcoming iPhone 15 before its release. 
-				<br><br>The <i>real</i> iPhone 15 was just released and not many of my predictions were accurate.
-				<br><br><i>PHOTOS DO NOT BELONG TO ME!</i>
-				<br><br><iframe style="border-radius:12px;margin-top:0;" src="https://open.spotify.com/embed/track/0O3TAouZE4vL9dM5SyxgvH?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></h4>
-			<!--
-			0PyJRNmJvJJ5OmffwQf5we - State Fair - Jack Harlow
-			54FJWt8YIA1IHjmUxuDxwi - Praise God - Kanye West
-			6SdQfCiVae1EXK1pQ6b92o - Rendezvous - Jack Harlow
-			3DK6m7It6Pw857FcQftMds - Runaway - Kanye West
-			2YSzYUF3jWqb9YP9VXmpjE - IDGAF - Drake, Yeat
-			0O3TAouZE4vL9dM5SyxgvH - Fashion Killa - A$AP Rocky
-			6n3HGiq4v35D6eFOSwqYuo - Teenage Fever - Drake
-			51EC3I1nQXpec4gDk0mQyP - 90210 (feat. Kacy Hill) - Travis Scott
-			4mmkhcEm1Ljy1U9nwtsxUo - Through The Wire - Kanye West
-			1ofhfV90EnYhEr7Un2fWiv - Changes - 2Pac
-			4tqcoej1zPvwePZCzuAjJd - Wet Dreamz - J. Cole
-			3eekarcy7kvN4yt5ZFzltW - Highest In The Room - Travis Scott
-			0AluA5RNsa4Cx6XRhf2hWZ - 10 Freaky Girls - Metro Boomin, 21 Savage
-			4kjI1gwQZRKNDkw1nI475M - MY EYES - Travis Scott
-			-->
-			</div>
-			<div class="column">
-				<img src="artwork/SMARTPHONE POSTER square!.png" width="100%" alt="oh no picture gone :(">
-				“Future” iPhone 15 by Zara [POSTER] (Not affiliated with Apple)
-			</div>
-		</div><br><br><br>
-	
-		<div class="row">
-			<div class="column">
-				<img src="artwork/ENGLISH 1.png" width="100%" alt="oh no picture gone :(">
-				<i>Montigo</i> Ace Bottle [POSTER] (Not affiliated with Montigo)
-			</div>
-			<div class="column">
-				<h4 style="text-align:justify;text-justify:inter-word;padding:10px;">
-					I received this Montigo Ace Bottle in Sunset Coral as a gift for my birthday last year and it’s such a game-changer, man..
-					<br><br> It keeps my water cool all day. I know this sounds like an advertisement, but I promise Montigo doesn’t even know I exist. I just really like their products.
-					<br><br><b><a href="https://shopmontigo.com/" style="color:#2346F3;" target="_blank">Get your own Montigo!</a></b>
-				<br><br><iframe style="border-radius:12px;margin-top:0;" src="https://open.spotify.com/embed/track/4kjI1gwQZRKNDkw1nI475M?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-				</h4>
-			<!--
-			0PyJRNmJvJJ5OmffwQf5we - State Fair - Jack Harlow
-			54FJWt8YIA1IHjmUxuDxwi - Praise God - Kanye West
-			6SdQfCiVae1EXK1pQ6b92o - Rendezvous - Jack Harlow
-			3DK6m7It6Pw857FcQftMds - Runaway - Kanye West
-			2YSzYUF3jWqb9YP9VXmpjE - IDGAF - Drake, Yeat
-			0O3TAouZE4vL9dM5SyxgvH - Fashion Killa - A$AP Rocky
-			6n3HGiq4v35D6eFOSwqYuo - Teenage Fever - Drake
-			51EC3I1nQXpec4gDk0mQyP - 90210 (feat. Kacy Hill) - Travis Scott
-			4mmkhcEm1Ljy1U9nwtsxUo - Through The Wire - Kanye West
-			1ofhfV90EnYhEr7Un2fWiv - Changes - 2Pac
-			4tqcoej1zPvwePZCzuAjJd - Wet Dreamz - J. Cole
-			3eekarcy7kvN4yt5ZFzltW - Highest In The Room - Travis Scott
-			0AluA5RNsa4Cx6XRhf2hWZ - 10 Freaky Girls - Metro Boomin, 21 Savage
-			4kjI1gwQZRKNDkw1nI475M - MY EYES - Travis Scott
-			-->
-			</div>
-		</div><br><br><br>
-	
-		<div class="row">
-			<div class="column">
-				<h1>PERSADA <i>MWT</i></h1>
-				<h4 style="margin-top:30px;text-align:justify;text-justify:inter-word;padding:10px;">
-				PERSADA is my school, SMK Taman Melawati’s, official magazine. It has been published annually for almost 28 years as of 2023. I’m proud to say that I’m a part of its Editorial Board, specifically the Graphic Design department. It’s been a blast working with our head editors: Wan, Zahra, Azeem, Dayana, as well as everyone else in this family.
-				<br><br> Look out for 2023’s issue (28th Edition)!
-				<br><br><a href="https://quarterlypersada.wixsite.com/e-pinnaclesofficials" style="color:#2346F3;" target="_blank"><b>Click me to visit PERSADA’s quarterly magazine site!</b></a>
-				<br><br><iframe style="border-radius:12px;margin-top:0;" src="https://open.spotify.com/embed/track/0AluA5RNsa4Cx6XRhf2hWZ?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></h4>
-			<!--
-			0PyJRNmJvJJ5OmffwQf5we - State Fair - Jack Harlow
-			54FJWt8YIA1IHjmUxuDxwi - Praise God - Kanye West
-			6SdQfCiVae1EXK1pQ6b92o - Rendezvous - Jack Harlow
-			3DK6m7It6Pw857FcQftMds - Runaway - Kanye West
-			2YSzYUF3jWqb9YP9VXmpjE - IDGAF - Drake, Yeat
-			0O3TAouZE4vL9dM5SyxgvH - Fashion Killa - A$AP Rocky
-			6n3HGiq4v35D6eFOSwqYuo - Teenage Fever - Drake
-			51EC3I1nQXpec4gDk0mQyP - 90210 (feat. Kacy Hill) - Travis Scott
-			4mmkhcEm1Ljy1U9nwtsxUo - Through The Wire - Kanye West
-			1ofhfV90EnYhEr7Un2fWiv - Changes - 2Pac
-			4tqcoej1zPvwePZCzuAjJd - Wet Dreamz - J. Cole
-			3eekarcy7kvN4yt5ZFzltW - Highest In The Room - Travis Scott
-			0AluA5RNsa4Cx6XRhf2hWZ - 10 Freaky Girls - Metro Boomin, 21 Savage
-			4kjI1gwQZRKNDkw1nI475M - MY EYES - Travis Scott
-			-->
-			</div>
-				<div class="column">
-				<img src="artwork/JENTERA PENGGERAK COVER '23.jpg" width="100%" alt="oh no picture gone :(">
-				<i>Jentera Penggerak</i> page for 2023’s upcoming issue
-			</div>
+			<h1>ZARA <i style="color:#F17F96;">HAPIZ</i></h1>
+			<h3>Hey readers! I'm <i style="color:#3D84E1;">Zara Hapiz</i> and I'm a graphic designer + aspiring computer/software engineer + all around <a href="art gallery.html" style="color:var(--black);">artist</a>. I'm a 17-year-old high school student. I'm a huge fan of hip-hop and 2000's R&amp;B music. I've got a knack for basketball and my jersey number is #1. My favourite font is Neue Haas Grotesk (ironically enough, it isn't being used in this website). Hmm.. what else? I'm a sucker for rom-coms.
+			<p>Anyway, if you couldn't already tell, I programmed this website myself. Its main purpose is to obviously showcase my coding abilities, but besides that this also serves as a portfolio for my graphic design (check out the <a href="store.html" style="color:var(--black);">store</a>!). For students or curious people, feel free to click <i style="color:#3D84E1;">Ctrl+U</i>.</p></h3>
+			<img src="ZARA HAPIZ LOGO ICON.png" style="width:120px;" alt="" class="spin">
 		</div>
+	</div>
+	<br>
+	<img src="artwork/home tcd.png" alt="" style="width:100vw;margin-left:-35px;">
+	<br><br><h1 class="titleslide">logofolio</h1><br><br>
+	<img src="ZARA HAPIZ LOGO PINK ICON.png" alt="" style="width:100px;z-index:0;position:fixed">
+	<div class="carousel">
+		<img src="logofolio/ZARA HAPIZ LOGO PINK.png" alt="">
+		<img src="ZARA HAPIZ LOGO PINK ICON.png" alt="">
+		<img src="logofolio/petanque logo.png" alt="">
+		<img src="logofolio/GRAPHICS pink-02.png" alt="">
+		<img src="logofolio/ZARA HAPIZ LOGO SMALL.png" alt="">
+		<img src="logofolio/STICKER-02.png" alt="">
+		<img src="logofolio/LAS LOGO.png" alt="">
+		<img src="logofolio/5IGNAL LOGO 01.png" alt="">
+		<img src="logofolio/5IGNAL LOGO 03.png" alt="">
+		<img src="logofolio/PRS MWT.png" alt="">
+	</div><br>
+	<div class="carousel" style="animation-direction: alternate-reverse;">
+		<img src="logofolio/FOODS-01.png" alt="">
+		<img src="logofolio/FOODS-02.png" alt="">
+		<img src="logofolio/FOODS-03.png" alt="">
+		<img src="logofolio/Personality+ logo-04.png" alt="">
+		<img src="logofolio/Personality+ logo-05.png" alt="">
+		<img src="logofolio/Personality+ logo-03.png" alt="">
+		<img src="logofolio/RUMAH SUKAN CAPS!-01.png" alt="" style="height:200px;">
+		<img src="logofolio/zara hapiz logo.png" alt="">
+		<img src="logofolio/zara hapiz logo smol.png" alt="">
+	</div><br><br><br>
 	
-	
-	<br><br><br><h1 style="font-family:'owners-narrow',sans-serif;font-weight:700;font-style:normal;font-size:15vw!important;text-align:center;color:#F0B719;">PROLOGUE!</h1>
-		<h4 style="text-align:justify;text-justify:inter-word;padding:30px;font-size:0.8em;">
-			Alright, first and foremost, I’d like to thank my <i style="color:#F26697;">parents</i>. My mom and dad. Without them, I wouldn’t be here, both figuratively and literally. My mom inspires me to achieve greater heights and has been nurturing and guiding me since birth. She inspired me to display my talents here. My dad, on the other hand, is the coolest person on earth. He inspired me to take my passion for computer science further, and now that’s my ambition. I’d also like to give an honourable mention to my <i style="color:#F26697;">younger siblings</i>, Azeem and Mysha, who give me constant unconditional support.
-			<br><br>
-			I’d also like to thank <i style="color:#F26697;">Cikgu Rosila</i> and <i style="color:#F26697;">Cikgu Hidayati</i>. They’d been my Computer Science teachers throughout 2020-2022 and without them, this website wouldn’t exist, no joke. I wouldn’t know how to code at all without them. The idea of coding my own website wouldn’t even cross my mind without them.
-			<br><br>
-			Last, but definitely not least, I’d like to express my appreciation towards my amazing friends. <i style="color:#F26697;">Adam</i>, <i style="color:#F26697;">Afina</i>, <i style="color:#F26697;">Airel</i>, <i style="color:#F26697;">Airin</i>, <i style="color:#F26697;">Aishah</i>, <i style="color:#F26697;">Aleesya</i>, <i style="color:#F26697;">Alisha</i>, <i style="color:#F26697;">Aliya</i>, <i style="color:#F26697;">Azeem</i>, <i style="color:#F26697;">Cassandra</i>, <i style="color:#F26697;">Lakhiesa</i>, <i style="color:#F26697;">Lara</i>, <i style="color:#F26697;">Ranjit</i>, <i style="color:#F26697;">Syarafina</i>, <i style="color:#F26697;">Uwais</i>, and <i style="color:#F26697;">Ziqry</i>, just to name a few. You all motivate me to embrace my talents and skills, and I truly wouldn’t be me without all of you.
-		</h4>
-	
-	
+	<h1>work with me!</h1>
+	<h3>Contact me at @zaramysh on Instagram or email me at zara.hapiz@gmail.com for a chat.
+	<p>**I AM CURRENTLY UNAVAILABLE DUE TO EXAM SEASON!</p></h3><br><br><br>
 	
 	<!--FOOTER STUFF-->
 	<footer><br><br>
 		<a href="https://www.instagram.com/zaramysh/" target="_blank"><img src="instagram.png" style="width:30px;" alt="Instagram"></a>
-		<a href="https://www.tiktok.com/@zaramysh" target="_blank"><img src="tik-tok.png" style="width:30px;" alt="TikTok"></a>
+		<a href="https://www.tiktok.com/@flow7rboy" target="_blank"><img src="tik-tok.png" style="width:30px;" alt="TikTok"></a>
 		<p>© Zara Hapiz 2024</p>
+		<p><img src="ZARA HAPIZ LOGO WHITE ICON.png" alt="" style="width:50px;"></p>
 		<embed><a href="https://acadooghostwriter.com/" style="opacity: 0; cursor:default;">https://acadooghostwriter.com</a> <script type="text/javascript" src="https://www.freevisitorcounters.com/auth.php?id=1d304043b64be22a3a5ba7a5a465aa9a5c4460cf"></script>
 		<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1019120/t/5"></script>
 	</footer>
 	<!--END OF FOOTER STUFF-->
+	
+	
 	<!--JAVASCRIPT SCRIPTS-->
 	<script>
+	window.addEventListener('scroll', () => {
+  	document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+	}, false);
+		
 	function myFunction() {
 		var x = document.getElementById("myTopnav");
 	    if (x.className === "topnav") {
-			x.className += " responsive";
+			x.className += "responsive";
 	  	} else {
 			x.className = "topnav";
 	  	}
