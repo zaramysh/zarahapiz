@@ -9,19 +9,28 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Space+Grotesk:wght@300..700&family=VT323&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 <!--CSS CODES-->
 <style>
+	:root {
+  		--black: #0C0A13;
+  		--white: #F0F5E4;
+		--pink: #F17F96;
+		--blue: #3D84E1;
+		--orange: #E65E15;
+	}
 	body {
-		font-family: 'Fragment Mono', monospace;
-		font-weight: 500;
+  		font-family: "Space Grotesk", sans-serif;
+		font-optical-sizing: auto;
+		font-weight: 400;
 		font-style: normal;
-		font-size: 1.5em;
-		color: #0A0A0A;
+		font-size: 1.1em;
+		color: #0C0A13;
 		margin: 35px;
-		background-color: #F3F3F3;
+		background-color: #F0F5E4;
+		background-image: linear-gradient(var(--white), var(--pink) 40%);
 		background-repeat: repeat-y;
 		background-position: left top;
   		background-attachment: scroll;
@@ -30,28 +39,23 @@
 		overflow-x: hidden;
 	}
 	h1 {
-		font-family: "degular-display", sans-serif;
-		font-weight: 700;
+		
+		font-weight: 900;
 		font-style: normal;
-		font-size: 4em;
+		font-size: 7em;
 		margin: 10px;
 		line-height: 0.8em;
-		animation-name: titleHover;
-		animation-duration: 3s;
-		animation-iteration-count: 1;
 	}
 	h2 {
-		font-family: "neue-haas-grotesk-text",sans-serif;
 		margin: 0;
 		margin-top: 20px;
 		font-weight: 600;
 	}
 	h3 {
 		margin: 10px 0 10px 0;
-		font-weight: 300;
+		font-weight: 400;
 	}
 	h4 {
-		font-family: "neue-haas-grotesk-text",sans-serif;
 		margin: 10px 0 10px 0;
 		font-weight: 500;
 		font-size: 1em;
@@ -65,20 +69,15 @@
 		width: 10px;
 	}
 	::-webkit-scrollbar-track {
-		background: #0A0A0A;
+		background: #F0F5E4;
+		border-left: 1px solid #0C0A13;
 	}
 	::-webkit-scrollbar-thumb {
-		background: #F26697;
-		border: 1px solid #0A0A0A;
+		background: #0C0A13;
+		border: 1px solid #0C0A13;
 	}
 	::-webkit-scrollbar-thumb:hover {
-		background: #2346F3;
-	}
-	@keyframes colourchange {
-  		50% {
-			-webkit-filter: hue-rotate(360deg); 
-			filter: hue-rotate(360deg);
-  		}
+		background: #E65E15;
 	}
 	ul {
 		height: 0px;
@@ -90,29 +89,25 @@
 	}
 	ul a {
 		display: block;
-		color: black;
-		margin: 15px 15px 15px 30px;
+		margin: 30px 15px 15px 30px;
 		text-decoration: none;
-		color: #0A0A0A;
+		color: #0C0A13;
 		float: left;
 		transition: color 0.3s, transform 0.3s;
 	}
 	ul a:hover {
-		color: #F26697;
+		color: #E65E15;
 		transform: rotate(10deg);
 	}
 	.active {
-		color: #2346F3;
-	}
-	embed {
-		cursor: default;
+		color: #F17F96;
 	}
 	.ribbon {
 		margin: -35px;
-		font-size: 0.8em;
+		font-size: 1em;
+		font-weight: 400;
 		text-align: center;
-		background-color: #F0B719;
-		border-bottom: 1px solid #08131C;
+		background-color: #0C0A13;
 		overflow-x: hidden;
 		overflow-y: hidden;
 		height: 33px;
@@ -120,7 +115,7 @@
 		white-space: nowrap;
 	}
 	.ribbon-text {
-		color: #08131C;
+		color: #F0F5E4;
 		font-size: 1.4em;
   		animation: bannermove 10s linear infinite;
  		animation-play-state: running;
@@ -143,13 +138,16 @@
 		animation-play-state:paused;
 	}
 	footer {
-		color: #0A0A0A;
+		color: var(--white);
 		text-align: center;
 		font-size: 0.9em;
+		background-color: var(--black);
+		margin: -35px;
+		padding: 20px;
 	}
 	.topnav .icon {
   		display: none;
-		color: #F3F3F3;
+		color: #F0F5E4;
 	}
 	.column {
 		flex: 50%;
@@ -158,20 +156,23 @@
 	.row {
 		display: flex;
 	}
-	@keyframes spinny {
-		0% {
-		transform: rotate(0);
-		}
-		100% {
-		transform: rotate(360deg);
-		}
+	.spin {
+		animation: spin 1s linear infinite;
+  		animation-play-state: paused;
+  		animation-delay: calc(var(--scroll) * -1s);
 	}
-		/* responsive stuff */
+	@keyframes spin 
+	{
+		to { 
+			transform: rotate(360deg);
+		}
+	}	
+		/* RESPONSIVE*/
 	@media screen and (max-width: 830px) {
 		html {
 		}
 		body {
-			font-size: 4vw;
+			font-size: 2.5vw;
 			margin: 35px 10px;
 			overflow-x: hidden;
 			background-position: top center;
@@ -180,22 +181,23 @@
 			font-size: 15vw;
 		}
 		h4, h5 {
-			font-size: 3.5vw;
+			font-size: 3vw;
 		}
 		ul {
-			width: 50%;
+			width: 40%;
 			text-align: right;
 		}
 		ul a {
 			margin-top: 3.5vw;
-			font-size: 7vw;
-			line-height: 4vw;
+			font-size: 5vw;
+			line-height: 3vw;
 			overflow: visible;
-			color: #08131C;
+			color: var(--black);
 		}
 		ul a:hover {
 			transform: rotate(5deg);
 		}
+		
 		.row {
 			display: block;
 		}
@@ -207,15 +209,14 @@
 		width: 0px;
 		}
 		.topnav { 
-			background-color: #F0B719;
-			border-radius: 5px;
-			z-index: 5;
+			background-color: var(--pink);
+			border-radius: 20px;
 		}
 		.topnav a {display: none;}
   		.topnav a.icon {
 			float: right;
 			display: block;
-			filter: invert(90%);
+			color: var(--black);
  		}
 		.topnav.responsive {position: relative;}
 		.topnav.responsive a.icon {
@@ -227,16 +228,12 @@
 			float: none;
 			display: block;
 			text-align: left;
-			font-size: 4.5vw;
 		}
 		i {
 			width: "40vw";
 		}
 		.ribbon {
 			height: 5vw;
-		}
-		.stickers {
-			display: none;
 		}
 		.gallery {
 			margin-left: 5vw;
@@ -252,24 +249,26 @@
 	.gallery {
 		position: relative;
 		display: inline-block;
-		margin-right: 65px;
+		margin-right: 15px;
   		width: 300px;
   		background-color: #F3F3F3;
-  		height: 410px;
-		border-left: 5px solid #F0B719;
+  		height: 300px;
+		/*border-left: 5px solid #F0B719;*/
 		color: #0A0A0A;
 		overflow: visible;
-		margin-bottom: 65px;
+		margin-bottom: 20px;
 		text-align: left;
 		vertical-align: top;
 	}
 	.title {
+		display: none;
 		background-color: #2346F3;
 		color: #F3F3F3;
 		padding: 5px 7px;
 		font-size: 0.8em;
 	}
 	.container {
+		display: none;
 		padding: 10px 15px 0px 15px;
 		overflow: visible;
 		line-height: 25px;
@@ -297,7 +296,7 @@
 	  	width: 80%;
 	  	max-width: 700px;
 	  	text-align: center;
-	  	color: #2346F3;
+	  	color: var(--white);
 	  	padding: 10px 0;
 	  	height: 150px;
 	  	font-size: 1em;
@@ -308,7 +307,7 @@
 	  	position: absolute;
 	  	top: 15px;
 	  	right: 35px;
-	  	color: #F0B719;
+	  	color: var(--blue);
 	  	font-size: 40px;
 	  	font-weight: bold;
 	  	transition: 0.3s;
@@ -328,48 +327,29 @@
 <body>
 	<!--HEADER STUFF-->
 	<div class="ribbon"><div class="ribbon-text">
-	THANK YOU FOR VISITING ZARA'S WEBSITE! THANK YOU FOR VISITING ZARA'S WEBSITE! THANK YOU FOR VISITING ZARA'S WEBSITE
+	WELCOME TO MY (NEW &amp; IMPROVED) WEBSITE. &#10240; ENJOY YOUR TIME HERE! &#10240; THANKS FOR THE SUPPORT &lt;3
 	</div></div>
 	<br>
 	<ul style="float:left;">
-		<li style="float:left;margin-top:-25px;"><a href="index.html"><img src="ZARA HAPIZ LOGO BLACK.png" alt="ZH" style="width:100px;"></a></li>
+		<li style="float:left;margin-top:-25px;"><a href="index.html"><img src="ZARA HAPIZ LOGO.png" alt="ZH" style="width:150px;"></a></li>
 	</ul><ul style="float:right;margin-top:5px;font-size:1.1em;"><div class="topnav" id="myTopnav">
 		<a href="index.html">home</a>
-  		<a class="active" href="art gallery.html">art gallery</a>
+  		<a class="active" href="gallery.html">gallery</a>
 		<a href="store.html">store</a>
-		<a href="contact.html">contact</a>
 		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
     	<i class="fa fa-bars" style="font-size:7.5vw;"></i>
-  </a></div>
+  	</a></div>
 	</ul>
-	<br><br>
-	<div class="divider"></div>
 	<!--END OF HEADER STUFF-->
 	
 	
 <!--MAIN!!!!-->	
-	<br>
-		<!--<table>
-		<tr>
-			<td><h1 style="font-family:'owners-narrow',sans-serif;font-weight:700;font-style:normal;font-size:15vw;margin-top:20px;">ART GALLERY</h1></td>
-			<td style="background-color:#F3F3F3;"><!--<h1 style="color:#0A0A0A;vertical-align:top;text-align:justify;text-justify:inter-word;margin-left:-3px;">ARTWORK<i>!</i></h1>-->
-			<!--<h4 style="color:#0A0A0A;vertical-align:top;text-align:justify;text-justify:inter-word;">
-				Artwork by me. 
-				<br>Mostly graphite.
-				<br>Enjoy!
-			</h4>
-			</td>
-		</tr>
-		</table>-->
-	
-	<h1 style="font-family: 'neue-haas-grotesk-text', sans-serif;color:#F3F3F3;background-color:#2346F3;padding:50px;">ART GALLERY<i>!!!</i>
-	<div class="stickers"><img src="STICKER-05.png" style="float:right;width:230px;position:relative;bottom:6vw;right:2vw;transform:rotate(6deg);z-index:2;cursor:default;" alt="oh no :(">
-	<img src="STICKER-02.png" style="float:right;width:150px;position:relative;bottom:10vw;left:20vw;transform:rotate(10deg);z-index:1;cursor:default;animation:spinny 10s linear infinite;animation-play-state:running;-webkit-animation-play-state:running;animation-direction:normal;" alt="oh no :(">
-	<img src="ZARA HAPIZ LOGO SMALL.png" style="float:right;width:200px;position:relative;bottom:12vw;left:20vw;transform:rotate(-10deg);z-index:1;cursor:default;" alt="oh no :("></div></h1><br><br>
+	<br><br><br><br><br><h1>zara's artwork</h1>
+	<h3>Click each image for more information.</h3><br>
+	<img class="spin" style="position:absolute;left:1200px;z-index:3;width:200px;" src="ZARA HAPIZ LOGO PINK ICON.png" alt="">
+	<img class="spin" style="position:absolute;top:900px;left:-50px;z-index:3;width:200px;" src="ZARA HAPIZ LOGO WHITE ICON.png" alt="">
 	
 	
-	<!---2023--->
-	<h2 style="color:#F26697;"><p>2023</p></h2>
 	<div class="gallery">
 		<div class="title">Jack Harlow</div>
 	<img id="img2023-10" src="artwork/jack harlow.png" width="300px" height="300px" alt="Jack Harlow">
@@ -410,6 +390,7 @@
 	<img id="img2023-3" src="artwork/madeline-1.png" width="300px" height="300px" alt="Madeline Argy">
 	<div class="container">6/2/23<br><i>Graphite</i></div></div>
 	
+	<h1><center>having fun there?</center></h1><br>
 	<div class="gallery">
 		<div class="title">Central Cee</div>
 	<img id="img2023-2" src="artwork/central cee-1.png" width="300px" height="300px" alt="Central Cee">
@@ -420,10 +401,6 @@
 	<img id="img2023-1" src="artwork/clairo-1.png" width="300px" height="300px" alt="Clairo">
 	<div class="container">3/2/23<br><i>Graphite</i></div></div>
 	
-	
-	
-	<!---2022--->
-	<h2 style="color:#F26697;"><p>2022</p></h2>
 	<div class="gallery">
 		<div class="title">Pear</div>
 	<img id="img2022-3" src="artwork/pear-1.png" width="300px" height="300px" alt="Pear; acrylic on paper">
@@ -439,9 +416,6 @@
 	<img id="img2022-1" src="artwork/waktu senja-1.png" width="300px" height="300px" alt="Waktu Senja; acrylic on paper">
 	<div class="container">31/3/22<br><i>Acrylic</i></div></div>
 	
-	
-	<!---2021--->
-	<h2 style="color:#F26697;"><p>2021</p></h2>
 	<div class="gallery">
 		<div class="title">Fried Egg</div>
 	<img id="img2021-4" src="artwork/egg-1.png" width="300px" height="300px" alt="Fried Egg">
@@ -457,10 +431,14 @@
 	<img id="img2021-2" src="artwork/willow-1.png" width="300px" height="300px" alt="WILLOW">
 	<div class="container">11/6/21<br><i>Acrylic</i></div></div>
 	
+	<img class="spin" style="position:absolute;left:1200px;z-index:3;width:200px;" src="ZARA HAPIZ LOGO ICON.png" alt="">
+	
 	<div class="gallery">
 		<div class="title">Manta Ray</div>
 	<img id="img2021-1" src="artwork/manta ray-1.png" width="300px" height="300px" alt="Manta Ray (for Suraya)">
-	<div class="container">22/5/21<br><i>Digital</i></div></div>
+	<div class="container">22/5/21<br><i>Digital</i></div></div><br>
+	
+	<h1><center>the end!</center></h1><br><br><br>
 	
 <!--END OF MAIN-->	
 	<!-- MODAL -->
@@ -474,9 +452,10 @@
 	
 	<!--FOOTER STUFF-->
 	<footer><br><br>
-		<a href="https://www.instagram.com/zaramysh/" target="_blank"><img src="instagram.png" style="width:30px;display:inline-block;filter:invert(90%);" alt="Instagram"></a>
-		<a href="https://www.tiktok.com/@zaramysh" target="_blank"><img src="tik-tok.png" style="width:30px;display:inline-block;filter:invert(90%);" alt="TikTok"></a>
+		<a href="https://www.instagram.com/zaramysh/" target="_blank"><img src="instagram.png" style="width:30px;" alt="Instagram"></a>
+		<a href="https://www.tiktok.com/@flow7rboy" target="_blank"><img src="tik-tok.png" style="width:30px;" alt="TikTok"></a>
 		<p>© Zara Hapiz 2024</p>
+		<p><img src="ZARA HAPIZ LOGO WHITE ICON.png" alt="" style="width:50px;"></p>
 		
 	</footer>
 	<!--END OF FOOTER STUFF-->
@@ -490,6 +469,9 @@
 			x.className = "topnav";
 	  	}
 	}
+	window.addEventListener('scroll', () => {
+  	document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+	}, false);
 // Get the modal
 var modal = document.getElementById('myModal');
 
@@ -643,6 +625,9 @@ var span = document.getElementsByClassName("close")[0];
 
 // close the model when clicking x
 span.onclick = function() { 
+	modal.style.display = "none";
+}
+img01.onclick = function() {
 	modal.style.display = "none";
 }
 </script>
