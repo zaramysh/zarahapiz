@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <title>STORE - Zara Hapiz</title>
-<link rel="icon" type="image/x-icon" href="ZARA HAPIZ LOGO SMALL.png">
+<link rel="icon" type="image/x-icon" href="ZARA HAPIZ LOGO PINK ICON.png">
 <link rel="stylesheet" href="https://use.typekit.net/oag6cqw.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -199,10 +199,6 @@
 		::-webkit-scrollbar {
 		width: 0px;
 		}
-		.topnav { 
-			background-color: var(--pink);
-			border-radius: 20px;
-		}
 		.topnav a {display: none;}
   		.topnav a.icon {
 			float: right;
@@ -228,10 +224,7 @@
 		}
 		.gallery {
 			margin-left: 5vw;
-		}
-		.price {
-			position: relative;
-			display: none;
+			font-size: 3.2vw;
 		}
 	}
 	/*STORE STYLES*/
@@ -595,7 +588,7 @@
 		<h1><center>the end!</center></h1><br><br><br>
 		<div id="lightbox">
 		<span class="close">×</span>
-		<img src="RECEIPT!.png" alt="" style="transform:rotate(10deg);position:relative;bottom:130px;">
+		<img src="RECEIPT!.png" alt="" style="transform:rotate(10deg);position:relative;bottom:110px;">
 		</div>
 	
 	<!--
@@ -616,7 +609,7 @@
 	
 	
 	<!--FOOTER STUFF-->
-	<footer style="margin-top:-150px;">
+	<footer style="margin-top:-130px;">
 		<a href="https://www.instagram.com/zaramysh/" target="_blank"><img src="instagram.png" style="width:30px;" alt="Instagram"></a>
 		<a href="https://www.tiktok.com/@flow7rboy" target="_blank"><img src="tik-tok.png" style="width:30px;" alt="TikTok"></a>
 		<p>© Zara Hapiz 2024</p>
@@ -638,28 +631,7 @@
   	document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
 	}, false);
 		
-		
-	//RECEIPT
-	/*$(document).ready(function() {
-      $('a.external').click(function(e) {
-        e.preventDefault();
-        var url = $(this).attr('href');
-        window.open(url, '_blank');
-        $('#lightbox').fadeIn();
-        $('#lightbox img').attr('src', 'RECEIPT.png');
-      });
-      $('#lightbox').on('click', function() {
-        $(this).fadeOut();
-        $('#lightbox img').attr('src', '');
-      });
-      $('#lightbox img').on('click', function(e) {
-        e.stopPropagation();
-      });
-      $('#lightbox .close').on('click', function() {
-        $('#lightbox').fadeOut();
-        $('#lightbox img').attr('src', '');
-      });
-    });*/
+	
 	</script>
 </body>
 </html>
