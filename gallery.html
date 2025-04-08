@@ -17,15 +17,6 @@
 <style>
 
 	
-/* RESPONSIVE*/
-	@media screen and (max-width: 830px) {
-			.gallery {
-				margin-left: 5vw;
-			}
-			.modal-content {
-				filter: blur(0);
-			}
-	}
 /*ART GALLERY STYLES*/
 	.gallery img {
 		max-height: 450px;
@@ -177,6 +168,17 @@
 	.backtotop:hover::after {
 	  transform: scaleX(1);
 	  transform-origin: bottom left;
+	}
+	
+	/* RESPONSIVE*/
+	@media screen and (max-width: 830px) {
+			.gallery {
+				margin-left: 5vw;
+			}
+			.modal-content {
+				filter: blur(0);
+				width: 50%;
+			}
 	}
 </style>
 <!--END OF CSS CODES-->
@@ -345,7 +347,7 @@
 	<img id="img1" src="artwork/woman.jpg" width="300px" height="300px" alt="They Smelt of Roses">
 	</div>
 	
-	<h1 style="line-height:120px;"><center>uh oh.. you've reached the end.</center></h1>
+	<h1 style="line-height:9vw;"><center>uh oh.. you've reached the end.</center></h1>
 	<center><h2 onclick="topFunction()" class="backtotop">&uarr; back to top! &uarr;</h2></center><br><br><br><br>
 	
 <!--END OF MAIN-->	
