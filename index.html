@@ -1,5 +1,5 @@
 <!doctype html>
-<!--ZARA HAPIZ WEBSITE, COPYRIGHT ZARA HAPIZ 2024-->
+<!--ZARA HAPIZ WEBSITE, COPYRIGHT ZARA HAPIZ 2025-->
 <html>
 <head>
 <meta charset="utf-8">
@@ -9,243 +9,22 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="./textanimation.css">
+<link rel="stylesheet" href="./zara's style.css">
 <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Space+Grotesk:wght@300..700&family=VT323&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 <!--CSS CODES-->
 <style>
-	:root {
-  		--black: #0C0A13;
-  		--white: #F0F5E4;
-		--pink: #F17F96;
-		--blue: #3D84E1;
-		--orange: #E65E15;
-	}
-	body {
-  		font-family: "Space Grotesk", sans-serif;
-		font-optical-sizing: auto;
-		font-weight: 400;
-		font-style: normal;
-		font-size: 1.1em;
-		color: #0C0A13;
-		margin: 35px;
-		background-color: #F0F5E4;
-		background-repeat: repeat-y;
-		background-position: left top;
-  		background-attachment: scroll;
-		background-size: cover;
-		cursor: default;
-		overflow-x: hidden;
-	}
-	h1 {
-		
-		font-weight: 900;
-		font-style: normal;
-		font-size: 7em;
-		margin: 10px;
-		line-height: 0.8em;
-	}
-	h2 {
-		margin: 0;
-		margin-top: 20px;
-		font-weight: 600;
-	}
-	h3 {
-		margin: 10px 0 10px 0;
-		font-weight: 400;
-	}
-	h4 {
-		margin: 10px 0 10px 0;
-		font-weight: 500;
-		font-size: 1em;
-	}
-	h5 {
-		font-weight: 500;
-		font-size: 0.5em;
-		opacity: 0.7;
-	}
-	::-webkit-scrollbar {
-		width: 10px;
-	}
-	::-webkit-scrollbar-track {
-		background: #F0F5E4;
-		border-left: 1px solid #0C0A13;
-	}
-	::-webkit-scrollbar-thumb {
-		background: #0C0A13;
-		border: 1px solid #0C0A13;
-	}
-	::-webkit-scrollbar-thumb:hover {
-		background: #E65E15;
-	}
-	ul {
-		height: 0px;
-		list-style-type: none;
-		margin: 0;
-  		padding: 0;
-		float: right;
-		font-size: 0.9em;
-	}
-	ul a {
-		display: block;
-		margin: 30px 15px 15px 30px;
-		text-decoration: none;
-		color: #0C0A13;
-		float: left;
-		transition: color 0.3s, transform 0.3s;
-	}
-	ul a:hover {
-		color: #E65E15;
-		transform: rotate(10deg);
-	}
-	.active {
-		color: #F17F96;
-	}
-	.ribbon {
-		margin: -35px;
-		font-size: 1em;
-		font-weight: 400;
-		text-align: center;
-		background-color: #0C0A13;
-		overflow-x: hidden;
-		overflow-y: hidden;
-		height: 33px;
-		font-style: italic;	
-		white-space: nowrap;
-	}
-	.ribbon-text {
-		color: #F0F5E4;
-		font-size: 1.4em;
-  		animation: bannermove 10s linear infinite;
- 		animation-play-state: running;
- 		-webkit-animation-play-state: running;
- 		animation-direction: alternate-reverse;
-	}
-	@keyframes bannermove {
-  		0% 
-	{
-    transform: translate(0, 0);
-  	}
-  	100% {
-    transform: translate(-10%, 0);
-  }
-}
-	.ribbon-text:hover {
-		-webkit-animation-play-state:paused;
-		-moz-animation-play-state:paused;
-		-o-animation-play-state:paused;
-		animation-play-state:paused;
-	}
-	footer {
-		color: var(--white);
-		text-align: center;
-		font-size: 0.9em;
-		background-color: var(--black);
-		margin: -35px;
-		padding: 20px;
-	}
-	.topnav .icon {
-  		display: none;
-		color: #F0F5E4;
-	}
-	.column {
-		flex: 50%;
-		padding: 0 5px;
-	}
-	.row {
-		display: flex;
-	}
-	.spin {
-		animation: spin 0.5s linear infinite;
-  		animation-play-state: paused;
-  		animation-delay: calc(var(--scroll) * -1s);
-	}
-	@keyframes spin 
-	{
-		to { 
-			transform: rotate(360deg);
-		}
-	}	
+
 	
-	
-		/* RESPONSIVE */
-		@media screen and (max-width: 830px) {
-		html {
+	/* INDEX SPECIFIC STUFF */
+	@media screen and (max-width: 830px) {
+		.zara {
+			width:50vw;
 		}
-		body {
-			font-size: 2.5vw;
-			margin: 35px 10px;
-			overflow-x: hidden;
-			background-position: top center;
-		}
-		h1 {
-			font-size: 15vw;
-		}
-		h4, h5 {
-			font-size: 3vw;
-		}
-		ul {
-			width: 40%;
-			text-align: right;
-		}
-		ul a {
-			margin-top: 3.5vw;
-			font-size: 5vw;
-			line-height: 3vw;
-			overflow: visible;
-			color: var(--black);
-		}
-		ul a:hover {
-			transform: rotate(5deg);
-		}
-		
-		.row {
-			display: block;
-		}
-		.column {
-			margin-bottom: 10vw;
-			width: 100%;
-		}
-		li {
-			width: 1px;
-		}
-		::-webkit-scrollbar {
-		width: 0px;
-		}
-		.topnav { 
-			background-color: var(--pink);
-			border-radius: 20px;
-		}
-		.topnav a {display: none;}
-  		.topnav a.icon {
-			float: right;
-			display: block;
-			color: var(--black);
- 		}
-		.topnav.responsive {position: relative;}
-		.topnav.responsive a.icon {
-			position: absolute;
-			right: 0;
-			top: 0;
-		}
-		.topnav.responsive a {
-			float: none;
-			display: block;
-			text-align: left;
-		}
-		i {
-			width: "40vw";
-		}
-		.ribbon {
-			height: 5vw;
-		}
-			.zara {
-				width:50vw;
-			}
 	}
-	/*INDEX STUFF*/
-	
 	embed {
 		cursor: default;
 	}
@@ -282,35 +61,77 @@
 		}
 	}
 	
-	.zaraslide {
-		animation: slide 0.05s linear infinite;
+	.titleslide {
+	position: relative;
+	top: 400px;
+		scale: 1.4;
+		animation: titleslide 0.1s infinite;
 		animation-iteration-count: 1;
   		animation-play-state: paused;
   		animation-delay: calc(var(--scroll) * -1s);
+		animation-timing-function: ease-out;
+		animation-fill-mode: forwards;
 	}
-	@keyframes slide 
+	@keyframes titleslide 
 	{
 		from { 
-			transform: translateX(-450px);
+			scale: 1;
+			transform: translateY(-400px);
+			filter: blur(0);
 		}
 		to { 
-			transform: translateX(0);
+			scale: 1.4;
+			transform: translateY(0);
+			filter: blur(5px);
 		}
 	}	
-	.titleslide {
-		animation: swoosh 0.9s linear infinite;
+	
+	<!-- .expcontainer {
+		border: 4px solid var(--black);
+		float: left;
+		margin-right: 10px;
+		border-radius: 30px;
+		padding: 5px 20px;
+	}
+	@keyframes exp {
+		0% {
+		transform: translate(0, 0);
+		}
+		100% {
+		transform: translate(100%, 0);
+		}
+	} -->
+	.zaraslide {
+		z-index: 3;
+		animation: zaraslide 0.05s infinite;
+		animation-iteration-count: 1;
   		animation-play-state: paused;
   		animation-delay: calc(var(--scroll) * -1s);
+		position: relative;
+		left: 425px;
+		animation-timing-function: ease-out;
 	}
-	@keyframes swoosh 
+	@keyframes zaraslide 
 	{
 		from { 
-			transform: translateX(700px);
+			transform: translateX(-800px);
 		}
 		to { 
 			transform: translateX(0);
 		}
-	}	
+	}
+	@media screen and (max-width: 830px) {
+		.zaraslide {
+			animation-duration: 0;
+			animation-iteration-count: 0;
+			left: 25vw;
+		}
+	}
+	.poster {
+	cursor: pointer;
+	}
+	
+	
 </style>
 <!--END OF CSS CODES-->
 	
@@ -328,25 +149,67 @@
 	</ul><ul style="float:right;margin-top:5px;font-size:1.1em;"><div class="topnav" id="myTopnav">
 		<a class="active" href="index.html">home</a>
   		<a href="gallery.html">gallery</a>
-		<a href="store.html">store</a>
+		<a href="shop.html">shop</a>
 		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
     	<i class="fa fa-bars" style="font-size:7.5vw;"></i>
   </a></div>
 	</ul>
-	<div class="row" style="margin-top: 150px;">
-		<div class="column" style="flex:30%;">
-			<div class="zaraslide"><img class="zara" src="zaraaaa.png" alt=""></div>
-		</div>
-		<div class="column">
-			<h1>ZARA <i style="color:#F17F96;">HAPIZ</i></h1>
-			<h3>Hey readers! I'm <i style="color:#3D84E1;">Zara Hapiz</i> and I'm a graphic designer + aspiring computer/software engineer + all around <a href="art gallery.html" style="color:var(--black);">artist</a>. I'm a 17-year-old high school student. I'm a huge fan of hip-hop and 2000's R&amp;B music. I've got a knack for basketball and skateboarding. My favourite fonts are Neue Haas Grotesk and Futura (ironically enough, they aren't being used in this website). Hmm.. what else? I'm a sucker for rom-coms. My favourite movies are Titanic and To All The Boys.
-			<p>Anyway, if you couldn't already tell, I programmed this website myself. Its main purpose is to obviously showcase my coding abilities, but besides that this also serves as a portfolio for my graphic design (check out the <a href="store.html" style="color:var(--black);">store</a>!). For students or curious people, feel free to click <i style="color:#3D84E1;">Ctrl+U</i>.</p></h3>
-			<img src="ZARA HAPIZ LOGO ICON.png" style="width:120px;" alt="" class="spin">
-		</div>
-	</div>
+<!--END OF HEADER STUFF-->
+	
+<!--MAIN-->	
+	<div class="progresscontainer"><div class="progressbar" id="progressbar"></div></div>
+	<img class="spin" style="position:absolute;left:1000px;top:300px;z-index:4;width:200px;" src="ZARA HAPIZ LOGO ICON.png" alt="">
+	<img class="spin" style="position:absolute;top:850px;left:50px;z-index:4;width:200px;" src="ZARA HAPIZ LOGO PINK ICON.png" alt="">
+	<h1 style="margin-top:150px;text-align:center;align:center;" class="titleslide">ZARA <i style="color:#F17F96;">HAPIZ</i></h1>
+			<div class="zaraslide"><img class="zara" src="zaraaaa2.png" alt=""></div>
+		<br>
+	<audio id="I know love">
+	<source src="I know love.mp3" type="audio/mp3">
+	</audio>
 	<br>
-	<img src="artwork/home diet pepsi.png" alt="" style="width:100vw;margin-left:-35px;">
-	<br><br><h1 class="titleslide">logofolio</h1><br><br>
+	<img src="artwork/home i know love.png" alt="" class="poster" onclick="playAudio5()">
+	<h4 style="text-align:right;">I know love (feat. The Kid LAROI) - Tate McRae (click poster to play!) &#10240; &#10240; <i style="opacity:0.7;cursor:pointer;" onclick="pauseAudio5()">Pause</i></h4>
+	<br><br><h1 class="slide" style="animation-duration:0.137s;animation-iteration-count:2;">&gt;&gt;&gt;introduction<i>!</i></h1>
+	<h3 style="margin:50px 100px;">
+	<div class="text"><p>
+	Hey readers! I'm <i style="color:#3D84E1;">Zara Hapiz</i> and I'm an 18 year old graphic designer + aspiring computer/software engineer + all around <a href="art gallery.html">artist</a> + cool person. I'm a huge fan of hip-hop, rap, and 2000's R&amp;B <a href="https://open.spotify.com/user/b07rczbm9srn0ev6kfk0pdtra?si=785b4cbfa9b34115">music</a>. My favourite artists are 
+	<a href="https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x?si=XvrrZXUIRvOTV0t7dG85qw">Kanye West</a>, 
+	<a href="https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY?si=Ax5aGF6uSEmjndkEi13HyA">Travis Scott</a>, and 
+	<a href="https://open.spotify.com/artist/7tYKF4w9nC0nq9CsPZTHyP?si=Yx6Y1TDPTcaz7eoOY-2FVQ">SZA</a>, 
+	just to name a few. I'm also into basketball and skateboarding, and I'm a debater (third speaker represent!). Hmm.. what else? I'm a sucker for <a href="https://letterboxd.com/nasilemakajis/">rom-coms</a>. I love math. And computer science. I am literally the epitome of nerdiness. But I promise I'm cool.</p></div>
+	<div class="text"><p>
+	Anyway, if you couldn't already tell, I programmed this website myself. Its main purpose is to obviously showcase my coding abilities, but besides that this also serves as a portfolio for my graphic design (check out the <a href="store.html">store</a>!). For students or curious people, feel free to click <i style="color:#3D84E1;">Ctrl+U</i>.
+	</p></div>
+	<img src="ZARA HAPIZ LOGO ICON.png" alt="" style="width:70px;">
+	</h3>
+			
+	
+	<audio id="Diet Pepsi">
+	<source src="Diet Pepsi.mp3" type="audio/mp3">
+	</audio>
+	<img src="artwork/home diet pepsi.png" alt="" class="poster" onclick="playAudio1()">
+	<h4 style="text-align:right;">Diet Pepsi - Addison Rae (click poster to play!) &#10240; &#10240; <i style="opacity:0.7;cursor:pointer;" onclick="pauseAudio1()">Pause</i></h4>
+	<br><br><h1 class="slide" style="animation-duration:0.136s;animation-iteration-count:4;">&gt;&gt;&gt;experience<i>!</i></h1><br>
+	<h2 style="margin-left:50px;"><div class="text">
+	<p>&rarr; Member of PERSADA's Arts Department (2022)</p>
+	<p>&rarr; Member of PERSADA's Graphics Department (2022-2025)</p>
+	<p>&rarr; Vice Secretary of SMKTM's Visual Art Club (2023)</p>
+	<p>&rarr; President of SMKTM's Visual Art Club (2024)</p>
+	<p>&rarr; SMKTM Girl Guides Graphic Designer (2024)</p>
+	<p>&rarr; Head of PERSADA's Graphics Department (2024-2025)</p>
+	</div></h2><br>
+	<!-- <div class="carousel" style="animation:exp 10s linear infinite alternate;">
+		<div class="expcontainer">PERSADA's Arts Department (2022)</div>
+		<div class="expcontainer" style="background-color:var(--black);color:var(--white);">PERSADA's Graphics Department (2022-2024)</div>
+	</div><br></h2> -->
+	
+	
+	<audio id="Utopia">
+	<source src="Utopia.mp3" type="audio/mp3">
+	</audio>
+	<img src="artwork/home utopia.png" alt="" class="poster" onclick="playAudio4()">
+	<h4 style="text-align:right;">Utopia - Travis Scott (click poster to play!) &#10240; &#10240; <i style="opacity:0.7;cursor:pointer;" onclick="pauseAudio4()">Pause</i></h4>
+	<br><br><h1 class="slide" style="animation-duration:0.13s;animation-iteration-count:6;">&gt;&gt;&gt;logofolio<i>!</i></h1><br><br>
 	<img src="ZARA HAPIZ LOGO PINK ICON.png" alt="" style="width:100px;z-index:0;position:fixed">
 	<div class="carousel">
 		<img src="logofolio/ZARA HAPIZ LOGO PINK.png" alt="">
@@ -370,18 +233,25 @@
 		<img src="logofolio/RUMAH SUKAN CAPS!-01.png" alt="" style="height:200px;">
 		<img src="logofolio/zara hapiz logo.png" alt="">
 		<img src="logofolio/zara hapiz logo smol.png" alt="">
-	</div><br><br><br>
-	<img src="artwork/home tcd.png" alt="" style="width:100vw;margin-left:-35px;">
+	</div><br><br><br><br><br>
 	
-	<h1>work with me!</h1>
-	<h3>Contact me at @zaramysh on Instagram or email me at zara.hapiz@gmail.com for a chat.
-	<p>**I AM CURRENTLY UNAVAILABLE DUE TO EXAM SEASON!</p></h3><br><br><br>
+	<audio id="TFT">
+	<source src="TFT.mp3" type="audio/mp3">
+	</audio>
+	<img src="artwork/home tft.png" alt="" class="poster" onclick="playAudio3()">
+	<h4 style="text-align:right;">The First Time - The Kid LAROI (click poster to play!) &#10240; &#10240; <i style="opacity:0.7;cursor:pointer;" onclick="pauseAudio3()">Pause</i></h4><br><br>
+	
+	<div class="hoverunderline"><h1>work with me!</h1></div>
+	<h3>Contact me at @zaramysh on Instagram.</h3>
+	<br><br><br>
 	
 	<!--FOOTER STUFF-->
 	<footer><br><br>
-		<a href="https://www.instagram.com/zaramysh/" target="_blank"><img src="instagram.png" style="width:30px;" alt="Instagram"></a>
-		<a href="https://www.tiktok.com/@flow7rboy" target="_blank"><img src="tik-tok.png" style="width:30px;" alt="TikTok"></a>
-		<p>© Zara Hapiz 2024</p>
+		<a href="https://www.instagram.com/zaramysh/" target="_blank"><img src="instagram.png" style="width:30px;" alt=""></a>
+		<a href="https://www.tiktok.com/@flow7rboy" target="_blank"><img src="tik-tok.png" style="width:30px;" alt=""></a>
+		<a href="https://www.behance.net/zarahapiz" target="_blank"><img src="behance.png" style="width:30px;filter:invert(1);" alt=""></a>
+		<p>coded with love &lt;3</p>
+		<p>© Zara Hapiz 2025</p>
 		<p><img src="ZARA HAPIZ LOGO WHITE ICON.png" alt="" style="width:50px;"></p>
 		<embed><a href="https://acadooghostwriter.com/" style="opacity: 0; cursor:default;">https://acadooghostwriter.com</a> <script type="text/javascript" src="https://www.freevisitorcounters.com/auth.php?id=1d304043b64be22a3a5ba7a5a465aa9a5c4460cf"></script>
 		<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1019120/t/5"></script>
@@ -391,10 +261,12 @@
 	
 	<!--JAVASCRIPT SCRIPTS-->
 	<script>
+// RESPONSIVE
 	window.addEventListener('scroll', () => {
   	document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
 	}, false);
 		
+// TOPNAV
 	function myFunction() {
 		var x = document.getElementById("myTopnav");
 	    if (x.className === "topnav") {
@@ -403,6 +275,87 @@
 			x.className = "topnav";
 	  	}
 	}
+	
+// PROGRESS BAR
+	window.onscroll = function() {progressFunction()};
+
+	function progressFunction() {
+	    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+	    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+	    var scrolled = (winScroll / height) * 100;
+	    document.getElementById("progressbar").style.width = scrolled + "%";
+	}
+	
+// AUDIO STUFF
+	var x = document.getElementById("Diet Pepsi"); 
+	function playAudio1() { 
+		  x.play(); 
+		} 
+		function pauseAudio1() { 
+		  x.pause(); 
+		} 
+	var y = document.getElementById("Lana"); 
+	function playAudio2() { 
+		  y.play(); 
+		} 
+		function pauseAudio2() { 
+		  y.pause(); 
+		} 
+	var z = document.getElementById("TFT"); 
+		function playAudio3() { 
+		  z.play(); 
+		} 
+		function pauseAudio3() { 
+		  z.pause(); 
+		} 
+	var a = document.getElementById("Utopia"); 
+		function playAudio4() { 
+		  a.play(); 
+		}
+		function pauseAudio4() { 
+		  a.pause(); 
+		} 
+	var b = document.getElementById("I know love"); 
+		function playAudio5() { 
+		  b.play(); 
+		}
+		function pauseAudio5() { 
+		  b.pause(); 
+		} 
+		
+		
+		
+		
+<!--SMOOTH SCROLL-->
+	<!-- let currentScroll = 0; -->
+    <!-- let targetScroll = 0; -->
+    <!-- let scrollSpeed = 0; // Start with no speed -->
+    <!-- const friction = 0.1; // Controls how smooth and slow the scroll decelerates -->
+    <!-- const maxSpeed = 30; // The max speed of the scroll -->
+    <!-- const scrollAcceleration = 1.5; // Controls the scroll acceleration when the user scrolls -->
+
+    <!-- window.addEventListener('wheel', (event) => { -->
+      <!-- // When wheel is moved, increase the target scroll based on the wheel delta -->
+      <!-- targetScroll += event.deltaY * scrollAcceleration; -->
+      <!-- scrollSpeed = Math.min(Math.abs(scrollSpeed), maxSpeed) * Math.sign(targetScroll); // Limit max speed and direction -->
+    <!-- }); -->
+
+    <!-- function smoothScroll() { -->
+      <!-- // Gradually move the current scroll to the target scroll position -->
+      <!-- currentScroll += (targetScroll - currentScroll) * friction; -->
+
+      <!-- // Scroll to the current position (smoothly) -->
+      <!-- window.scrollTo(0, currentScroll); -->
+
+      <!-- // Keep requesting the next frame for smoothness -->
+      <!-- requestAnimationFrame(smoothScroll); -->
+    <!-- } -->
+
+    <!-- // Start the smooth scrolling animation loop -->
+    <!-- smoothScroll(); -->
 	</script>
+	<script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
+	<script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script>
+	<script src='https://assets.codepen.io/16327/SplitText3.min.js'></script><script src="./textanimation.js"></script>
 </body>
 </html>
