@@ -1,0 +1,358 @@
+/* GENERAL STYLES */
+	:root {
+  		--black: #0C0A13;
+  		--white: #F0F5E4;
+		--pink: #F17F96;
+		--blue: #3D84E1;
+		--orange: #E65E15;
+	}
+	body {
+  		font-family: "Space Grotesk", sans-serif;
+		font-optical-sizing: auto;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 1.1em;
+		color: #0C0A13;
+		margin: 35px;
+		background-color: #F0F5E4;
+		background-repeat: repeat-y;
+		background-position: left top;
+  		background-attachment: scroll;
+		background-size: cover;
+		cursor: default;
+		max-width: 100vw;
+		overflow-x: hidden;
+	}
+	h1 {
+		
+		font-weight: 900;
+		font-style: normal;
+		font-size: 7em;
+		margin: 10px;
+		line-height: 0.8em;
+	}
+	h2 {
+		margin: 0;
+		margin-top: 20px;
+		font-weight: 500;
+		font-size: 2em;
+	}
+	h3 {
+		margin: 10px;
+		font-weight: 400;
+	}
+	h4 {
+		margin: 10px 0 10px 0;
+		font-weight: 500;
+		font-size: 1em;
+	}
+	h5 {
+		font-weight: 500;
+		font-size: 0.5em;
+		opacity: 0.7;
+	}
+	/* SCROLLBAR */
+	::-webkit-scrollbar {
+		width: 10px;
+	}
+	::-webkit-scrollbar-track {
+		background: #F0F5E4;
+		border-left: 1px solid #0C0A13;
+	}
+	::-webkit-scrollbar-thumb {
+		background: #0C0A13;
+		border: 1px solid #0C0A13;
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background: var(--blue);
+	}
+	
+	/* PROGRESS BAR */
+	.progresscontainer {
+		position: fixed;
+		z-index: 2;
+	    width: 100%;
+	    height: 10px;
+	    background: transparent;
+		bottom: 0;
+		left: 0;
+	}
+	.progressbar {
+	    height: 10px;
+	    background: var(--pink);
+	    width: 0%;
+	}
+	
+	.progressbar:hover {
+		animation: hueshift 1s linear infinite;
+	}
+	
+	@keyframes hueshift {
+		from {
+		filter: hue-rotate(0);
+		}
+		to {
+		filter: hue-rotate(360deg);
+		}
+	}
+	
+	/* MENU */
+	a {
+		color: var(--black);
+	}
+	a:hover {
+		color: var(--pink);
+	}
+	ul {
+		height: 0px;
+		list-style-type: none;
+		margin: 0;
+  		padding: 0;
+		float: right;
+		font-size: 0.9em;
+	}
+	ul a {
+		display: block;
+		margin: 30px 15px 15px 30px;
+		text-decoration: none;
+		color: #0C0A13;
+		float: left;
+		transition: color 0.3s, transform 0.3s;
+	}
+	ul a:hover {
+		color: var(--blue);
+		transform: rotate(10deg);
+	}
+	.active {
+		color: #F17F96;
+	}
+	.topnav .icon {
+  		display: none;
+		color: #F0F5E4;
+	}
+	/* RIBBON */
+	.ribbon {
+		margin: -35px;
+		font-size: 1em;
+		font-weight: 400;
+		text-align: center;
+		background-color: #0C0A13;
+		overflow-x: hidden;
+		overflow-y: hidden;
+		height: 33px;
+		font-style: italic;	
+		white-space: nowrap;
+	}
+	.ribbon-text {
+		color: #F0F5E4;
+		font-size: 1.4em;
+  		animation: bannermove 10s linear infinite;
+ 		animation-play-state: running;
+ 		-webkit-animation-play-state: running;
+ 		animation-direction: alternate-reverse;
+	}
+	@keyframes bannermove {
+  		0% 
+	{
+    transform: translate(0, 0);
+  	}
+  	100% {
+    transform: translate(-10%, 0);
+  }
+}
+	.ribbon-text:hover {
+		-webkit-animation-play-state:paused;
+		-moz-animation-play-state:paused;
+		-o-animation-play-state:paused;
+		animation-play-state:paused;
+	}
+	/* MISC */
+	footer {
+		color: var(--white);
+		text-align: center;
+		font-size: 0.9em;
+		background-color: var(--black);
+		margin: -35px;
+		padding: 20px;
+	}
+	.column {
+		flex: 50%;
+		padding: 0 5px;
+	}
+	.row {
+		display: flex;
+	}
+	.spin {
+		animation: spin 1s linear infinite;
+  		animation-play-state: paused;
+  		animation-delay: calc(var(--scroll) * -1s);
+	}
+		@keyframes spin 
+		{
+			to { 
+				transform: rotate(500deg);
+			}
+		}	
+	.slide {
+	    opacity: 0;
+		animation: slide infinite;
+  		animation-play-state: paused;
+  		animation-delay: calc(var(--scroll) * -1s);
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+		@keyframes slide 
+		{
+			from { 
+				opacity: 0;
+				transform: translateX(-400px);
+			}
+			to { 
+				opacity: 1;
+				transform: translateX(0);
+			}
+		}	
+	
+	.poster {
+	width: 100vw;
+	margin-left: -35px;
+	cursor: pointer;
+	filter: saturate(0);
+	transition: filter 0.3s, border-radius 0.3s;
+	border-radius: 0;
+	}
+	
+	.poster:hover {
+	filter: saturate(1);
+	border-radius: 50px;
+	}
+	
+	.hoverunderline {
+	  display: inline-block;
+	  position: relative;
+	}
+	.hoverunderline::after {
+	  content: '';
+	  position: absolute;
+	  width: 100%;
+	  transform: scaleX(0);
+	  height: 5px;
+	  bottom: 0;
+	  left: 0;
+	  background-color: var(--black);
+	  transform-origin: bottom right;
+	  transition: transform 0.25s ease-out;
+	}
+
+	.hoverunderline:hover::after {
+	  transform: scaleX(1);
+	  transform-origin: bottom left;
+	}
+		
+	.text a {
+		display: inline-block;
+		position: relative;
+		text-decoration: none;
+		color: var(--pink);
+	}
+	.text a::after {
+	  content: '';
+	  position: absolute;
+	  width: 100%;
+	  transform: scaleX(0);
+	  height: 3px;
+	  bottom: 0;
+	  left: 0;
+	  background-color: var(--pink);
+	  transform-origin: bottom right;
+	  transition: transform 0.25s ease-out;
+	}
+
+	.text a:hover::after {
+	  transform: scaleX(1);
+	  transform-origin: bottom left;
+	}
+	
+/* RESPONSIVE */
+		@media screen and (max-width: 830px) {
+		html {
+		}
+		body {
+			font-size: 2.5vw;
+			margin: 35px 10px;
+			margin-left: 35px;
+			overflow-x: hidden;
+			background-position: top center;
+		}
+		h1 {
+			font-size: 9vw;
+		}
+		h2 {
+			font-size: 4vw;
+		}
+		h3 { .text {
+			margin-left: -6vw;
+			margin-right: -5vw;
+		}}
+		h4, h5 {
+			font-size: 3vw;
+		}
+		ul {
+			width: 40%;
+			text-align: right;
+		}
+		ul a {
+			margin-top: 3.5vw;
+			font-size: 5vw;
+			line-height: 3vw;
+			overflow: visible;
+			color: var(--black);
+		}
+		ul a:hover {
+			transform: rotate(5deg);
+		}
+		
+		.row {
+			display: block;
+		}
+		.column {
+			margin-bottom: 10vw;
+			width: 100%;
+		}
+		li {
+			width: 1px;
+		}
+		::-webkit-scrollbar {
+		width: 0px;
+		}
+		.topnav { 
+			background-color: var(--pink);
+			border-radius: 20px;
+		}
+		.topnav a {display: none;}
+  		.topnav a.icon {
+			float: right;
+			display: block;
+			color: var(--black);
+ 		}
+		.topnav.responsive {position: relative;}
+		.topnav.responsive a.icon {
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		.topnav.responsive a {
+			float: none;
+			display: block;
+			text-align: left;
+		}
+		i {
+			width: "40vw";
+		}
+		.ribbon {
+			height: 5vw;
+		}
+		.poster {
+			filter: saturate(1);
+		}
+	}

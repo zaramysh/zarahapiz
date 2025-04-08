@@ -1,0 +1,610 @@
+<!doctype html>
+<!--ZARA HAPIZ WEBSITE, COPYRIGHT ZARA HAPIZ 2024-->
+<html>
+<head>
+<meta charset="utf-8">
+<title>SHOP - Zara Hapiz</title>
+<link rel="icon" type="image/x-icon" href="ZARA HAPIZ LOGO PINK ICON.png">
+<link rel="stylesheet" href="https://use.typekit.net/oag6cqw.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="./textanimation.css">
+<link rel="stylesheet" href="./zara's style.css">
+<link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Space+Grotesk:wght@300..700&family=VT323&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	
+<!--CSS CODES-->
+<style>
+/* RESPONSIVE*/
+	@media screen and (max-width: 830px) {
+			.gallery {
+				margin-left: 5vw;
+			}
+	}
+	/*STORE STYLES*/
+	.gallery img {
+		max-width: 450px;
+		height: auto;
+		margin: auto;
+  		display: block;
+		cursor: default;
+	}
+	.gallery {
+		position: relative;
+		display: inline-block;
+		margin-right: 10px;
+  		width: 300px;
+  		background-image: linear-gradient(var(--white) 80%, var(--pink) 100%);
+  		height: 520px;
+		border: 1px solid #0A0A0A;
+		color: #0A0A0A;
+		overflow: visible;
+		margin-bottom: 40px;
+		text-align: left;
+		vertical-align: top;
+		transition: transform 0.3s, filter 0.3s;
+		transition-timing-function: cubic-bezier(.25,.75,.5,1.25);
+	}
+	.gallery:hover {
+		transform: translateY(-10px);
+		filter: drop-shadow(0 5px 5px grey);
+	}
+	.container {
+		padding: 10px 15px 0px 15px;
+		overflow: visible;
+		font-weight: 400;
+		font-size: 1em;
+		display: flex;
+		flex-flow: row nowrap;
+		border-top: 1px solid var(--black));
+	}
+	.button {
+		font-size: 1em;
+		color: var(--black);
+		text-decoration: none;
+		background-color: var(--white);
+		padding: 10px 15px;
+		transition: background-color 0.3s, transform 0.3s;
+		transition-timing-function: cubic-bezier(.25,.75,.5,1.25);
+		text-align: center;
+		border: 1px solid #0A0A0A;
+	}
+	.button:hover {
+		background-color: var(--pink);
+		transform: rotate(10deg);
+	}
+	.rainbow {
+		color: var(--pink);
+		animation: rainbow 0.05s linear infinite;
+  		animation-play-state: paused;
+  		animation-delay: calc(var(--scroll) * -1s);
+	}
+	@keyframes rainbow
+	{
+		to { 
+			filter: hue-rotate(360deg);
+		}
+	}	
+	.receipt {
+		width: 50vw;
+		transform: rotate(-5deg); 
+		position: relative;
+		bottom: 110px;
+		display: block;
+		margin: auto;
+		animation: receipt infinite;
+  		animation-play-state: paused;
+  		animation-delay: calc(var(--scroll) * -1s);
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+		transition: transform 0.3s;
+		transition-timing-function: cubic-bezier(.25,.75,.5,1.25);
+	}
+	@keyframes receipt {
+		from {
+			filter: blur(5px);
+		}
+		to {
+			filter: blur(0);
+		}
+	}
+	.receipt:hover {
+		transform: rotate(5deg);
+	}
+	.backtotop {
+		cursor: pointer;
+		transition: color 0.3s;
+		display: inline-block;
+		position: relative;
+	}
+	.backtotop:hover {
+		color: var(--blue)
+	}
+	.backtotop::after {
+	  content: '';
+	  position: absolute;
+	  width: 100%;
+	  transform: scaleX(0);
+	  height: 3px;
+	  bottom: 0;
+	  left: 0;
+	  background-color: var(--blue);
+	  transform-origin: bottom right;
+	  transition: transform 0.25s ease-out;
+	}
+
+	.backtotop:hover::after {
+	  transform: scaleX(1);
+	  transform-origin: bottom left;
+	}
+	.dl {
+		text-decoration: underline;
+	}
+	html {
+		scroll-behavior: smooth;
+	}
+</style>
+<!--END OF CSS CODES-->
+	
+</head>
+<body>
+	<!--HEADER STUFF-->
+	<div class="ribbon"><div class="ribbon-text">
+	THANK YOU FOR VISITING ZARA'S WEBSITE! THANK YOU FOR VISITING ZARA'S WEBSITE! THANK YOU FOR VISITING ZARA'S WEBSITE
+	</div></div>
+	<br>
+	<ul style="float:left;">
+		<li style="float:left;margin-top:-25px;"><a href="index.html"><img src="ZARA HAPIZ LOGO.png" alt="ZH" style="width:150px;"></a></li>
+	</ul><ul style="float:right;margin-top:5px;font-size:1.1em;"><div class="topnav" id="myTopnav">
+		<a href="index.html">home</a>
+  		<a href="gallery.html">gallery</a>
+		<a class="active" href="shop.html">shop</a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    	<i class="fa fa-bars" style="font-size:7.5vw;"></i>
+  </a></div>
+	</ul>
+	<br><br>
+	<div class="divider"></div>
+	<div class="progresscontainer"><div class="progressbar" id="progressbar"></div></div>
+<!--END OF HEADER STUFF-->
+
+	<br><br><br><br><br><div class="slide" style="animation-duration:0.03s;animation-iteration-count:1;"><h1>&gt;&gt;&gt;shop<i>!</i></h1></div><br><br>
+	<div class="poster"><img src="artwork/home lana.png" style="width:100%;"></div><br>
+	<div class="slide" style="animation-duration:0.075s;animation-iteration-count:2;">
+	<h1>freebies galore..</h1></div>
+	<h3 style="margin:50px 100px;"><div class="text">
+	<p>Looking to get some of my designs for yourself? Look no further! This is the right place, and surprise! It's all 100% free. I make no money from these posters. &lt;/3</p>
+	<p>Posters are available in <i>png</i> format.</p>
+	</div>
+	<img src="ZARA HAPIZ LOGO ICON.png" alt="" style="width:70px;"></h3>
+	<div class="ribbon" style="height:2.7em;"><div class="ribbon-text" style="font-size:2em;animation-duration:3s;">
+	"LA FLAME SAYS LET YOUR AMBITION CARRY YOU," - TRAVIS SCOTT, "<a href="https://open.spotify.com/track/2QeQNF182V61Im0QpjdVta?si=a678a45317e74c7d" style="color:var(--white);">RODEO</a>"
+	</div></div><br><br><br><br>
+	
+	
+	
+		<div class="gallery">
+		<img src="artwork/I know love - Tate McRae.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			I know love</span>
+			<p style="margin-top:0;">Tate McRae</p></h3></span>
+		<a href="artwork/I know love - Tate McRae.png" download="I know love - Tate McRae by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+			
+		<div class="gallery">
+		<img src="artwork/Lana - SZA.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			Lana</span>
+			<p style="margin-top:0;">SZA</p></h3></span>
+		<a href="artwork/Lana - SZA.png" download="Lana - SZA by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+			
+		<div class="gallery">
+		<img src="artwork/Diet Pepsi - Addison Rae.png" width="300px"  alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			Diet Pepsi</span>
+			<p style="margin-top:0;">Addison Rae</p></h3></span>
+		<a href="artwork/Diet Pepsi - Addison Rae.png" download="Diet Pepsi - Addison Rae by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+	
+		<div class="gallery">
+		<img src="artwork/Something To Give Each Other - Troye Sivan.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			Something To Give Each Other</span>
+			<p style="margin-top:0;">Troye Sivan</p></h3></span>
+		<a href="artwork/Something To Give Each Other - Troye Sivan.png" download="Something To Give Each Other - Troye Sivan by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+		
+		<div class="gallery">
+		<img src="artwork/APEROL SPRITZ - The Kid LAROI.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			APEROL SPRITZ</span>
+			<p style="margin-top:0;">The Kid LAROI</p></h3></span>
+		<a href="artwork/APEROL SPRITZ - The Kid LAROI.png" download="APEROL SPRITZ - The Kid LAROI by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+	
+		<div class="gallery">
+		<img src="artwork/THE FIRST TIME - The Kid LAROI.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			THE FIRST TIME</span>
+			<p style="margin-top:0;">The Kid LAROI</p></h3></span>
+		<a href="artwork/THE FIRST TIME - The Kid LAROI.png" download="THE FIRST TIME - The Kid LAROI by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+	
+		<div class="gallery">
+		<img src="artwork/Saturn - SZA.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			Saturn</span>
+			<p style="margin-top:0;">SZA</p></h3></span>
+		<a href="artwork/Saturn - SZA.png" download="Saturn - SZA by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+	
+		<!-- <div class="gallery">
+		<img src="artwork/The World EP.Fin Will - ATEEZ.png" width="300px" alt="The World EP.Fin Will - ATEEZ">
+		<div class="container">The World EP.Fin Will - ATEEZ<br>
+		<i style="opacity:0.4;">for Idania</i>
+		<a style="text-decoration:none;color:#0A0A0A;" href="https://drive.google.com/file/d/1w4dJGQGWblOiZldgvck7f0w3q22MQqtu/view?usp=sharing" class="external" target="_blank"><div class="button">download PNG</div></a>
+			</div></div> -->	
+	
+		<!-- <div class="gallery">
+		<img src="artwork/JAY-Z.png" width="300px" alt="JAY-Z">
+		<div class="container">JAY-Z<br>
+		<a style="text-decoration:none;color:#0A0A0A;" href="https://drive.google.com/file/d/1WKJIINIV1bBx78PTN-oU-ss_eaSb_by5/view?usp=sharing" class="external" target="_blank"><div class="button">download PNG</div></a>
+			</div></div> -->
+	
+		<!--<div class="ribbon" style="transform: rotate(5deg);position:relative;"><div class="ribbon-text">
+		FREE POSTERS FREE POSTERS FREE POSTERS FREE POSTERS FREE POSTERS FREE POSTERS FREE POSTERS FREE POSTERS 
+		</div></div>-->
+	
+		<div class="gallery">
+		<img src="artwork/Pharrell Williams.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			Pharrell Williams</span></h3></span>
+		<a href="artwork/Pharrell Williams.png" download="Pharrell Williams by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+	
+		<!--<div class="gallery">-->  <!--removed coz it's inappropriate..
+		<img src="artwork/Central Cee.png" width="300px" alt="Central Cee">
+		<div class="container">Central Cee<br>
+		<a style="text-decoration:none;color:#0A0A0A;" href="https://drive.google.com/file/d/1TzwB2lCeSqEAwen7wJJ-bhXlDagP04H2/view?usp=sharing" class="external" target="_blank"><div class="button">download PNG</div></a>
+			</div></div>	-->
+	
+		<!-- <div class="gallery">
+		<img src="artwork/Eminem.png" width="300px" alt="Eminem">
+		<div class="container">Eminem<br>
+		<a style="text-decoration:none;color:#0A0A0A;" href="https://drive.google.com/file/d/1-1-Z2_iyOUy6YBnkiRvZLvf9gn3CTvL8/view?usp=sharing" class="external" target="_blank"><div class="button">download PNG</div></a>
+			</div></div>	 -->
+	
+		<div class="gallery">
+		<img src="artwork/J. Cole.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			J. Cole</span></h3></span>
+		<a href="artwork/J. Cole.png" download="J. Cole by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+	
+		<div class="gallery">
+		<img src="artwork/Travis Scott.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			Travis Scott</span></h3></span>
+		<a href="artwork/Travis Scott.png" download="Travis Scott by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+	
+		<div class="gallery">
+		<img src="artwork/2Pac.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			2Pac</span></h3></span>
+		<a href="artwork/2Pac.png" download="2Pac by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+	
+	<!-- <div class="ribbon" style="transform: rotate(5deg);position:relative;"><div class="ribbon-text">
+		FREE POSTERS FREE POSTERS FREE POSTERS FREE POSTERS FREE POSTERS FREE POSTERS FREE POSTERS FREE POSTERS 
+		</div></div> -->
+	
+		<div class="gallery">
+		<img src="artwork/Late Registration - Kanye West.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			Late Registration</span>
+			<p style="margin-top:0;">Kanye West</p></h3></span>
+		<a href="artwork/Late Registration - Kanye West.png" download="Late Registration - Kanye West by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+	
+		<div class="gallery">
+		<img src="artwork/That's Life - Frank Sinatra.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			That's Life</span>
+			<p style="margin-top:0;">Frank Sinatra</p></h3></span>
+		<a href="artwork/That's Life - Frank Sinatra.png" download="That's Life - Frank Sinatra by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+	
+		<div class="gallery">
+		<img src="artwork/Sweetener - Ariana Grande.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			Sweetener</span>
+			<p style="margin-top:0;">Ariana Grande</p></h3></span>
+		<a href="artwork/Sweetener - Ariana Grande.png" download="Sweetener - Ariana Grande by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+	
+		<div class="gallery">
+		<img src="artwork/Teenage Fever - Drake.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			Teenage Fever</span>
+			<p style="margin-top:0;">Drake</p></h3></span>
+		<a href="artwork/Teenage Fever - Drake.png" download="Teenage Fever - Drake by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+	
+		<div class="gallery">
+		<img src="artwork/The College Dropout - Kanye West.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			The College Dropout</span>
+			<p style="margin-top:0;">Kanye West</p></h3></span>
+		<a href="artwork/The College Dropout - Kanye West.png" download="The College Dropout - Kanye West by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+	
+		<div class="gallery">
+		<img src="artwork/Graduation - Kanye West.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			Graduation</span>
+			<p style="margin-top:0;">Kanye West</p></h3></span>
+		<a href="artwork/Graduation - Kanye West.png" download="Graduation - Kanye West by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+	
+		<div class="gallery">
+		<img src="artwork/For All The Dogs - Drake.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			For All The Dogs</span>
+			<p style="margin-top:0;">Drake</p></h3></span>
+		<a href="artwork/For All The Dogs - Drake.png" download="For All The Dogs - Drake by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+	
+		<div class="gallery">
+		<img src="artwork/Violent Crimes - Kanye West.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			Violent Crimes</span>
+			<p style="margin-top:0;">Kanye West</p></h3></span>
+		<a href="artwork/Violent Crimes - Kanye West.png" download="Violent Crimes - Kanye West by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+	
+	<!-- <h1 style="position:relative;bottom:40px;" class="rainbow"><center>**express yourself!</center></h1> -->
+	
+		<div class="gallery">
+		<img src="artwork/3D (feat. Jack Harlow) - Jung Kook.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			3D (feat. Jack Harlow)</span>
+			<p style="margin-top:0;">Jung Kook</p></h3></span>
+		<a href="artwork/3D (feat. Jack Harlow) - Jung Kook.png" download="3D (feat. Jack Harlow) - Jung Kook by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+	
+		<div class="gallery">
+		<img src="artwork/Runaway - Kanye West.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			Runaway</span>
+			<p style="margin-top:0;">Kanye West</p></h3></span>
+		<a href="artwork/Runaway - Kanye West.png" download="Runaway - Kanye West by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+	
+		<div class="gallery">
+		<img src="artwork/A BOY IS A GUN - Tyler, The Creator.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			A BOY IS A GUN</span>
+			<p style="margin-top:0;">Tyler, The Creator</p></h3></span>
+		<a href="artwork/A BOY IS A GUN - Tyler, The Creator.png" download="A BOY IS A GUN - Tyler, The Creator by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+	
+		<div class="gallery">
+		<img src="artwork/Bound 2 - Kanye West.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			Bound 2</span>
+			<p style="margin-top:0;">Kanye West</p></h3></span>
+		<a href="artwork/Bound 2 - Kanye West.png" download="Bound 2 - Kanye West by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+	
+		<div class="gallery">
+		<img src="artwork/Thats What They All Say - Jack Harlow.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			Thats What They All Say</span>
+			<p style="margin-top:0;">Jack Harlow</p></h3></span>
+		<a href="artwork/Thats What They All Say - Jack Harlow.png" download="Thats What They All Say - Jack Harlow by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+		
+		<div class="gallery">
+		<img src="artwork/Jackman. - Jack Harlow.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			Jackman.</span>
+			<p style="margin-top:0;">Jack Harlow</p></h3></span>
+		<a href="artwork/Jackman. - Jack Harlow.png" download="Jackman. - Jack Harlow by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+	
+		<div class="gallery">
+		<img src="artwork/UTOPIA - Travis Scott.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			UTOPIA</span>
+			<p style="margin-top:0;">Travis Scott</p></h3></span>
+		<a href="artwork/UTOPIA - Travis Scott.png" download="UTOPIA - Travis Scott by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+	
+		<div class="gallery">
+		<img src="artwork/BARBIE 2023.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			BARBIE</span>
+			<p style="margin-top:0;">(2023)</p></h3></span>
+		<a href="artwork/BARBIE 2023.png" download="BARBIE 2023 by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+	
+		<div class="gallery">
+		<img src="artwork/Flashing Lights - Kanye West.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			Flashing Lights</span>
+			<p style="margin-top:0;">Kanye West</p></h3></span>
+		<a href="artwork/Flashing Lights - Kanye West.png" download="Flashing Lights - Kanye West by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+	
+		<div class="gallery">
+		<img src="artwork/Come Home The Kids Miss You - Jack Harlow.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			Come Home The Kids Miss You</span>
+			<p style="margin-top:0;">Jack Harlow</p></h3></span>
+		<a href="artwork/Come Home The Kids Miss You - Jack Harlow.png" download="Come Home The Kids Miss You - Jack Harlow by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+	
+		<div class="gallery">
+		<img src="artwork/Tamale - Tyler, The Creator.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			Tamale</span>
+			<p style="margin-top:0;">Tyler, The Creator</p></h3></span>
+		<a href="artwork/Tamale - Tyler, The Creator.png" download="Tamale - Tyler, The Creator by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+		
+		<div class="gallery">
+		<img src="artwork/JUGGERNAUT - Tyler, The Creator.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			JUGGERNAUT</span>
+			<p style="margin-top:0;">Tyler, The Creator</p></h3></span>
+		<a href="artwork/JUGGERNAUT - Tyler, The Creator.png" download="JUGGERNAUT - Tyler, The Creator by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+	
+		<div class="gallery">
+		<img src="artwork/I Ain't Got Time! - Tyler.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			I Ain't Got Time!</span>
+			<p style="margin-top:0;">Tyler, The Creator</p></h3></span>
+		<a href="artwork/I Ain't Got Time! - Tyler.png" download="I Ain't Got Time! - Tyler, The Creator by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+	
+		<div class="gallery">
+		<img src="artwork/F2F.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			F2F</span>
+			<p style="margin-top:0;">SZA</p></h3></span>
+		<a href="artwork/F2F.png" download="F2F - SZA by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+	
+		<div class="gallery">
+		<img src="artwork/garden (say it like dat).png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			Garden (Say It Like Dat)</span>
+			<p style="margin-top:0;">SZA</p></h3></span>
+		<a href="artwork/garden (say it like dat).png" download="Garden (Say It Like Dat) - SZA by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+	
+		<div class="gallery">
+		<img src="artwork/GHOST IN THE MACHINE.png" width="300px" alt="">
+		<div class="container">
+		<span style="flex-grow: 8;"><h3 style="margin-top:0;"><span style="font-size:1.3em;font-weight:600;line-height:10px;">
+			Ghost In The Machine</span>
+			<p style="margin-top:0;">SZA</p></h3></span>
+		<a href="artwork/GHOST IN THE MACHINE.png" download="Ghost In The Machine - SZA by Zara Hapiz"><div class="button"><span class="dl">&darr;</span></div></a>
+			</div></div>
+	
+		<h1 style="line-height:9vw;"><center>uh oh.. you've reached the end.</center></h1>
+		<br>
+		<!-- <span class="close">×</span> -->
+		<img src="RECEIPT!.png" alt="" class="receipt" style="position:relative;bottom:8vw;">
+		<center><h2 onclick="topFunction()" class="backtotop" style="position:relative;bottom:100px;">&uarr; back to top! &uarr;</h2></center>
+	
+	<!--
+		<h2>Python codes</h2>
+		<div class="gallery">
+		<img src="artwork/converter.png" width="300px" height="300px" alt="Number System Converter">
+		<div class="container">number system converter<br><h4>*this code is fully in Malay :)</h4>
+		<a style="text-decoration:none;color:#0A0A0A;" href="https://drive.google.com/file/d/1FJ3pngXxi71Klq_xtU-MnXmbviWmoqBr/view?usp=sharing" target="_blank"><div class="button">download .py file</div></a></div></div>
+		<div class="gallery">
+		<img src="artwork/patterns.png" width="300px" height="300px" alt="Patterns and Sequences">
+		<div class="container">patterns and sequences<br><h4>*this code is fully in Malay :)</h4>
+		<a style="text-decoration:none;color:#0A0A0A;" href="https://drive.google.com/file/d/1qae4Isz2EdwrSkr2pxKUDwD33BfLc8E2/view?usp=sharing" target="_blank"><div class="button">download .py file</div></a></div></div>
+		<div class="gallery">
+		<img src="artwork/compendium.png" width="300px" height="300px" alt="TLoZ:BotW Compendium">
+		<div class="container">TLoZ:BotW compendium<br>
+		<a style="text-decoration:none;color:#0A0A0A;" href="https://drive.google.com/file/d/1orJHjPoCbh2-2vtkXd62ca2OrLiUxy9K/view?usp=sharing" target="_blank"><div class="button">download .py file</div></a></div></div> -->
+	
+	
+	
+	<!--FOOTER STUFF-->
+	<footer>
+		<a href="https://www.instagram.com/zaramysh/" target="_blank"><img src="instagram.png" style="width:30px;" alt="Instagram"></a>
+		<a href="https://www.tiktok.com/@flow7rboy" target="_blank"><img src="tik-tok.png" style="width:30px;" alt="TikTok"></a>
+		<a href="https://www.behance.net/zarahapiz" target="_blank"><img src="behance.png" style="width:30px;filter:invert(1);" alt=""></a>
+		<p>coded with love &lt;3</p>
+		<p>© Zara Hapiz 2025</p>
+		<p><img src="ZARA HAPIZ LOGO WHITE ICON.png" alt="" style="width:50px;"></p>
+	</footer>
+	<!--END OF FOOTER STUFF-->
+	
+	
+	<!--JAVASCRIPT SCRIPTS-->
+	<script>
+// RESPONSIVE
+	window.addEventListener('scroll', () => {
+  	document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+	}, false);
+		
+// TOPNAV
+	function myFunction() {
+		var x = document.getElementById("myTopnav");
+	    if (x.className === "topnav") {
+			x.className += "responsive";
+	  	} else {
+			x.className = "topnav";
+	  	}
+	}
+	
+// PROGRESS BAR
+	window.onscroll = function() {progressFunction()};
+
+	function progressFunction() {
+	    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+	    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+	    var scrolled = (winScroll / height) * 100;
+	    document.getElementById("progressbar").style.width = scrolled + "%";
+	}
+	
+// BACK TO TOP BUTTON
+	// When the user clicks on the button, scroll to the top of the document
+	function topFunction() {
+	  document.body.scrollTop = 0; // For Safari
+	  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+	}
+	
+		
+	
+	</script>
+	<script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
+	<script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script>
+	<script src='https://assets.codepen.io/16327/SplitText3.min.js'></script><script src="./textanimation.js"></script>
+</body>
+</html>
