@@ -18,7 +18,7 @@
 
 	
 /*ART GALLERY STYLES*/
-	.gallery img {
+	.gallery img, .gallery-designs img {
 		max-height: 450px;
 		margin: auto;
   		display: block;
@@ -26,7 +26,7 @@
 		transition: transform 0.3s, filter 0.3s;
 		transition-timing-function: cubic-bezier(.25,.75,.5,1.25);
 	}
-	.gallery img:hover {
+	.gallery img:hover, .gallery-designs img:hover {
 		transform: translateY(-10px);
 		filter: drop-shadow(0 5px 5px grey);
 	}
@@ -37,6 +37,20 @@
   		width: 300px;
   		background-color: #F3F3F3;
   		height: 300px;
+		/*border-left: 5px solid #F0B719;*/
+		color: #0A0A0A;
+		overflow: visible;
+		margin-bottom: 20px;
+		text-align: left;
+		vertical-align: top;
+	}
+	.gallery-designs {
+		position: relative;
+		display: inline-block;
+		margin-right: 15px;
+  		width: 300px;
+  		background-color: none;
+  		height: 420px;
 		/*border-left: 5px solid #F0B719;*/
 		color: #0A0A0A;
 		overflow: visible;
@@ -172,7 +186,7 @@
 	
 	/* RESPONSIVE*/
 	@media screen and (max-width: 830px) {
-			.gallery {
+			.gallery, .gallery-designs {
 				margin-left: 5vw;
 			}
 			.modal-content {
@@ -223,103 +237,205 @@
 	<!-- <img class="spin" style="position:absolute;top:900px;left:-50px;z-index:3;width:200px;" src="ZARA HAPIZ LOGO WHITE ICON.png" alt=""> -->
 	
 	
+	<h1>graphic designs</h1>
+	<h3>
+	<p>Designs that aren't in the <a href="shop.html">shop</a>.</p></h3>
+	
+	<div class="gallery-designs">
+	<img id="img53" src="artwork/PERSADA COVER 6.png" width="300px" alt="PERSADA Official Cover">
+	</div>
+	
+	<div class="gallery-designs">
+	<img id="img52" src="artwork/PERSADA COVER 2.png" width="300px" alt="PERSADA Cover Draft #3">
+	</div>
+	
+	<div class="gallery-designs">
+	<img id="img51" src="artwork/PERSADA COVER 3.png" width="300px" alt="PERSADA Cover Draft #2">
+	</div>
+	
+	<div class="gallery-designs">
+	<img id="img50" src="artwork/PERSADA COVER.png" width="300px" alt="PERSADA Cover Draft #1">
+	</div>
+	
+	<div class="gallery-designs">
+	<img id="img49" src="artwork/SEJARAH SEKOLAH.png" width="300px" alt="PERSADA: Sejarah Sekolah">
+	</div>
+	
+	<div class="gallery-designs">
+	<img id="img48" src="artwork/FRESH TAKES COVER 4.png" width="300px" alt="PERSADA: Fresh Takes Cover">
+	</div>
+	
+	
+	<div class="gallery-designs">
+	<img id="img47" src="artwork/STUDYING KIT.png" width="300px" alt="PERSADA: Studying Kit">
+	</div>
+	
+	<div class="gallery-designs">
+	<img id="img46" src="artwork/UNIT KOKO COVER white.png" width="300px" alt="PERSADA: Kokurikulum Cover">
+	</div>
+	
+	<div class="gallery-designs">
+	<img id="img45" src="artwork/NUKILAN RASA TEMPLATE EXAMPLE 1.png" width="300px" alt="PERSADA: Nukilan Rasa">
+	</div>
+	
+	<div class="gallery-designs">
+	<img id="img44" src="artwork/NUKILAN RASA COVER.png" width="300px" alt="PERSADA: Nukilan Rasa Cover ">
+	</div>
+	
+	<div class="gallery-designs">
+	<img id="img43" src="artwork/SCHOOL HAPPENINGS COVER.png" width="300px" alt="PERSADA: School Happenings Cover">
+	</div>
+	
+	<div class="gallery-designs">
+	<img id="img42" src="artwork/EDITORIAL BOARD COVER.jpg" width="300px" alt="PERSADA: Editorial Board Cover">
+	</div>
+	
+	<div class="gallery-designs">
+	<img id="img41" src="artwork/fruits.png" width="300px" alt="Les Fruits">
+	</div>
+	
+	<div class="gallery-designs">
+	<img id="img40" src="artwork/SONG DEDICATION.png" width="300px" alt="DJ Waf & Zara at Hari Koperasi SMKTM 2024">
+	</div>
+	
+	<div class="gallery-designs">
+	<img id="img39" src="artwork/HOF RESULTS 3.png" width="300px" alt="SMKTM Hall of Fame 2024 'Artfully Creative' Winner (thank you :) !)">
+	</div>
+	
+	<div class="gallery-designs">
+	<img id="img38" src="artwork/HOF RESULTS COVER.png" width="300px" alt="SMKTM Hall of Fame 2024 Results">
+	</div>
+	
+	<div class="gallery-designs">
+	<img id="img37" src="artwork/HOF 5.png" width="300px" alt="SMKTM Hall of Fame 2024 Voting">
+	</div>
+	
+	<div class="gallery-designs">
+	<img id="img36" src="artwork/HOF CALENDAR.png" width="300px" alt="SMKTM Hall of Fame 2024 Calendar">
+	</div>
+	
+	<div class="gallery-designs">
+	<img id="img35" src="artwork/HOF NOMINATION.png" width="300px" alt="SMKTM Hall of Fame 2024 Nomination">
+	</div>
+	
+	<div class="gallery-designs">
+	<img id="img34" src="artwork/ART CLUB ICE BREAKING.png" width="300px" alt="Art Club Ice Breaking Event">
+	</div>
+	
+	<div class="gallery-designs">
+	<img id="img33" src="artwork/PETANQUE POSTER 9.png" width="300px" alt="Petanque Tournament 2024">
+	</div>
+	
+	<div class="gallery-designs">
+	<img id="img32" src="artwork/JELEKIT POSTER.png" width="300px" alt="PRS' Jelekit 2024 (Pokemon themed!)">
+	</div>
+	
+	<div class="gallery-designs">
+	<img id="img31" src="artwork/ALYSSA BOWLING.png" width="300px" alt="Bowling Club at Hari Koperasi SMKTM 2024">
+	</div>
+	
+	<div class="gallery-designs">
+	<img id="img30" src="artwork/DEBATE POSTER.png" width="300px" alt="Debate Auditions 2024">
+	</div>
+	
+	<div class="gallery-designs">
+	<img id="img29" src="artwork/GRAPHICS DEPARTMENT by Zara.png" width="300px" alt="PERSADA's Graphics Department Intake 2024">
+	</div>
+	
+	<div class="gallery-designs">
+	<img id="img28" src="artwork/RECYCLE.png" width="300px" alt="Recycle!">
+	</div>
+	
+	<div class="gallery-designs">
+	<img id="img27" src="artwork/ENGLISH 1.png" width="300px" alt="Montigo please sponsor me.">
+	</div>
+	
+	
+	
+	<h1>artwork</h1>
 	<div class="gallery">
-	<img id="img9" src="artwork/jack and rose.jpg" width="300px" height="300px" alt="Titanic (1997) - Jack Dawson & Rose DeWitt Bukater">
+	<img id="img26" src="artwork/jack and rose.jpg" width="300px" height="300px" alt="Titanic (1997) - Jack Dawson & Rose DeWitt Bukater">
 	</div>
 	
 	<div class="gallery">
-	<img id="img8" src="artwork/lilies.jpg" width="300px" height="300px" alt="Lilies">
+	<img id="img25" src="artwork/lilies.jpg" width="300px" height="300px" alt="Lilies">
 	</div>
 	
 	<div class="gallery">
-		<div class="title">Jack Harlow</div>
-	<img id="img2023-10" src="artwork/jack harlow.png" width="300px" height="300px" alt="Jack Harlow">
-	<div class="container">8/8/23<i><br>Graphite</i></div></div>
+	<img id="img24" src="artwork/jack harlow.png" width="300px" height="300px" alt="Jack Harlow">
+	</div>
 	
 	<div class="gallery">
-		<div class="title">Earth-42's Prowler</div>
-	<img id="img2023-9" src="artwork/prowler-42-1.png" width="300px" height="300px" alt="Miles Morales, the Prowler of Earth-42.">
-	<div class="container">6/6/23<br><i>Graphite</i></div></div>	
+	<img id="img23" src="artwork/prowler-42-1.png" width="300px" height="300px" alt="Miles Morales, the Prowler of Earth-42.">
+	</div>	
 	
 	<div class="gallery">
-		<div class="title">beabadoobee</div>
-	<img id="img2023-8" src="artwork/beabadoobee-1.png" width="300px" height="300px" alt="beabadoobee">
-	<div class="container">12/4/23<br><i>Graphite</i></div></div>	
+	<img id="img22" src="artwork/beabadoobee-1.png" width="300px" height="300px" alt="beabadoobee">
+	</div>	
 	
 	<div class="gallery">
-		<div class="title">SZA</div>
-	<img id="img2023-7" src="artwork/sza-1.png" width="300px" height="300px" alt="SZA">
-	<div class="container">16/2/23<br><i>Graphite</i></div></div>	
+	<img id="img21" src="artwork/sza-1.png" width="300px" height="300px" alt="SZA">
+	</div>	
 	
 	<div class="gallery">
-		<div class="title">Xavier Thorpe</div>
-	<img id="img2023-6" src="artwork/xavier-1.png" width="300px" height="300px" alt="Xavier Thorpe from <i>Wednesday</i> during the Poe Cup">
-	<div class="container">8/2/23<br><i>Graphite</i></div></div>
+	<img id="img20" src="artwork/xavier-1.png" width="300px" height="300px" alt="Xavier Thorpe from <i>Wednesday</i> during the Poe Cup">
+	</div>
 	
 	<div class="gallery">
-		<div class="title">Wednesday Addams</div>
-	<img id="img2023-5" src="artwork/wednesday-1.png" width="300px" height="300px" alt="Wednesday Addams from <i>Wednesday</i> during the Poe Cup">
-	<div class="container">8/2/23<br><i>Graphite</i></div></div>
+	<img id="img19" src="artwork/wednesday-1.png" width="300px" height="300px" alt="Wednesday Addams from <i>Wednesday</i> during the Poe Cup">
+	</div>
 	
 	<div class="gallery">
-		<div class="title">Enid Sinclair</div>
-	<img id="img2023-4" src="artwork/enid-1.png" width="300px" height="300px" alt="Enid Sinclair from <i>Wednesday</i> during the Poe Cup">
-	<div class="container">8/2/23<br><i>Graphite</i></div></div>
+	<img id="img18" src="artwork/enid-1.png" width="300px" height="300px" alt="Enid Sinclair from <i>Wednesday</i> during the Poe Cup">
+	</div>
 	
 	<div class="gallery">
-		<div class="title">Madeline Argy</div>
-	<img id="img2023-3" src="artwork/madeline-1.png" width="300px" height="300px" alt="Madeline Argy">
-	<div class="container">6/2/23<br><i>Graphite</i></div></div>
+	<img id="img17" src="artwork/madeline-1.png" width="300px" height="300px" alt="Madeline Argy">
+	</div>
 	
 	<!-- <h1><center>having fun there?</center></h1><br> -->
 	<div class="gallery">
-		<div class="title">Central Cee</div>
-	<img id="img2023-2" src="artwork/central cee-1.png" width="300px" height="300px" alt="Central Cee">
-	<div class="container">5/2/23<br><i>Graphite</i></div></div>
-	
-	<div class="gallery">
-	<img id="img6" src="artwork/chrissy.jpg" width="300px" height="300px" alt="Chrissy Cunningham from <i>Stranger Things 4</i>">
+	<img id="img16" src="artwork/central cee-1.png" width="300px" height="300px" alt="Central Cee">
 	</div>
 	
 	<div class="gallery">
-	<img id="img7" src="artwork/beatrice.jpg" width="300px" height="300px" alt="Beatrice">
+	<img id="img15" src="artwork/chrissy.jpg" width="300px" height="300px" alt="Chrissy Cunningham from <i>Stranger Things 4</i>">
 	</div>
 	
 	<div class="gallery">
-		<div class="title">Clairo</div>
-	<img id="img2023-1" src="artwork/clairo-1.png" width="300px" height="300px" alt="Clairo">
-	<div class="container">3/2/23<br><i>Graphite</i></div></div>
-	
-	<div class="gallery">
-	<img id="img2" src="artwork/apple.jpg" width="300px" height="300px" alt="Apple">
+	<img id="img14" src="artwork/beatrice.jpg" width="300px" height="300px" alt="Beatrice">
 	</div>
 	
 	<div class="gallery">
-		<div class="title">Pear</div>
-	<img id="img2022-3" src="artwork/pear-1.png" width="300px" height="300px" alt="Pear; acrylic on paper">
-	<div class="container">27/6/22<br><i>Acrylic</i></div></div>
-	
-	<div class="gallery">
-		<div class="title">Save the Animals<i>!</i></div>
-	<img id="img2022-2" src="artwork/save the animals.png" width="300px" height="300px" alt="Save The Animals">
-	<div class="container">9/5/22<br><i>Graphite</i></div></div>
-	
-	<div class="gallery">
-		<div class="title">Waktu Senja</div>
-	<img id="img2022-1" src="artwork/waktu senja-1.png" width="300px" height="300px" alt="Waktu Senja; acrylic on paper">
-	<div class="container">31/3/22<br><i>Acrylic</i></div></div>
-	
-	<div class="gallery">
-		<div class="title">Fried Egg</div>
-	<img id="img2021-4" src="artwork/egg-1.png" width="300px" height="300px" alt="Fried Egg">
-	<div class="container">30/11/21<br><i>Digital</i></div></div>
-	
-	<div class="gallery">
-	<img id="img4" src="artwork/pastels.jpg" width="300px" height="300px" alt="Oil Pastels">
+	<img id="img13" src="artwork/clairo-1.png" width="300px" height="300px" alt="Clairo">
 	</div>
 	
 	<div class="gallery">
-	<img id="img3" src="artwork/claire.jpg" width="300px" height="300px" alt="Colourful..">
+	<img id="img12" src="artwork/apple.jpg" width="300px" height="300px" alt="Apple">
+	</div>
+	
+	<div class="gallery">
+	<img id="img11" src="artwork/pear-1.png" width="300px" height="300px" alt="Pear; acrylic on paper">
+	</div>
+	
+	<div class="gallery">
+	<img id="img10" src="artwork/save the animals.png" width="300px" height="300px" alt="Save The Animals">
+	</div>
+	
+	<div class="gallery">
+	<img id="img9" src="artwork/waktu senja-1.png" width="300px" height="300px" alt="Waktu Senja; acrylic on paper">
+	</div>
+	
+	<div class="gallery">
+	<img id="img8" src="artwork/egg-1.png" width="300px" height="300px" alt="Fried Egg">
+	</div>
+	
+	<div class="gallery">
+	<img id="img7" src="artwork/pastels.jpg" width="300px" height="300px" alt="Oil Pastels">
+	</div>
+	
+	<div class="gallery">
+	<img id="img6" src="artwork/claire.jpg" width="300px" height="300px" alt="Colourful..">
 	</div>
 	
 	<div class="gallery">
@@ -327,25 +443,19 @@
 	</div>
 	
 	<div class="gallery">
-		<div class="title">Promises</div>
-	<img id="img2021-3" src="artwork/promises-1.png" width="300px" height="300px" alt="Promises">
-	<div class="container">7/10/21<br><i>Digital</i></div></div>
+	<img id="img4" src="artwork/promises-1.png" width="300px" height="300px" alt="Promises">
+	</div>
 	
 	<div class="gallery">
-		<div class="title">Willow</div>
-	<img id="img2021-2" src="artwork/willow-1.png" width="300px" height="300px" alt="WILLOW">
-	<div class="container">11/6/21<br><i>Acrylic</i></div></div>
+	<img id="img3" src="artwork/willow-1.png" width="300px" height="300px" alt="WILLOW"></div>
 	
 	<!-- <img class="spin" style="position:absolute;left:1200px;z-index:3;width:200px;" src="ZARA HAPIZ LOGO ICON.png" alt=""> -->
 	
 	<div class="gallery">
-		<div class="title">Manta Ray</div>
-	<img id="img2021-1" src="artwork/manta ray-1.png" width="300px" height="300px" alt="Manta Ray (for Suraya)">
-	<div class="container">22/5/21<br><i>Digital</i></div></div>
+	<img id="img2" src="artwork/manta ray-1.png" width="300px" height="300px" alt="Manta Ray (for Suraya)"></div>
 	
 	<div class="gallery">
-	<img id="img1" src="artwork/woman.jpg" width="300px" height="300px" alt="They Smelt of Roses">
-	</div>
+	<img id="img1" src="artwork/woman.jpg" width="300px" height="300px" alt="They Smelt of Roses"></div>
 	
 	<h1 style="line-height:9vw;"><center>uh oh.. you've reached the end.</center></h1>
 	<center><h2 onclick="topFunction()" class="backtotop">&uarr; back to top! &uarr;</h2></center><br><br><br><br>
@@ -411,229 +521,33 @@
 	var modal = document.getElementById('myModal');
 
 	// IMAGE MODAL
-	var img = document.getElementById('img9');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	img.onclick = function(){
-		  modal.style.display = "block";
-		  modalImg.src = this.src;
-		  captionText.innerHTML = this.alt;
-	}
-	// IMAGE MODAL
-	var img = document.getElementById('img8');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	img.onclick = function(){
-		  modal.style.display = "block";
-		  modalImg.src = this.src;
-		  captionText.innerHTML = this.alt;
-	}
-	// IMAGE MODAL
-	var img = document.getElementById('img7');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	img.onclick = function(){
-		  modal.style.display = "block";
-		  modalImg.src = this.src;
-		  captionText.innerHTML = this.alt;
-	}
-	// IMAGE MODAL
-	var img = document.getElementById('img6');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	img.onclick = function(){
-		  modal.style.display = "block";
-		  modalImg.src = this.src;
-		  captionText.innerHTML = this.alt;
-	}
-	// IMAGE MODAL
-	var img = document.getElementById('img5');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	img.onclick = function(){
-		  modal.style.display = "block";
-		  modalImg.src = this.src;
-		  captionText.innerHTML = this.alt;
-	}
-	// IMAGE MODAL
-	var img = document.getElementById('img4');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	img.onclick = function(){
-		  modal.style.display = "block";
-		  modalImg.src = this.src;
-		  captionText.innerHTML = this.alt;
-	}
-	// IMAGE MODAL
-	var img = document.getElementById('img3');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	img.onclick = function(){
-		  modal.style.display = "block";
-		  modalImg.src = this.src;
-		  captionText.innerHTML = this.alt;
-	}
-	// IMAGE MODAL
-	var img = document.getElementById('img2');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	img.onclick = function(){
-		  modal.style.display = "block";
-		  modalImg.src = this.src;
-		  captionText.innerHTML = this.alt;
-	}
-	// IMAGE MODAL
-	var img = document.getElementById('img1');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	img.onclick = function(){
-		  modal.style.display = "block";
-		  modalImg.src = this.src;
-		  captionText.innerHTML = this.alt;
-	}
-	// IMAGE MODAL
-	var img = document.getElementById('img2023-10');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	img.onclick = function(){
-		  modal.style.display = "block";
-		  modalImg.src = this.src;
-		  captionText.innerHTML = this.alt;
-	}
-	// IMAGE MODAL
-	var img = document.getElementById('img2023-9');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	img.onclick = function(){
-		  modal.style.display = "block";
-		  modalImg.src = this.src;
-		  captionText.innerHTML = this.alt;
-	}
-	// IMAGE MODAL
-	var img = document.getElementById('img2023-8');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	img.onclick = function(){
-		  modal.style.display = "block";
-		  modalImg.src = this.src;
-		  captionText.innerHTML = this.alt;
-	}
-	// IMAGE MODAL
-	var img = document.getElementById('img2023-7');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	img.onclick = function(){
-		  modal.style.display = "block";
-		  modalImg.src = this.src;
-		  captionText.innerHTML = this.alt;
-	}// IMAGE MODAL
-	var img = document.getElementById('img2023-6');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	img.onclick = function(){
-		  modal.style.display = "block";
-		  modalImg.src = this.src;
-		  captionText.innerHTML = this.alt;
-	}
-	// IMAGE MODAL
-	var img = document.getElementById('img2023-5');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	img.onclick = function(){
-		  modal.style.display = "block";
-		  modalImg.src = this.src;
-		  captionText.innerHTML = this.alt;
-	}
-	// IMAGE MODAL
-	var img = document.getElementById('img2023-4');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	img.onclick = function(){
-		  modal.style.display = "block";
-		  modalImg.src = this.src;
-		  captionText.innerHTML = this.alt;
-	}
-	// IMAGE MODAL
-	var img = document.getElementById('img2023-3');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	img.onclick = function(){
-		  modal.style.display = "block";
-		  modalImg.src = this.src;
-		  captionText.innerHTML = this.alt;
-	}
-	// IMAGE MODAL
-	var img = document.getElementById('img2023-2');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	img.onclick = function(){
-		  modal.style.display = "block";
-		  modalImg.src = this.src;
-		  captionText.innerHTML = this.alt;
-	}
-	// IMAGE MODAL
-	var img = document.getElementById('img2023-3');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	img.onclick = function(){
-		  modal.style.display = "block";
-		  modalImg.src = this.src;
-		  captionText.innerHTML = this.alt;
-	}
-	// IMAGE MODAL
-	var img = document.getElementById('img2022-2');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	img.onclick = function(){
-		  modal.style.display = "block";
-		  modalImg.src = this.src;
-		  captionText.innerHTML = this.alt;
-	}
-	// IMAGE MODAL
-	var img = document.getElementById('img2022-1');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	img.onclick = function(){
-		  modal.style.display = "block";
-		  modalImg.src = this.src;
-		  captionText.innerHTML = this.alt;
-	}
-	// IMAGE MODAL
-	var img = document.getElementById('img2021-4');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	img.onclick = function(){
-		  modal.style.display = "block";
-		  modalImg.src = this.src;
-		  captionText.innerHTML = this.alt;
-	}
-	// IMAGE MODAL
-	var img = document.getElementById('img2021-3');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	img.onclick = function(){
-		  modal.style.display = "block";
-		  modalImg.src = this.src;
-		  captionText.innerHTML = this.alt;
-	}
-	// IMAGE MODAL
-	var img = document.getElementById('img2021-2');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	img.onclick = function(){
-		  modal.style.display = "block";
-		  modalImg.src = this.src;
-		  captionText.innerHTML = this.alt;
-	}
-	// IMAGE MODAL
-	var img = document.getElementById('img2021-1');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	img.onclick = function(){
-		modal.style.display = "block";
-		modalImg.src = this.src;
-		captionText.innerHTML = this.alt;
-	}
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the common modal elements once outside the loop
+    var modal = document.getElementById('myModal'); // Assuming your modal has an ID 'myModal'
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+
+    // Determine the total number of images you have
+    // You might need to adjust this 'maxImageId' based on your actual HTML
+    const maxImageId = 70; // Example: If you have images from img1 to img30
+
+    // Loop through each image ID
+    for (let i = 1; i <= maxImageId; i++) {
+        var imgId = 'img' + i; // Construct the ID: 'img1', 'img2', etc.
+        var img = document.getElementById(imgId);
+
+        // Check if the image element actually exists before trying to attach an event listener
+        if (img) {
+            img.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src; // 'this' refers to the clicked image
+                captionText.innerHTML = this.alt; // 'this.alt' gets the alt text of the clicked image
+            }
+        } else {
+            console.warn('Image with ID ' + imgId + ' not found.');
+        }
+    }
+});
 
 
 	// get the x
